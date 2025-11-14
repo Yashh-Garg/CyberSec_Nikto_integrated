@@ -339,6 +339,7 @@ Once scan results are displayed, you can:
 
 For issues, questions, or contributions:
 - Open an issue on GitHub
+- Can connect on LinkedIn
 
 
 ---
