@@ -1,0 +1,73 @@
+scanners:
+  nikto:
+    image: "securecodebox/nikto:latest"
+    timeout: 3600
+    default_options:
+      - "-Format"
+      - "xml"
+      - "-Display"
+      - "V"
+      - "-Tuning"
+      - "x"
+    tuning_options:
+      - "0": "File Upload"
+      - "1": "Interesting File / Seen in logs"
+      - "2": "Misconfiguration / Default File"
+      - "3": "Information Disclosure"
+      - "4": "Injection (XSS/Script/HTML)"
+      - "5": "Remote File Retrieval - Inside Web Root"
+      - "6": "Denial of Service"
+      - "7": "Remote File Retrieval - Server Wide"
+      - "8": "Code Execution - Remote"
+      - "9": "SQL Injection"
+      - "a": "Authentication Bypass"
+      - "b": "Software Identification"
+      - "c": "Remote Source Inclusion"
+      - "x": "All Tests"
+
+  # Future scanners
+  # nmap:
+  #   image: "securecodebox/nmap:latest"
+  #   timeout: 1800
+  #
+  # nuclei:
+  #   image: "projectdiscovery/nuclei:latest"
+  #   timeout: 3600
+
+severity_mapping:
+  critical:
+    keywords:
+      - "rce"
+      - "remote code execution"
+      - "sql injection"
+      - "xss"
+      - "cross-site scripting"
+      - "command injection"
+      - "path traversal"
+      - "arbitrary file"
+      - "authentication bypass"
+  
+  high:
+    keywords:
+      - "information disclosure"
+      - "sensitive data"
+      - "credentials"
+      - "password"
+      - "secret"
+      - "private key"
+      - "ssl"
+      - "tls"
+      - "certificate"
+  
+  medium:
+    keywords:
+      - "version disclosure"
+      - "server header"
+      - "directory listing"
+      - "robots.txt"
+      - "backup file"
+      - "debug"
+
+  low:
+    default: true
+

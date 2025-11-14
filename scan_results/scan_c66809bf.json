@@ -1,0 +1,2282 @@
+{
+  "scan_id": "c66809bf",
+  "target": "https://jimsrohini.org/",
+  "port": 80,
+  "ssl": false,
+  "created_at": "2025-11-14T22:43:10.578582+05:30",
+  "completed_at": "2025-11-14T22:44:05.733208+05:30",
+  "findings_count": 13,
+  "results": {
+    "findings_count": 13,
+    "findings": [
+      {
+        "id": "NIKTO-4",
+        "severity": "MEDIUM",
+        "title": "The anti-clickjacking X-Frame-Options header is not present.",
+        "description": "The anti-clickjacking X-Frame-Options header is not present.",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [
+          "CVE-2009-0114",
+          "CVE-2010-2576",
+          "CVE-2009-0374"
+        ],
+        "osvdb_id": null,
+        "cvss_score": 6.8,
+        "remediation": "Add X-Frame-Options header: 'X-Frame-Options: DENY' or 'X-Frame-Options: SAMEORIGIN'",
+        "cve_details": [
+          {
+            "id": "CVE-2009-0374",
+            "cvss_score": 4.3,
+            "cvss_version": "2.0",
+            "description": "Google Chrome 1.0.154.43 allows remote attackers to trick a user into visiting an arbitrary URL via an onclick action that moves a crafted element to the current mouse position, related to a \"Clickjacking\" vulnerability.  NOTE: a third party disputes the relevance of this issue, stating that \"every sufficiently featured browser is and likely will remain susceptible to the behavior known as clickjacking,\" and adding that the exploit code \"is not a valid demonstration of the issue.",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0374"
+          },
+          {
+            "id": "CVE-2009-0114",
+            "cvss_score": 5.8,
+            "cvss_version": "2.0",
+            "description": "Unspecified vulnerability in the Settings Manager in Adobe Flash Player 9.x before 9.0.159.0 and 10.x before 10.0.22.87, and possibly other versions, allows remote attackers to trick a user into visiting an arbitrary URL via unknown vectors, related to \"a potential Clickjacking issue variant.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0114"
+          },
+          {
+            "id": "CVE-2010-2576",
+            "cvss_score": 6.8,
+            "cvss_version": "2.0",
+            "description": "Opera before 10.61 does not properly suppress clicks on download dialogs that became visible after a recent tab change, which allows remote attackers to conduct clickjacking attacks, and consequently execute arbitrary code, via vectors involving (1) closing a tab or (2) hiding a tab, a related issue to CVE-2005-2407.",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2576"
+          }
+        ],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-5",
+        "severity": "LOW",
+        "title": "Uncommon header 'nel' found, with contents: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "description": "Uncommon header 'nel' found, with contents: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-6",
+        "severity": "LOW",
+        "title": "Uncommon header 'cf-ray' found, with contents: 99e8235cbf6d0b0c-FRA",
+        "description": "Uncommon header 'cf-ray' found, with contents: 99e8235cbf6d0b0c-FRA",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-7",
+        "severity": "LOW",
+        "title": "Uncommon header 'cf-cache-status' found, with contents: DYNAMIC",
+        "description": "Uncommon header 'cf-cache-status' found, with contents: DYNAMIC",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-8",
+        "severity": "LOW",
+        "title": "Uncommon header 'report-to' found, with contents: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.n...",
+        "description": "Uncommon header 'report-to' found, with contents: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xOfrrSpntttOHFHx7NJYDofOwIAdaj%2BBca37C%2BifHORnWYHPFJMR9bDAbyDxn7%2BMi8Pi0yAcm7UOoAHxp4FZKrlmmGk6ZYZy%2BSBVZDeM\"}]}",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-9",
+        "severity": "LOW",
+        "title": "Uncommon header 'server-timing' found, with contents: cfEdge;dur=3,cfOrigin;dur=106",
+        "description": "Uncommon header 'server-timing' found, with contents: cfEdge;dur=3,cfOrigin;dur=106",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-10",
+        "severity": "LOW",
+        "title": "Uncommon header 'alt-svc' found, with contents: h3=\":443\"; ma=86400",
+        "description": "Uncommon header 'alt-svc' found, with contents: h3=\":443\"; ma=86400",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-11",
+        "severity": "MEDIUM",
+        "title": "Uncommon header 'x-powered-by-plesk' found, with contents: PleskWin",
+        "description": "Uncommon header 'x-powered-by-plesk' found, with contents: PleskWin",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-12",
+        "severity": "LOW",
+        "title": "Root page / redirects to: https://jimsrohini.org/",
+        "description": "Root page / redirects to: https://jimsrohini.org/",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-13",
+        "severity": "CRITICAL",
+        "title": "No CGI Directories found (use '-C all' to force check all possible dirs)",
+        "description": "No CGI Directories found (use '-C all' to force check all possible dirs)",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [
+          "CVE-2011-0655",
+          "CVE-2009-3023",
+          "CVE-2011-0976"
+        ],
+        "osvdb_id": null,
+        "cvss_score": 9.3,
+        "remediation": "Review CVE details and apply security patches or updates as recommended",
+        "cve_details": [
+          {
+            "id": "CVE-2009-3023",
+            "cvss_score": 9.0,
+            "cvss_version": "2.0",
+            "description": "Buffer overflow in the FTP Service in Microsoft Internet Information Services (IIS) 5.0 through 6.0 allows remote authenticated users to execute arbitrary code via a crafted NLST (NAME LIST) command that uses wildcards, leading to memory corruption, aka \"IIS FTP Service RCE and DoS Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3023"
+          },
+          {
+            "id": "CVE-2011-0976",
+            "cvss_score": 9.3,
+            "cvss_version": "2.0",
+            "description": "Microsoft PowerPoint 2002 SP3, 2003 SP3, and 2007 SP2; Office 2004 and 2008 for Mac; Open XML File Format Converter for Mac; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2; and PowerPoint Viewer 2007 SP2 do not properly handle Office Art containers that have invalid records, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a PowerPoint document with a container that triggers certain access to an uninitialized object, aka \"OfficeArt Atom RCE Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-0976"
+          },
+          {
+            "id": "CVE-2011-0655",
+            "cvss_score": 9.3,
+            "cvss_version": "2.0",
+            "description": "Microsoft PowerPoint 2007 SP2 and 2010; Office 2004, 2008, and 2011 for Mac; Open XML File Format Converter for Mac; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2; PowerPoint Viewer; PowerPoint Viewer 2007 SP2; and PowerPoint Web App do not properly validate TimeColorBehaviorContainer Floating Point records in PowerPoint documents, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted document containing an invalid record, aka \"Floating Point Techno-color Time Bandit RCE Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-0655"
+          }
+        ],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-14",
+        "severity": "LOW",
+        "title": "Uncommon header 'referrer-policy' found, with contents: same-origin",
+        "description": "Uncommon header 'referrer-policy' found, with contents: same-origin",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-15",
+        "severity": "LOW",
+        "title": "Uncommon header 'proxy-status' found, with contents: Cloudflare-Proxy;error=http_request_error",
+        "description": "Uncommon header 'proxy-status' found, with contents: Cloudflare-Proxy;error=http_request_error",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-16",
+        "severity": "MEDIUM",
+        "title": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN",
+        "description": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": "Add X-Frame-Options header: 'X-Frame-Options: DENY' or 'X-Frame-Options: SAMEORIGIN'",
+        "cve_details": [],
+        "scanner": "nikto"
+      }
+    ],
+    "scanner": "nikto",
+    "parsed_at": "2025-11-14T22:44:05.733175+05:30"
+  },
+  "risk_score": {
+    "score": 6.2,
+    "level": "MINIMAL",
+    "breakdown": {
+      "MEDIUM": {
+        "count": 3,
+        "score": 12
+      },
+      "LOW": {
+        "count": 9,
+        "score": 9
+      },
+      "CRITICAL": {
+        "count": 1,
+        "score": 10
+      }
+    },
+    "total_findings": 13
+  },
+  "raw_output": "<?xml version=\"1.0\"?>\n<niktoscan>\n<scandata targetip=\"jimsrohini.org\" targethostname=\"jimsrohini.org\" targetport=\"80\" />\n<item id=\"1\">\n<description>Start Time:         2025-11-14 17:13:11 (GMT0)</description>\n<uri>/</uri>\n</item>\n<item id=\"2\">\n<description>Server: cloudflare</description>\n<uri>/</uri>\n</item>\n<item id=\"3\">\n<description>Retrieved x-powered-by header: ASP.NET</description>\n<uri>/</uri>\n</item>\n<item id=\"4\">\n<description>The anti-clickjacking X-Frame-Options header is not present.</description>\n<uri>/</uri>\n</item>\n<item id=\"5\">\n<description>Uncommon header &apos;nel&apos; found, with contents: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;success_fraction&quot;:0.0,&quot;max_age&quot;:604800}</description>\n<uri>/</uri>\n</item>\n<item id=\"6\">\n<description>Uncommon header &apos;cf-ray&apos; found, with contents: 99e8235cbf6d0b0c-FRA</description>\n<uri>/</uri>\n</item>\n<item id=\"7\">\n<description>Uncommon header &apos;cf-cache-status&apos; found, with contents: DYNAMIC</description>\n<uri>/</uri>\n</item>\n<item id=\"8\">\n<description>Uncommon header &apos;report-to&apos; found, with contents: {&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://a.nel.cloudflare.com/report/v4?s=xOfrrSpntttOHFHx7NJYDofOwIAdaj%2BBca37C%2BifHORnWYHPFJMR9bDAbyDxn7%2BMi8Pi0yAcm7UOoAHxp4FZKrlmmGk6ZYZy%2BSBVZDeM&quot;}]}</description>\n<uri>/</uri>\n</item>\n<item id=\"9\">\n<description>Uncommon header &apos;server-timing&apos; found, with contents: cfEdge;dur=3,cfOrigin;dur=106</description>\n<uri>/</uri>\n</item>\n<item id=\"10\">\n<description>Uncommon header &apos;alt-svc&apos; found, with contents: h3=&quot;:443&quot;; ma=86400</description>\n<uri>/</uri>\n</item>\n<item id=\"11\">\n<description>Uncommon header &apos;x-powered-by-plesk&apos; found, with contents: PleskWin</description>\n<uri>/</uri>\n</item>\n<item id=\"12\">\n<description>Root page / redirects to: https://jimsrohini.org/</description>\n<uri>/</uri>\n</item>\n<item id=\"13\">\n<description>No CGI Directories found (use &apos;-C all&apos; to force check all possible dirs)</description>\n<uri>/</uri>\n</item>\n<item id=\"14\">\n<description>Uncommon header &apos;referrer-policy&apos; found, with contents: same-origin</description>\n<uri>/</uri>\n</item>\n<item id=\"15\">\n<description>Uncommon header &apos;proxy-status&apos; found, with contents: Cloudflare-Proxy;error=http_request_error</description>\n<uri>/</uri>\n</item>\n<item id=\"16\">\n<description>Uncommon header &apos;x-frame-options&apos; found, with contents: SAMEORIGIN</description>\n<uri>/</uri>\n</item>\n<item id=\"17\">\n<description>59 items checked: 0 error(s) and 12 item(s) reported on remote host</description>\n<uri>/</uri>\n</item>\n<item id=\"18\">\n<description>End Time:           2025-11-14 17:14:03 (GMT0) (52 seconds)</description>\n<uri>/</uri>\n</item>\n<item id=\"19\">\n<description>1 host(s) tested</description>\n<uri>/</uri>\n</item>\n</niktoscan>",
+  "logs": "- Nikto v2.1.5\n---------------------------------------------------------------------------\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apache_expect_xss\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Apache Expect XSS\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_multiple_index\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Multiple Index\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_paths\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Path Search\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_robots\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Robots\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_xml\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Report as XML\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_fileops\nV:Fri Nov 14 17:13:10 2025 - Loaded \"File Operations\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_clientaccesspolicy\nV:Fri Nov 14 17:13:10 2025 - Loaded \"clientaccesspolicy.xml\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_csv\nV:Fri Nov 14 17:13:10 2025 - Loaded \"CSV reports\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_msf\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Report data to Metasploit\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_html\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Report as HTML\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_outdated\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Outdated\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_subdomain\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Sub-domain forcer\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_cgi\nV:Fri Nov 14 17:13:10 2025 - Loaded \"CGI\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_dictionary_attack\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Dictionary attack\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_parked\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Parked Detection\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_auth\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Guess authentication\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_tests\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Nikto Tests\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_httpoptions\nV:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Options\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_msgs\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Server Messages\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apacheusers\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Apache Users\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_cookies\nV:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_favicon\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Favicon\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_headers\nV:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Headers\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_nbe\nV:Fri Nov 14 17:13:10 2025 - Loaded \"NBE reports\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_ssl\nV:Fri Nov 14 17:13:10 2025 - Loaded \"SSL and cert checks\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_embedded\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Embedded Detection\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_content_search\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Content Search\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_core\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_text\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Text reports\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_siebel\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Siebel Checks\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_put_del_test\nV:Fri Nov 14 17:13:10 2025 - Loaded \"Put/Delete test\" plugin.\nV:Fri Nov 14 17:13:10 2025 - Getting targets\nV:Fri Nov 14 17:13:10 2025 - Target:jimsrohini.org port:80\nV:Fri Nov 14 17:13:10 2025 - Checking for HTTP on port jimsrohini.org:80, using HEAD\nV:Fri Nov 14 17:13:11 2025 - 301 for HEAD:\t/\nV:Fri Nov 14 17:13:11 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)\nV:Fri Nov 14 17:13:11 2025 - Opening report for \"CSV reports\" plugin\nV:Fri Nov 14 17:13:11 2025 - 59 server checks loaded\nV:Fri Nov 14 17:13:11 2025 - Running start for \"Favicon\" plugin\nV:Fri Nov 14 17:13:11 2025 - Running start for \"HTTP Headers\" plugin\nV:Fri Nov 14 17:13:11 2025 - Running start for \"Embedded Detection\" plugin\nV:Fri Nov 14 17:13:11 2025 - Running start for \"Guess authentication\" plugin\nV:Fri Nov 14 17:13:11 2025 - Running start for \"Content Search\" plugin\nV:Fri Nov 14 17:13:11 2025 - 301 for GET:\t/\n+ Target IP:          104.21.16.132\n+ Target Hostname:    jimsrohini.org\n+ Target Port:        80\n+ Start Time:         2025-11-14 17:13:11 (GMT0)\n---------------------------------------------------------------------------\n+ Server: cloudflare\nV:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/\n+ Retrieved x-powered-by header: ASP.NET\n+ The anti-clickjacking X-Frame-Options header is not present.\n+ Uncommon header 'nel' found, with contents: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}\n+ Uncommon header 'cf-ray' found, with contents: 99e8235cbf6d0b0c-FRA\n+ Uncommon header 'cf-cache-status' found, with contents: DYNAMIC\n+ Uncommon header 'report-to' found, with contents: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xOfrrSpntttOHFHx7NJYDofOwIAdaj%2BBca37C%2BifHORnWYHPFJMR9bDAbyDxn7%2BMi8Pi0yAcm7UOoAHxp4FZKrlmmGk6ZYZy%2BSBVZDeM\"}]}\n+ Uncommon header 'server-timing' found, with contents: cfEdge;dur=3,cfOrigin;dur=106\n+ Uncommon header 'alt-svc' found, with contents: h3=\":443\"; ma=86400\n+ Uncommon header 'x-powered-by-plesk' found, with contents: PleskWin\n+ Root page / redirects to: https://jimsrohini.org/\nV:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH/\nV:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH/\nV:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.cfm\nV:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH.cfm\nV:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.php\nV:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH.php\nV:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.php3\nV:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/Zt5UymqH.php3\nV:Fri Nov 14 17:13:13 2025 - Testing error for file: /.Zt5UymqH\nV:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/.Zt5UymqH\nV:Fri Nov 14 17:13:13 2025 - Testing error for file: /Zt5UymqH.exe\nV:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/Zt5UymqH.exe\nV:Fri Nov 14 17:13:13 2025 - Testing error for file: /Zt5UymqH.idc\nV:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.idc\nV:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.cgi\nV:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.cgi\nV:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH\nV:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH\nV:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.asp\nV:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.asp\nV:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.pl\nV:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/Zt5UymqH.pl\nV:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/index.php?\nV:Fri Nov 14 17:13:15 2025 - Running recon for \"CGI\" plugin\nV:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/cgi.cgi/\nV:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/webcgi/\nV:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi-914/\nV:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi-915/\nV:Fri Nov 14 17:13:16 2025 - 404 for GET:\t/bin/\nV:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi/\nV:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/mpcgi/\nV:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/cgi-bin/\nV:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/ows-bin/\nV:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgi-sys/\nV:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgi-local/\nV:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/htbin/\nV:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgibin/\nV:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/cgis/\nV:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/scripts/\nV:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/cgi-win/\nV:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/fcgi-bin/\nV:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-exe/\nV:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-home/\nV:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-perl/\nV:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/scgi-bin/\n+ No CGI Directories found (use '-C all' to force check all possible dirs)\nV:Fri Nov 14 17:13:20 2025 - Checking for CGI in: \nV:Fri Nov 14 17:13:20 2025 - Running recon for \"Path Search\" plugin\nV:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:21 2025 - Running recon for \"Robots\" plugin\nV:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/robots.txt\nV:Fri Nov 14 17:13:21 2025 - Running recon for \"clientaccesspolicy.xml\" plugin\nV:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/clientaccesspolicy.xml\nV:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/crossdomain.xml\nV:Fri Nov 14 17:13:22 2025 - Running scan for \"Apache Expect XSS\" plugin\nV:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:22 2025 - Running scan for \"Multiple Index\" plugin\nV:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/index.php\nV:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/index.php3\nV:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.html\nV:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.htm\nV:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.shtml\nV:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.cfm\nV:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.cgi\nV:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.pl\nV:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.asp\nV:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.aspx\nV:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.asp\nV:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.aspx\nV:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.htm\nV:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/index.do\nV:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/index.jhtml\nV:Fri Nov 14 17:13:26 2025 - Running scan for \"Outdated\" plugin\nV:Fri Nov 14 17:13:26 2025 - Running scan for \"Parked Detection\" plugin\nV:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:26 2025 - Running scan for \"Apache Users\" plugin\nV:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/~root\nV:Fri Nov 14 17:13:26 2025 - Running scan for \"Favicon\" plugin\nV:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/favicon.ico\nV:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:27 2025 - Running scan for \"HTTP Headers\" plugin\nV:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/index.asp\nV:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/junk999.asp\nV:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/index.aspx\nV:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/junk988.aspx\nV:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/login.asp\nV:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/login.aspx\nV:Fri Nov 14 17:13:29 2025 - 400 for GET:\t/\n+ Uncommon header 'referrer-policy' found, with contents: same-origin\n+ Uncommon header 'proxy-status' found, with contents: Cloudflare-Proxy;error=http_request_error\nV:Fri Nov 14 17:13:29 2025 - 400 for GET:\t/images\nV:Fri Nov 14 17:13:29 2025 - 400 for GET:\t.\nV:Fri Nov 14 17:13:29 2025 - Running scan for \"SSL and cert checks\" plugin\nV:Fri Nov 14 17:13:29 2025 - Running scan for \"Embedded Detection\" plugin\nV:Fri Nov 14 17:13:29 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/hmstat.htm\nV:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/SoundBridgeStatus.html\nV:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/eng/start/StatPtrGen.htm\nV:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/cab/top.shtml\nV:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/home.asp\nV:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/\nV:Fri Nov 14 17:13:33 2025 - Running scan for \"Siebel Checks\" plugin\nV:Fri Nov 14 17:13:33 2025 No Siebel Application defined\nV:Fri Nov 14 17:13:33 2025 - Running scan for \"Put/Delete test\" plugin\nV:Fri Nov 14 17:13:34 2025 - 301 for PUT:\t/nikto-test-WH0unEYC.html\nV:Fri Nov 14 17:13:34 2025 - Running scan for \"HTTP Options\" plugin\nV:Fri Nov 14 17:13:34 2025 - 400 for OPTIONS:\t*\nV:Fri Nov 14 17:13:34 2025 - 301 for OPTIONS:\t/\nV:Fri Nov 14 17:13:35 2025 - 301 for DEBUG:\t/\nV:Fri Nov 14 17:13:35 2025 - 400 for PROPFIND:\t/\nV:Fri Nov 14 17:13:35 2025 - 405 for TRACE:\t/\nV:Fri Nov 14 17:13:35 2025 - 405 for TRACE:\t/\nV:Fri Nov 14 17:13:36 2025 - 403 for TRACK:\t/\n+ Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN\nV:Fri Nov 14 17:13:36 2025 - 403 for TRACK:\t/\nV:Fri Nov 14 17:13:36 2025 - Running scan for \"Server Messages\" plugin\nV:Fri Nov 14 17:13:36 2025 - Running scan for \"Nikto Tests\" plugin\nV:Fri Nov 14 17:13:36 2025 - 301 for GET:\t/cfappman/index.cfm\nV:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/cfdocs/examples/cvbeans/beaninfo.cfm\nV:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/cfdocs/examples/parks/detail.cfm\nV:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/kboard/\nV:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/lists/admin/\nV:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/splashAdmin.php\nV:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/ssdefs/\nV:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/sshome/\nV:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/tiki/\nV:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/tiki/tiki-install.php\nV:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/scripts/samples/details.idc\nV:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/geeklog/users.php\nV:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/admentor/adminadmin.asp\nV:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/imp/mailbox.php3?actionID=6&server=x&imapuser=x';somesql+--&pass=x\nV:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/userinfo.php?uid=1;\nV:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/site/' UNION ALL SELECT FileToClob('/etc/passwd','server')::html,0 FROM sysusers WHERE username=USER --/.html\nV:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/site/' UNION ALL SELECT FileToClob('/etc/passwd','server')::html,0 FROM sysusers WHERE username = USER --/.html\nV:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/postnuke/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*\nV:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/postnuke/html/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*\nV:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/phpwebsite/index.php?module=calendar&calendar[view]=day&year=2003%00-1&month=\nV:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/phpBB2/search.php?search_id=1\\\\\nV:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*\nV:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/author.asp\nV:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/agentadmin.php\nV:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/postnuke/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/modules/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/phpBB/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/forum/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/postnuke/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/postnuke/html/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/modules/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/phpBB/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/forum/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/postnuke/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/modules/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/phpBB/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/forum/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/postnuke/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/postnuke/html/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/modules/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/phpBB/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/forum/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/postnuke/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/postnuke/html/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/modules/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/phpBB/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/forum/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/index.php?name=PNphpBB2&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/postnuke/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/modules/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/phpBB/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/forum/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/postnuke/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/postnuke/html/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/modules/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/phpBB/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/forum/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/postnuke/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/modules/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/phpBB/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/forum/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/postnuke/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/postnuke/html/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/modules/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/phpBB/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/forum/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/postnuke/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/postnuke/html/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/modules/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/phpBB/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/forum/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/index.php?name=PNphpBB2&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527\nV:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/shopexd.asp?catalogid='42\nV:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/shopping/diag_dbtest.asp\nV:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/reademail.pl\nV:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/index.php?showforum=1&prune_day=100&sort_by=Z-A&sort_key=[sqlgoeshere]\nV:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/index.php?offset=[%20Problem%20Here%20]\nV:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/utils/sprc.asp\nV:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/db.php?q='&t='\nV:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/rpc.php?q='&t='\nV:Fri Nov 14 17:14:02 2025 - 301 for POST:\t/search.php\nV:Fri Nov 14 17:14:03 2025 - 301 for POST:\t/private.php\n+ 59 items checked: 0 error(s) and 12 item(s) reported on remote host\n+ End Time:           2025-11-14 17:14:03 (GMT0) (52 seconds)\n---------------------------------------------------------------------------\n+ 1 host(s) tested\nV:Fri Nov 14 17:14:03 2025 + 195 requests made in 53 seconds\n",
+  "log_events": [
+    {
+      "line_number": 1,
+      "timestamp": "2025-11-14T22:44:03.272827",
+      "message": "- Nikto v2.1.5",
+      "level": "INFO"
+    },
+    {
+      "line_number": 2,
+      "timestamp": "2025-11-14T22:44:03.272843",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 3,
+      "timestamp": "2025-11-14T22:44:03.272848",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apache_expect_xss",
+      "level": "INFO"
+    },
+    {
+      "line_number": 4,
+      "timestamp": "2025-11-14T22:44:03.272852",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Apache Expect XSS\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 5,
+      "timestamp": "2025-11-14T22:44:03.272855",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_multiple_index",
+      "level": "INFO"
+    },
+    {
+      "line_number": 6,
+      "timestamp": "2025-11-14T22:44:03.272858",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Multiple Index\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 7,
+      "timestamp": "2025-11-14T22:44:03.272860",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_paths",
+      "level": "INFO"
+    },
+    {
+      "line_number": 8,
+      "timestamp": "2025-11-14T22:44:03.272864",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Path Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 9,
+      "timestamp": "2025-11-14T22:44:03.272868",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_robots",
+      "level": "INFO"
+    },
+    {
+      "line_number": 10,
+      "timestamp": "2025-11-14T22:44:03.272872",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Robots\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 11,
+      "timestamp": "2025-11-14T22:44:03.272875",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 12,
+      "timestamp": "2025-11-14T22:44:03.272877",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Report as XML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 13,
+      "timestamp": "2025-11-14T22:44:03.272879",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_fileops",
+      "level": "INFO"
+    },
+    {
+      "line_number": 14,
+      "timestamp": "2025-11-14T22:44:03.272881",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"File Operations\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 15,
+      "timestamp": "2025-11-14T22:44:03.272883",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_clientaccesspolicy",
+      "level": "INFO"
+    },
+    {
+      "line_number": 16,
+      "timestamp": "2025-11-14T22:44:03.272885",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"clientaccesspolicy.xml\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 17,
+      "timestamp": "2025-11-14T22:44:03.272887",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_csv",
+      "level": "INFO"
+    },
+    {
+      "line_number": 18,
+      "timestamp": "2025-11-14T22:44:03.272889",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"CSV reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 19,
+      "timestamp": "2025-11-14T22:44:03.272891",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_msf",
+      "level": "INFO"
+    },
+    {
+      "line_number": 20,
+      "timestamp": "2025-11-14T22:44:03.272893",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Report data to Metasploit\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 21,
+      "timestamp": "2025-11-14T22:44:03.272895",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 22,
+      "timestamp": "2025-11-14T22:44:03.272897",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Report as HTML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 23,
+      "timestamp": "2025-11-14T22:44:03.272899",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_outdated",
+      "level": "INFO"
+    },
+    {
+      "line_number": 24,
+      "timestamp": "2025-11-14T22:44:03.272900",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Outdated\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 25,
+      "timestamp": "2025-11-14T22:44:03.272902",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_subdomain",
+      "level": "INFO"
+    },
+    {
+      "line_number": 26,
+      "timestamp": "2025-11-14T22:44:03.272904",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Sub-domain forcer\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 27,
+      "timestamp": "2025-11-14T22:44:03.272906",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 28,
+      "timestamp": "2025-11-14T22:44:03.272908",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"CGI\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 29,
+      "timestamp": "2025-11-14T22:44:03.272909",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_dictionary_attack",
+      "level": "INFO"
+    },
+    {
+      "line_number": 30,
+      "timestamp": "2025-11-14T22:44:03.272911",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Dictionary attack\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 31,
+      "timestamp": "2025-11-14T22:44:03.272914",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_parked",
+      "level": "INFO"
+    },
+    {
+      "line_number": 32,
+      "timestamp": "2025-11-14T22:44:03.272917",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Parked Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 33,
+      "timestamp": "2025-11-14T22:44:03.272920",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_auth",
+      "level": "INFO"
+    },
+    {
+      "line_number": 34,
+      "timestamp": "2025-11-14T22:44:03.272923",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Guess authentication\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 35,
+      "timestamp": "2025-11-14T22:44:03.272926",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_tests",
+      "level": "INFO"
+    },
+    {
+      "line_number": 36,
+      "timestamp": "2025-11-14T22:44:03.272927",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Nikto Tests\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 37,
+      "timestamp": "2025-11-14T22:44:03.272929",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_httpoptions",
+      "level": "INFO"
+    },
+    {
+      "line_number": 38,
+      "timestamp": "2025-11-14T22:44:03.272931",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Options\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 39,
+      "timestamp": "2025-11-14T22:44:03.272933",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_msgs",
+      "level": "INFO"
+    },
+    {
+      "line_number": 40,
+      "timestamp": "2025-11-14T22:44:03.272935",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Server Messages\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 41,
+      "timestamp": "2025-11-14T22:44:03.272937",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apacheusers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 42,
+      "timestamp": "2025-11-14T22:44:03.272939",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Apache Users\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 43,
+      "timestamp": "2025-11-14T22:44:03.272940",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_cookies",
+      "level": "INFO"
+    },
+    {
+      "line_number": 44,
+      "timestamp": "2025-11-14T22:44:03.272942",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 45,
+      "timestamp": "2025-11-14T22:44:03.272968",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_favicon",
+      "level": "INFO"
+    },
+    {
+      "line_number": 46,
+      "timestamp": "2025-11-14T22:44:03.272973",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Favicon\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 47,
+      "timestamp": "2025-11-14T22:44:03.272975",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_headers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 48,
+      "timestamp": "2025-11-14T22:44:03.272977",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"HTTP Headers\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 49,
+      "timestamp": "2025-11-14T22:44:03.272979",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_nbe",
+      "level": "INFO"
+    },
+    {
+      "line_number": 50,
+      "timestamp": "2025-11-14T22:44:03.272981",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"NBE reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 51,
+      "timestamp": "2025-11-14T22:44:03.272983",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_ssl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 52,
+      "timestamp": "2025-11-14T22:44:03.272984",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"SSL and cert checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 53,
+      "timestamp": "2025-11-14T22:44:03.272986",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_embedded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 54,
+      "timestamp": "2025-11-14T22:44:03.272988",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Embedded Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 55,
+      "timestamp": "2025-11-14T22:44:03.272990",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_content_search",
+      "level": "INFO"
+    },
+    {
+      "line_number": 56,
+      "timestamp": "2025-11-14T22:44:03.272992",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Content Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 57,
+      "timestamp": "2025-11-14T22:44:03.272994",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_core",
+      "level": "INFO"
+    },
+    {
+      "line_number": 58,
+      "timestamp": "2025-11-14T22:44:03.272996",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_text",
+      "level": "INFO"
+    },
+    {
+      "line_number": 59,
+      "timestamp": "2025-11-14T22:44:03.272998",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Text reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 60,
+      "timestamp": "2025-11-14T22:44:03.273000",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_siebel",
+      "level": "INFO"
+    },
+    {
+      "line_number": 61,
+      "timestamp": "2025-11-14T22:44:03.273001",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Siebel Checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 62,
+      "timestamp": "2025-11-14T22:44:03.273003",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_put_del_test",
+      "level": "INFO"
+    },
+    {
+      "line_number": 63,
+      "timestamp": "2025-11-14T22:44:03.273005",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Loaded \"Put/Delete test\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 64,
+      "timestamp": "2025-11-14T22:44:03.273007",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Getting targets",
+      "level": "INFO"
+    },
+    {
+      "line_number": 65,
+      "timestamp": "2025-11-14T22:44:03.273009",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Target:jimsrohini.org port:80",
+      "level": "INFO"
+    },
+    {
+      "line_number": 66,
+      "timestamp": "2025-11-14T22:44:03.273011",
+      "message": "V:Fri Nov 14 17:13:10 2025 - Checking for HTTP on port jimsrohini.org:80, using HEAD",
+      "level": "INFO"
+    },
+    {
+      "line_number": 67,
+      "timestamp": "2025-11-14T22:44:03.273013",
+      "message": "V:Fri Nov 14 17:13:11 2025 - 301 for HEAD:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 68,
+      "timestamp": "2025-11-14T22:44:03.273015",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)",
+      "level": "INFO"
+    },
+    {
+      "line_number": 69,
+      "timestamp": "2025-11-14T22:44:03.273017",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Opening report for \"CSV reports\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 70,
+      "timestamp": "2025-11-14T22:44:03.273019",
+      "message": "V:Fri Nov 14 17:13:11 2025 - 59 server checks loaded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 71,
+      "timestamp": "2025-11-14T22:44:03.273021",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Running start for \"Favicon\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 72,
+      "timestamp": "2025-11-14T22:44:03.273023",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Running start for \"HTTP Headers\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 73,
+      "timestamp": "2025-11-14T22:44:03.273025",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Running start for \"Embedded Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 74,
+      "timestamp": "2025-11-14T22:44:03.273027",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Running start for \"Guess authentication\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 75,
+      "timestamp": "2025-11-14T22:44:03.273029",
+      "message": "V:Fri Nov 14 17:13:11 2025 - Running start for \"Content Search\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 76,
+      "timestamp": "2025-11-14T22:44:03.273031",
+      "message": "V:Fri Nov 14 17:13:11 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 77,
+      "timestamp": "2025-11-14T22:44:03.273033",
+      "message": "+ Target IP:          104.21.16.132",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target IP:          104.21.16.132"
+    },
+    {
+      "line_number": 78,
+      "timestamp": "2025-11-14T22:44:03.273037",
+      "message": "+ Target Hostname:    jimsrohini.org",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target Hostname:    jimsrohini.org"
+    },
+    {
+      "line_number": 79,
+      "timestamp": "2025-11-14T22:44:03.273039",
+      "message": "+ Target Port:        80",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target Port:        80"
+    },
+    {
+      "line_number": 80,
+      "timestamp": "2025-11-14T22:44:03.273041",
+      "message": "+ Start Time:         2025-11-14 17:13:11 (GMT0)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Start Time:         2025-11-14 17:13:11 (GMT0)"
+    },
+    {
+      "line_number": 81,
+      "timestamp": "2025-11-14T22:44:03.273043",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 82,
+      "timestamp": "2025-11-14T22:44:03.273045",
+      "message": "+ Server: cloudflare",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Server: cloudflare"
+    },
+    {
+      "line_number": 83,
+      "timestamp": "2025-11-14T22:44:03.273046",
+      "message": "V:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 84,
+      "timestamp": "2025-11-14T22:44:03.273048",
+      "message": "+ Retrieved x-powered-by header: ASP.NET",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Retrieved x-powered-by header: ASP.NET"
+    },
+    {
+      "line_number": 85,
+      "timestamp": "2025-11-14T22:44:03.273050",
+      "message": "+ The anti-clickjacking X-Frame-Options header is not present.",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "The anti-clickjacking X-Frame-Options header is not present."
+    },
+    {
+      "line_number": 86,
+      "timestamp": "2025-11-14T22:44:03.273052",
+      "message": "+ Uncommon header 'nel' found, with contents: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'nel' found, with contents: {\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+    },
+    {
+      "line_number": 87,
+      "timestamp": "2025-11-14T22:44:03.273054",
+      "message": "+ Uncommon header 'cf-ray' found, with contents: 99e8235cbf6d0b0c-FRA",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'cf-ray' found, with contents: 99e8235cbf6d0b0c-FRA"
+    },
+    {
+      "line_number": 88,
+      "timestamp": "2025-11-14T22:44:03.273056",
+      "message": "+ Uncommon header 'cf-cache-status' found, with contents: DYNAMIC",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'cf-cache-status' found, with contents: DYNAMIC"
+    },
+    {
+      "line_number": 89,
+      "timestamp": "2025-11-14T22:44:03.273058",
+      "message": "+ Uncommon header 'report-to' found, with contents: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xOfrrSpntttOHFHx7NJYDofOwIAdaj%2BBca37C%2BifHORnWYHPFJMR9bDAbyDxn7%2BMi8Pi0yAcm7UOoAHxp4FZKrlmmGk6ZYZy%2BSBVZDeM\"}]}",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'report-to' found, with contents: {\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=xOfrrSpntttOHFHx7NJYDofOwIAdaj%2BBca37C%2BifHORnWYHPFJMR9bDAbyDxn7%2BMi8Pi0yAcm7UOoAHxp4FZKrlmmGk6ZYZy%2BSBVZDeM\"}]}"
+    },
+    {
+      "line_number": 90,
+      "timestamp": "2025-11-14T22:44:03.273060",
+      "message": "+ Uncommon header 'server-timing' found, with contents: cfEdge;dur=3,cfOrigin;dur=106",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'server-timing' found, with contents: cfEdge;dur=3,cfOrigin;dur=106"
+    },
+    {
+      "line_number": 91,
+      "timestamp": "2025-11-14T22:44:03.273062",
+      "message": "+ Uncommon header 'alt-svc' found, with contents: h3=\":443\"; ma=86400",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'alt-svc' found, with contents: h3=\":443\"; ma=86400"
+    },
+    {
+      "line_number": 92,
+      "timestamp": "2025-11-14T22:44:03.273064",
+      "message": "+ Uncommon header 'x-powered-by-plesk' found, with contents: PleskWin",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'x-powered-by-plesk' found, with contents: PleskWin"
+    },
+    {
+      "line_number": 93,
+      "timestamp": "2025-11-14T22:44:03.273066",
+      "message": "+ Root page / redirects to: https://jimsrohini.org/",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Root page / redirects to: https://jimsrohini.org/"
+    },
+    {
+      "line_number": 94,
+      "timestamp": "2025-11-14T22:44:03.273068",
+      "message": "V:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH/",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 95,
+      "timestamp": "2025-11-14T22:44:03.273070",
+      "message": "V:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 96,
+      "timestamp": "2025-11-14T22:44:03.273072",
+      "message": "V:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.cfm",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 97,
+      "timestamp": "2025-11-14T22:44:03.273074",
+      "message": "V:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 98,
+      "timestamp": "2025-11-14T22:44:03.273076",
+      "message": "V:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.php",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 99,
+      "timestamp": "2025-11-14T22:44:03.273077",
+      "message": "V:Fri Nov 14 17:13:12 2025 - 301 for GET:\t/Zt5UymqH.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 100,
+      "timestamp": "2025-11-14T22:44:03.273079",
+      "message": "V:Fri Nov 14 17:13:12 2025 - Testing error for file: /Zt5UymqH.php3",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 101,
+      "timestamp": "2025-11-14T22:44:03.273081",
+      "message": "V:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/Zt5UymqH.php3",
+      "level": "INFO"
+    },
+    {
+      "line_number": 102,
+      "timestamp": "2025-11-14T22:44:03.273082",
+      "message": "V:Fri Nov 14 17:13:13 2025 - Testing error for file: /.Zt5UymqH",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 103,
+      "timestamp": "2025-11-14T22:44:03.273084",
+      "message": "V:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/.Zt5UymqH",
+      "level": "INFO"
+    },
+    {
+      "line_number": 104,
+      "timestamp": "2025-11-14T22:44:03.273086",
+      "message": "V:Fri Nov 14 17:13:13 2025 - Testing error for file: /Zt5UymqH.exe",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 105,
+      "timestamp": "2025-11-14T22:44:03.273087",
+      "message": "V:Fri Nov 14 17:13:13 2025 - 301 for GET:\t/Zt5UymqH.exe",
+      "level": "INFO"
+    },
+    {
+      "line_number": 106,
+      "timestamp": "2025-11-14T22:44:03.273089",
+      "message": "V:Fri Nov 14 17:13:13 2025 - Testing error for file: /Zt5UymqH.idc",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 107,
+      "timestamp": "2025-11-14T22:44:03.273090",
+      "message": "V:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.idc",
+      "level": "INFO"
+    },
+    {
+      "line_number": 108,
+      "timestamp": "2025-11-14T22:44:03.273092",
+      "message": "V:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.cgi",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 109,
+      "timestamp": "2025-11-14T22:44:03.273093",
+      "message": "V:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 110,
+      "timestamp": "2025-11-14T22:44:03.273095",
+      "message": "V:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 111,
+      "timestamp": "2025-11-14T22:44:03.273096",
+      "message": "V:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH",
+      "level": "INFO"
+    },
+    {
+      "line_number": 112,
+      "timestamp": "2025-11-14T22:44:03.273098",
+      "message": "V:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.asp",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 113,
+      "timestamp": "2025-11-14T22:44:03.273099",
+      "message": "V:Fri Nov 14 17:13:14 2025 - 301 for GET:\t/Zt5UymqH.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 114,
+      "timestamp": "2025-11-14T22:44:03.273101",
+      "message": "V:Fri Nov 14 17:13:14 2025 - Testing error for file: /Zt5UymqH.pl",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 115,
+      "timestamp": "2025-11-14T22:44:03.273102",
+      "message": "V:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/Zt5UymqH.pl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 116,
+      "timestamp": "2025-11-14T22:44:03.273104",
+      "message": "V:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/index.php?",
+      "level": "INFO"
+    },
+    {
+      "line_number": 117,
+      "timestamp": "2025-11-14T22:44:03.273106",
+      "message": "V:Fri Nov 14 17:13:15 2025 - Running recon for \"CGI\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 118,
+      "timestamp": "2025-11-14T22:44:03.273108",
+      "message": "V:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/cgi.cgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 119,
+      "timestamp": "2025-11-14T22:44:03.273110",
+      "message": "V:Fri Nov 14 17:13:15 2025 - 301 for GET:\t/webcgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 120,
+      "timestamp": "2025-11-14T22:44:03.273111",
+      "message": "V:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi-914/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 121,
+      "timestamp": "2025-11-14T22:44:03.273113",
+      "message": "V:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi-915/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 122,
+      "timestamp": "2025-11-14T22:44:03.273114",
+      "message": "V:Fri Nov 14 17:13:16 2025 - 404 for GET:\t/bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 123,
+      "timestamp": "2025-11-14T22:44:03.273116",
+      "message": "V:Fri Nov 14 17:13:16 2025 - 301 for GET:\t/cgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 124,
+      "timestamp": "2025-11-14T22:44:03.273118",
+      "message": "V:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/mpcgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 125,
+      "timestamp": "2025-11-14T22:44:03.273119",
+      "message": "V:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/cgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 126,
+      "timestamp": "2025-11-14T22:44:03.273121",
+      "message": "V:Fri Nov 14 17:13:17 2025 - 301 for GET:\t/ows-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 127,
+      "timestamp": "2025-11-14T22:44:03.273122",
+      "message": "V:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgi-sys/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 128,
+      "timestamp": "2025-11-14T22:44:03.273124",
+      "message": "V:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgi-local/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 129,
+      "timestamp": "2025-11-14T22:44:03.273126",
+      "message": "V:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/htbin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 130,
+      "timestamp": "2025-11-14T22:44:03.273127",
+      "message": "V:Fri Nov 14 17:13:18 2025 - 301 for GET:\t/cgibin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 131,
+      "timestamp": "2025-11-14T22:44:03.273129",
+      "message": "V:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/cgis/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 132,
+      "timestamp": "2025-11-14T22:44:03.273131",
+      "message": "V:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/scripts/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 133,
+      "timestamp": "2025-11-14T22:44:03.273132",
+      "message": "V:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/cgi-win/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 134,
+      "timestamp": "2025-11-14T22:44:03.273134",
+      "message": "V:Fri Nov 14 17:13:19 2025 - 301 for GET:\t/fcgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 135,
+      "timestamp": "2025-11-14T22:44:03.273135",
+      "message": "V:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-exe/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 136,
+      "timestamp": "2025-11-14T22:44:03.273137",
+      "message": "V:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-home/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 137,
+      "timestamp": "2025-11-14T22:44:03.273138",
+      "message": "V:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/cgi-perl/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 138,
+      "timestamp": "2025-11-14T22:44:03.273140",
+      "message": "V:Fri Nov 14 17:13:20 2025 - 301 for GET:\t/scgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 139,
+      "timestamp": "2025-11-14T22:44:03.273142",
+      "message": "+ No CGI Directories found (use '-C all' to force check all possible dirs)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "No CGI Directories found (use '-C all' to force check all possible dirs)"
+    },
+    {
+      "line_number": 140,
+      "timestamp": "2025-11-14T22:44:03.273144",
+      "message": "V:Fri Nov 14 17:13:20 2025 - Checking for CGI in:",
+      "level": "INFO"
+    },
+    {
+      "line_number": 141,
+      "timestamp": "2025-11-14T22:44:03.273146",
+      "message": "V:Fri Nov 14 17:13:20 2025 - Running recon for \"Path Search\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 142,
+      "timestamp": "2025-11-14T22:44:03.273148",
+      "message": "V:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 143,
+      "timestamp": "2025-11-14T22:44:03.273149",
+      "message": "V:Fri Nov 14 17:13:21 2025 - Running recon for \"Robots\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 144,
+      "timestamp": "2025-11-14T22:44:03.273151",
+      "message": "V:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/robots.txt",
+      "level": "INFO"
+    },
+    {
+      "line_number": 145,
+      "timestamp": "2025-11-14T22:44:03.273153",
+      "message": "V:Fri Nov 14 17:13:21 2025 - Running recon for \"clientaccesspolicy.xml\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 146,
+      "timestamp": "2025-11-14T22:44:03.273155",
+      "message": "V:Fri Nov 14 17:13:21 2025 - 301 for GET:\t/clientaccesspolicy.xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 147,
+      "timestamp": "2025-11-14T22:44:03.273156",
+      "message": "V:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/crossdomain.xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 148,
+      "timestamp": "2025-11-14T22:44:03.273158",
+      "message": "V:Fri Nov 14 17:13:22 2025 - Running scan for \"Apache Expect XSS\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 149,
+      "timestamp": "2025-11-14T22:44:03.273160",
+      "message": "V:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 150,
+      "timestamp": "2025-11-14T22:44:03.273162",
+      "message": "V:Fri Nov 14 17:13:22 2025 - Running scan for \"Multiple Index\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 151,
+      "timestamp": "2025-11-14T22:44:03.273164",
+      "message": "V:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/index.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 152,
+      "timestamp": "2025-11-14T22:44:03.273165",
+      "message": "V:Fri Nov 14 17:13:22 2025 - 301 for GET:\t/index.php3",
+      "level": "INFO"
+    },
+    {
+      "line_number": 153,
+      "timestamp": "2025-11-14T22:44:03.273167",
+      "message": "V:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 154,
+      "timestamp": "2025-11-14T22:44:03.273168",
+      "message": "V:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 155,
+      "timestamp": "2025-11-14T22:44:03.273170",
+      "message": "V:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.shtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 156,
+      "timestamp": "2025-11-14T22:44:03.273172",
+      "message": "V:Fri Nov 14 17:13:23 2025 - 301 for GET:\t/index.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 157,
+      "timestamp": "2025-11-14T22:44:03.273173",
+      "message": "V:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 158,
+      "timestamp": "2025-11-14T22:44:03.273175",
+      "message": "V:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.pl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 159,
+      "timestamp": "2025-11-14T22:44:03.273176",
+      "message": "V:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 160,
+      "timestamp": "2025-11-14T22:44:03.273178",
+      "message": "V:Fri Nov 14 17:13:24 2025 - 301 for GET:\t/index.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 161,
+      "timestamp": "2025-11-14T22:44:03.273179",
+      "message": "V:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 162,
+      "timestamp": "2025-11-14T22:44:03.273181",
+      "message": "V:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 163,
+      "timestamp": "2025-11-14T22:44:03.273182",
+      "message": "V:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/default.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 164,
+      "timestamp": "2025-11-14T22:44:03.273184",
+      "message": "V:Fri Nov 14 17:13:25 2025 - 301 for GET:\t/index.do",
+      "level": "INFO"
+    },
+    {
+      "line_number": 165,
+      "timestamp": "2025-11-14T22:44:03.273185",
+      "message": "V:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/index.jhtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 166,
+      "timestamp": "2025-11-14T22:44:03.273187",
+      "message": "V:Fri Nov 14 17:13:26 2025 - Running scan for \"Outdated\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 167,
+      "timestamp": "2025-11-14T22:44:03.273189",
+      "message": "V:Fri Nov 14 17:13:26 2025 - Running scan for \"Parked Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 168,
+      "timestamp": "2025-11-14T22:44:03.273191",
+      "message": "V:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 169,
+      "timestamp": "2025-11-14T22:44:03.273192",
+      "message": "V:Fri Nov 14 17:13:26 2025 - Running scan for \"Apache Users\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 170,
+      "timestamp": "2025-11-14T22:44:03.273195",
+      "message": "V:Fri Nov 14 17:13:26 2025 - 301 for GET:\t/~root",
+      "level": "INFO"
+    },
+    {
+      "line_number": 171,
+      "timestamp": "2025-11-14T22:44:03.273196",
+      "message": "V:Fri Nov 14 17:13:26 2025 - Running scan for \"Favicon\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 172,
+      "timestamp": "2025-11-14T22:44:03.273198",
+      "message": "V:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/favicon.ico",
+      "level": "INFO"
+    },
+    {
+      "line_number": 173,
+      "timestamp": "2025-11-14T22:44:03.273199",
+      "message": "V:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 174,
+      "timestamp": "2025-11-14T22:44:03.273201",
+      "message": "V:Fri Nov 14 17:13:27 2025 - Running scan for \"HTTP Headers\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 175,
+      "timestamp": "2025-11-14T22:44:03.273203",
+      "message": "V:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/index.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 176,
+      "timestamp": "2025-11-14T22:44:03.273204",
+      "message": "V:Fri Nov 14 17:13:27 2025 - 301 for GET:\t/junk999.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 177,
+      "timestamp": "2025-11-14T22:44:03.273206",
+      "message": "V:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/index.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 178,
+      "timestamp": "2025-11-14T22:44:03.273207",
+      "message": "V:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/junk988.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 179,
+      "timestamp": "2025-11-14T22:44:03.273209",
+      "message": "V:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/login.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 180,
+      "timestamp": "2025-11-14T22:44:03.273211",
+      "message": "V:Fri Nov 14 17:13:28 2025 - 301 for GET:\t/login.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 181,
+      "timestamp": "2025-11-14T22:44:03.273221",
+      "message": "V:Fri Nov 14 17:13:29 2025 - 400 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 182,
+      "timestamp": "2025-11-14T22:44:03.273223",
+      "message": "+ Uncommon header 'referrer-policy' found, with contents: same-origin",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'referrer-policy' found, with contents: same-origin"
+    },
+    {
+      "line_number": 183,
+      "timestamp": "2025-11-14T22:44:03.273225",
+      "message": "+ Uncommon header 'proxy-status' found, with contents: Cloudflare-Proxy;error=http_request_error",
+      "level": "ERROR",
+      "type": "finding",
+      "finding": "Uncommon header 'proxy-status' found, with contents: Cloudflare-Proxy;error=http_request_error"
+    },
+    {
+      "line_number": 184,
+      "timestamp": "2025-11-14T22:44:03.273227",
+      "message": "V:Fri Nov 14 17:13:29 2025 - 400 for GET:\t/images",
+      "level": "INFO"
+    },
+    {
+      "line_number": 185,
+      "timestamp": "2025-11-14T22:44:03.273229",
+      "message": "V:Fri Nov 14 17:13:29 2025 - 400 for GET:\t.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 186,
+      "timestamp": "2025-11-14T22:44:03.273230",
+      "message": "V:Fri Nov 14 17:13:29 2025 - Running scan for \"SSL and cert checks\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 187,
+      "timestamp": "2025-11-14T22:44:03.273232",
+      "message": "V:Fri Nov 14 17:13:29 2025 - Running scan for \"Embedded Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 188,
+      "timestamp": "2025-11-14T22:44:03.273234",
+      "message": "V:Fri Nov 14 17:13:29 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 189,
+      "timestamp": "2025-11-14T22:44:03.273236",
+      "message": "V:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 190,
+      "timestamp": "2025-11-14T22:44:03.273237",
+      "message": "V:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 191,
+      "timestamp": "2025-11-14T22:44:03.273239",
+      "message": "V:Fri Nov 14 17:13:30 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 192,
+      "timestamp": "2025-11-14T22:44:03.273240",
+      "message": "V:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 193,
+      "timestamp": "2025-11-14T22:44:03.273242",
+      "message": "V:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 194,
+      "timestamp": "2025-11-14T22:44:03.273244",
+      "message": "V:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 195,
+      "timestamp": "2025-11-14T22:44:03.273245",
+      "message": "V:Fri Nov 14 17:13:31 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 196,
+      "timestamp": "2025-11-14T22:44:03.273247",
+      "message": "V:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/hmstat.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 197,
+      "timestamp": "2025-11-14T22:44:03.273249",
+      "message": "V:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/SoundBridgeStatus.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 198,
+      "timestamp": "2025-11-14T22:44:03.273250",
+      "message": "V:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/eng/start/StatPtrGen.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 199,
+      "timestamp": "2025-11-14T22:44:03.273252",
+      "message": "V:Fri Nov 14 17:13:32 2025 - 301 for GET:\t/cab/top.shtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 200,
+      "timestamp": "2025-11-14T22:44:03.273254",
+      "message": "V:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/home.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 201,
+      "timestamp": "2025-11-14T22:44:03.273255",
+      "message": "V:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 202,
+      "timestamp": "2025-11-14T22:44:03.273257",
+      "message": "V:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 203,
+      "timestamp": "2025-11-14T22:44:03.273259",
+      "message": "V:Fri Nov 14 17:13:33 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 204,
+      "timestamp": "2025-11-14T22:44:03.273260",
+      "message": "V:Fri Nov 14 17:13:33 2025 - Running scan for \"Siebel Checks\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 205,
+      "timestamp": "2025-11-14T22:44:03.273262",
+      "message": "V:Fri Nov 14 17:13:33 2025 No Siebel Application defined",
+      "level": "INFO"
+    },
+    {
+      "line_number": 206,
+      "timestamp": "2025-11-14T22:44:03.273264",
+      "message": "V:Fri Nov 14 17:13:33 2025 - Running scan for \"Put/Delete test\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 207,
+      "timestamp": "2025-11-14T22:44:03.273266",
+      "message": "V:Fri Nov 14 17:13:34 2025 - 301 for PUT:\t/nikto-test-WH0unEYC.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 208,
+      "timestamp": "2025-11-14T22:44:03.273268",
+      "message": "V:Fri Nov 14 17:13:34 2025 - Running scan for \"HTTP Options\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 209,
+      "timestamp": "2025-11-14T22:44:03.273269",
+      "message": "V:Fri Nov 14 17:13:34 2025 - 400 for OPTIONS:\t*",
+      "level": "INFO"
+    },
+    {
+      "line_number": 210,
+      "timestamp": "2025-11-14T22:44:03.273271",
+      "message": "V:Fri Nov 14 17:13:34 2025 - 301 for OPTIONS:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 211,
+      "timestamp": "2025-11-14T22:44:03.273272",
+      "message": "V:Fri Nov 14 17:13:35 2025 - 301 for DEBUG:\t/",
+      "level": "DEBUG"
+    },
+    {
+      "line_number": 212,
+      "timestamp": "2025-11-14T22:44:03.273274",
+      "message": "V:Fri Nov 14 17:13:35 2025 - 400 for PROPFIND:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 213,
+      "timestamp": "2025-11-14T22:44:03.273276",
+      "message": "V:Fri Nov 14 17:13:35 2025 - 405 for TRACE:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 214,
+      "timestamp": "2025-11-14T22:44:03.273279",
+      "message": "V:Fri Nov 14 17:13:35 2025 - 405 for TRACE:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 215,
+      "timestamp": "2025-11-14T22:44:03.273281",
+      "message": "V:Fri Nov 14 17:13:36 2025 - 403 for TRACK:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 216,
+      "timestamp": "2025-11-14T22:44:03.273283",
+      "message": "+ Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'x-frame-options' found, with contents: SAMEORIGIN"
+    },
+    {
+      "line_number": 217,
+      "timestamp": "2025-11-14T22:44:03.273285",
+      "message": "V:Fri Nov 14 17:13:36 2025 - 403 for TRACK:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 218,
+      "timestamp": "2025-11-14T22:44:03.273286",
+      "message": "V:Fri Nov 14 17:13:36 2025 - Running scan for \"Server Messages\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 219,
+      "timestamp": "2025-11-14T22:44:03.273288",
+      "message": "V:Fri Nov 14 17:13:36 2025 - Running scan for \"Nikto Tests\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 220,
+      "timestamp": "2025-11-14T22:44:03.273290",
+      "message": "V:Fri Nov 14 17:13:36 2025 - 301 for GET:\t/cfappman/index.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 221,
+      "timestamp": "2025-11-14T22:44:03.273292",
+      "message": "V:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/cfdocs/examples/cvbeans/beaninfo.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 222,
+      "timestamp": "2025-11-14T22:44:03.273294",
+      "message": "V:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/cfdocs/examples/parks/detail.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 223,
+      "timestamp": "2025-11-14T22:44:03.273296",
+      "message": "V:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/kboard/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 224,
+      "timestamp": "2025-11-14T22:44:03.273297",
+      "message": "V:Fri Nov 14 17:13:37 2025 - 301 for GET:\t/lists/admin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 225,
+      "timestamp": "2025-11-14T22:44:03.273299",
+      "message": "V:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/splashAdmin.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 226,
+      "timestamp": "2025-11-14T22:44:03.273301",
+      "message": "V:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/ssdefs/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 227,
+      "timestamp": "2025-11-14T22:44:03.273302",
+      "message": "V:Fri Nov 14 17:13:38 2025 - 301 for GET:\t/sshome/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 228,
+      "timestamp": "2025-11-14T22:44:03.273304",
+      "message": "V:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/tiki/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 229,
+      "timestamp": "2025-11-14T22:44:03.273305",
+      "message": "V:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/tiki/tiki-install.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 230,
+      "timestamp": "2025-11-14T22:44:03.273307",
+      "message": "V:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/scripts/samples/details.idc",
+      "level": "INFO"
+    },
+    {
+      "line_number": 231,
+      "timestamp": "2025-11-14T22:44:03.273309",
+      "message": "V:Fri Nov 14 17:13:39 2025 - 301 for GET:\t/geeklog/users.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 232,
+      "timestamp": "2025-11-14T22:44:03.273311",
+      "message": "V:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/admentor/adminadmin.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 233,
+      "timestamp": "2025-11-14T22:44:03.273313",
+      "message": "V:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/imp/mailbox.php3?actionID=6&server=x&imapuser=x';somesql+--&pass=x",
+      "level": "INFO"
+    },
+    {
+      "line_number": 234,
+      "timestamp": "2025-11-14T22:44:03.273315",
+      "message": "V:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/userinfo.php?uid=1;",
+      "level": "INFO"
+    },
+    {
+      "line_number": 235,
+      "timestamp": "2025-11-14T22:44:03.273317",
+      "message": "V:Fri Nov 14 17:13:40 2025 - 301 for GET:\t/site/' UNION ALL SELECT FileToClob('/etc/passwd','server')::html,0 FROM sysusers WHERE username=USER --/.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 236,
+      "timestamp": "2025-11-14T22:44:03.273320",
+      "message": "V:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/site/' UNION ALL SELECT FileToClob('/etc/passwd','server')::html,0 FROM sysusers WHERE username = USER --/.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 237,
+      "timestamp": "2025-11-14T22:44:03.273322",
+      "message": "V:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/postnuke/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*",
+      "level": "INFO"
+    },
+    {
+      "line_number": 238,
+      "timestamp": "2025-11-14T22:44:03.273325",
+      "message": "V:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/postnuke/html/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*",
+      "level": "INFO"
+    },
+    {
+      "line_number": 239,
+      "timestamp": "2025-11-14T22:44:03.273328",
+      "message": "V:Fri Nov 14 17:13:41 2025 - 301 for GET:\t/phpwebsite/index.php?module=calendar&calendar[view]=day&year=2003%00-1&month=",
+      "level": "INFO"
+    },
+    {
+      "line_number": 240,
+      "timestamp": "2025-11-14T22:44:03.273330",
+      "message": "V:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/phpBB2/search.php?search_id=1\\\\",
+      "level": "INFO"
+    },
+    {
+      "line_number": 241,
+      "timestamp": "2025-11-14T22:44:03.273332",
+      "message": "V:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/index.php?module=My_eGallery&do=showpic&pid=-1/**/AND/**/1=2/**/UNION/**/ALL/**/SELECT/**/0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,concat(0x3C7230783E,pn_uname,0x3a,pn_pass,0x3C7230783E),0,0,0/**/FROM/**/md_users/**/WHERE/**/pn_uid=$id/*",
+      "level": "INFO"
+    },
+    {
+      "line_number": 242,
+      "timestamp": "2025-11-14T22:44:03.273335",
+      "message": "V:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/author.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 243,
+      "timestamp": "2025-11-14T22:44:03.273336",
+      "message": "V:Fri Nov 14 17:13:42 2025 - 301 for GET:\t/agentadmin.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 244,
+      "timestamp": "2025-11-14T22:44:03.273338",
+      "message": "V:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 245,
+      "timestamp": "2025-11-14T22:44:03.273341",
+      "message": "V:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 246,
+      "timestamp": "2025-11-14T22:44:03.273343",
+      "message": "V:Fri Nov 14 17:13:43 2025 - 301 for GET:\t/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 247,
+      "timestamp": "2025-11-14T22:44:03.273346",
+      "message": "V:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/postnuke/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 248,
+      "timestamp": "2025-11-14T22:44:03.273348",
+      "message": "V:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 249,
+      "timestamp": "2025-11-14T22:44:03.273351",
+      "message": "V:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/modules/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 250,
+      "timestamp": "2025-11-14T22:44:03.273353",
+      "message": "V:Fri Nov 14 17:13:44 2025 - 301 for GET:\t/phpBB/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 251,
+      "timestamp": "2025-11-14T22:44:03.273356",
+      "message": "V:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/forum/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 252,
+      "timestamp": "2025-11-14T22:44:03.273358",
+      "message": "V:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 253,
+      "timestamp": "2025-11-14T22:44:03.273360",
+      "message": "V:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/postnuke/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 254,
+      "timestamp": "2025-11-14T22:44:03.273363",
+      "message": "V:Fri Nov 14 17:13:45 2025 - 301 for GET:\t/postnuke/html/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 255,
+      "timestamp": "2025-11-14T22:44:03.273365",
+      "message": "V:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/modules/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 256,
+      "timestamp": "2025-11-14T22:44:03.273368",
+      "message": "V:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/phpBB/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 257,
+      "timestamp": "2025-11-14T22:44:03.273370",
+      "message": "V:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/forum/index.php?name=Forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 258,
+      "timestamp": "2025-11-14T22:44:03.273373",
+      "message": "V:Fri Nov 14 17:13:46 2025 - 301 for GET:\t/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 259,
+      "timestamp": "2025-11-14T22:44:03.273375",
+      "message": "V:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/postnuke/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 260,
+      "timestamp": "2025-11-14T22:44:03.273377",
+      "message": "V:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 261,
+      "timestamp": "2025-11-14T22:44:03.273380",
+      "message": "V:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/modules/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 262,
+      "timestamp": "2025-11-14T22:44:03.273382",
+      "message": "V:Fri Nov 14 17:13:47 2025 - 301 for GET:\t/phpBB/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 263,
+      "timestamp": "2025-11-14T22:44:03.273385",
+      "message": "V:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/forum/index.php?Nikto=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 264,
+      "timestamp": "2025-11-14T22:44:03.273387",
+      "message": "V:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 265,
+      "timestamp": "2025-11-14T22:44:03.273389",
+      "message": "V:Fri Nov 14 17:13:48 2025 - 301 for GET:\t/postnuke/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 266,
+      "timestamp": "2025-11-14T22:44:03.273392",
+      "message": "V:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/postnuke/html/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 267,
+      "timestamp": "2025-11-14T22:44:03.273394",
+      "message": "V:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/modules/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 268,
+      "timestamp": "2025-11-14T22:44:03.273396",
+      "message": "V:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/phpBB/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 269,
+      "timestamp": "2025-11-14T22:44:03.273398",
+      "message": "V:Fri Nov 14 17:13:49 2025 - 301 for GET:\t/forum/index.php?name=forums&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 270,
+      "timestamp": "2025-11-14T22:44:03.273400",
+      "message": "V:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 271,
+      "timestamp": "2025-11-14T22:44:03.273402",
+      "message": "V:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/postnuke/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 272,
+      "timestamp": "2025-11-14T22:44:03.273405",
+      "message": "V:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/postnuke/html/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 273,
+      "timestamp": "2025-11-14T22:44:03.273407",
+      "message": "V:Fri Nov 14 17:13:50 2025 - 301 for GET:\t/modules/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 274,
+      "timestamp": "2025-11-14T22:44:03.273568",
+      "message": "V:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/phpBB/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 275,
+      "timestamp": "2025-11-14T22:44:03.273575",
+      "message": "V:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/forum/viewtopic.php?t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 276,
+      "timestamp": "2025-11-14T22:44:03.273578",
+      "message": "V:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/index.php?name=PNphpBB2&file=viewtopic&t=2&rush=%64%69%72&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 277,
+      "timestamp": "2025-11-14T22:44:03.273580",
+      "message": "V:Fri Nov 14 17:13:51 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 278,
+      "timestamp": "2025-11-14T22:44:03.273583",
+      "message": "V:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 279,
+      "timestamp": "2025-11-14T22:44:03.273585",
+      "message": "V:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 280,
+      "timestamp": "2025-11-14T22:44:03.273588",
+      "message": "V:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 281,
+      "timestamp": "2025-11-14T22:44:03.273590",
+      "message": "V:Fri Nov 14 17:13:52 2025 - 301 for GET:\t/postnuke/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 282,
+      "timestamp": "2025-11-14T22:44:03.273593",
+      "message": "V:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 283,
+      "timestamp": "2025-11-14T22:44:03.273595",
+      "message": "V:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/modules/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 284,
+      "timestamp": "2025-11-14T22:44:03.273598",
+      "message": "V:Fri Nov 14 17:13:53 2025 - 301 for GET:\t/phpBB/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 285,
+      "timestamp": "2025-11-14T22:44:03.273600",
+      "message": "V:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/forum/index.php?Nikto=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 286,
+      "timestamp": "2025-11-14T22:44:03.273603",
+      "message": "V:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 287,
+      "timestamp": "2025-11-14T22:44:03.273605",
+      "message": "V:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/postnuke/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 288,
+      "timestamp": "2025-11-14T22:44:03.273607",
+      "message": "V:Fri Nov 14 17:13:54 2025 - 301 for GET:\t/postnuke/html/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 289,
+      "timestamp": "2025-11-14T22:44:03.273609",
+      "message": "V:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/modules/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 290,
+      "timestamp": "2025-11-14T22:44:03.273612",
+      "message": "V:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/phpBB/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 291,
+      "timestamp": "2025-11-14T22:44:03.273614",
+      "message": "V:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/forum/index.php?name=Forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 292,
+      "timestamp": "2025-11-14T22:44:03.273617",
+      "message": "V:Fri Nov 14 17:13:55 2025 - 301 for GET:\t/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 293,
+      "timestamp": "2025-11-14T22:44:03.273619",
+      "message": "V:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/postnuke/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 294,
+      "timestamp": "2025-11-14T22:44:03.273621",
+      "message": "V:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/postnuke/html/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 295,
+      "timestamp": "2025-11-14T22:44:03.273624",
+      "message": "V:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/modules/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 296,
+      "timestamp": "2025-11-14T22:44:03.273626",
+      "message": "V:Fri Nov 14 17:13:56 2025 - 301 for GET:\t/phpBB/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 297,
+      "timestamp": "2025-11-14T22:44:03.273629",
+      "message": "V:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/forum/index.php?Nikto=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 298,
+      "timestamp": "2025-11-14T22:44:03.273631",
+      "message": "V:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 299,
+      "timestamp": "2025-11-14T22:44:03.273633",
+      "message": "V:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/postnuke/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 300,
+      "timestamp": "2025-11-14T22:44:03.273635",
+      "message": "V:Fri Nov 14 17:13:57 2025 - 301 for GET:\t/postnuke/html/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 301,
+      "timestamp": "2025-11-14T22:44:03.273637",
+      "message": "V:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/modules/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 302,
+      "timestamp": "2025-11-14T22:44:03.273639",
+      "message": "V:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/phpBB/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 303,
+      "timestamp": "2025-11-14T22:44:03.273642",
+      "message": "V:Fri Nov 14 17:13:58 2025 - 301 for GET:\t/forum/index.php?name=forums&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 304,
+      "timestamp": "2025-11-14T22:44:03.273644",
+      "message": "V:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 305,
+      "timestamp": "2025-11-14T22:44:03.273646",
+      "message": "V:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/postnuke/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 306,
+      "timestamp": "2025-11-14T22:44:03.273648",
+      "message": "V:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/postnuke/html/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 307,
+      "timestamp": "2025-11-14T22:44:03.273651",
+      "message": "V:Fri Nov 14 17:13:59 2025 - 301 for GET:\t/modules/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 308,
+      "timestamp": "2025-11-14T22:44:03.273653",
+      "message": "V:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/phpBB/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 309,
+      "timestamp": "2025-11-14T22:44:03.273656",
+      "message": "V:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/forum/viewtopic.php?t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 310,
+      "timestamp": "2025-11-14T22:44:03.273658",
+      "message": "V:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/index.php?name=PNphpBB2&file=viewtopic&t=2&rush=%6c%73%20%2d%61%6c&highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5f%47%45%54%5f%56%41%52%53%5b%72%75%73%68%5d%29.%2527",
+      "level": "INFO"
+    },
+    {
+      "line_number": 311,
+      "timestamp": "2025-11-14T22:44:03.273661",
+      "message": "V:Fri Nov 14 17:14:00 2025 - 301 for GET:\t/shopexd.asp?catalogid='42",
+      "level": "INFO"
+    },
+    {
+      "line_number": 312,
+      "timestamp": "2025-11-14T22:44:03.273663",
+      "message": "V:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/shopping/diag_dbtest.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 313,
+      "timestamp": "2025-11-14T22:44:03.273665",
+      "message": "V:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/reademail.pl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 314,
+      "timestamp": "2025-11-14T22:44:03.273667",
+      "message": "V:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/index.php?showforum=1&prune_day=100&sort_by=Z-A&sort_key=[sqlgoeshere]",
+      "level": "INFO"
+    },
+    {
+      "line_number": 315,
+      "timestamp": "2025-11-14T22:44:03.273669",
+      "message": "V:Fri Nov 14 17:14:01 2025 - 301 for GET:\t/index.php?offset=[%20Problem%20Here%20]",
+      "level": "INFO"
+    },
+    {
+      "line_number": 316,
+      "timestamp": "2025-11-14T22:44:03.273671",
+      "message": "V:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/utils/sprc.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 317,
+      "timestamp": "2025-11-14T22:44:03.273673",
+      "message": "V:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/db.php?q='&t='",
+      "level": "INFO"
+    },
+    {
+      "line_number": 318,
+      "timestamp": "2025-11-14T22:44:03.273674",
+      "message": "V:Fri Nov 14 17:14:02 2025 - 301 for GET:\t/rpc.php?q='&t='",
+      "level": "INFO"
+    },
+    {
+      "line_number": 319,
+      "timestamp": "2025-11-14T22:44:03.273676",
+      "message": "V:Fri Nov 14 17:14:02 2025 - 301 for POST:\t/search.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 320,
+      "timestamp": "2025-11-14T22:44:03.273678",
+      "message": "V:Fri Nov 14 17:14:03 2025 - 301 for POST:\t/private.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 321,
+      "timestamp": "2025-11-14T22:44:03.273680",
+      "message": "+ 59 items checked: 0 error(s) and 12 item(s) reported on remote host",
+      "level": "ERROR",
+      "type": "finding",
+      "finding": "59 items checked: 0 error(s) and 12 item(s) reported on remote host"
+    },
+    {
+      "line_number": 322,
+      "timestamp": "2025-11-14T22:44:03.273682",
+      "message": "+ End Time:           2025-11-14 17:14:03 (GMT0) (52 seconds)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "End Time:           2025-11-14 17:14:03 (GMT0) (52 seconds)"
+    },
+    {
+      "line_number": 323,
+      "timestamp": "2025-11-14T22:44:03.273684",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 324,
+      "timestamp": "2025-11-14T22:44:03.273686",
+      "message": "+ 1 host(s) tested",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "1 host(s) tested"
+    },
+    {
+      "line_number": 325,
+      "timestamp": "2025-11-14T22:44:03.273688",
+      "message": "V:Fri Nov 14 17:14:03 2025 + 195 requests made in 53 seconds",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "V:Fri Nov 14 17:14:03 2025 195 requests made in 53 seconds"
+    }
+  ]
+}

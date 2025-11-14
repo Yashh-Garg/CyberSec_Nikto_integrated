@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: .
+    container_name: cybersec-ai-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./scan_results:/app/scan_results
+      - ./logs:/app/logs
+      # Note: Socket mount removed for Windows - using TCP instead
+    environment:
+      # Use TCP endpoint for Windows
+      - DOCKER_HOST=tcp://host.docker.internal:2375
+      - LOG_LEVEL=info
+      - SCAN_TIMEOUT=3600
+      - MAX_CONCURRENT_SCANS=5
+    restart: unless-stopped
+    networks:
+      - cybersec-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  cybersec-network:
+    driver: bridge

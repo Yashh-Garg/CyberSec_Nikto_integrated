@@ -1,0 +1,1613 @@
+{
+  "scan_id": "6a9fae10",
+  "target": "github.com/",
+  "port": 80,
+  "ssl": false,
+  "created_at": "2025-11-14T23:58:22.215582+05:30",
+  "completed_at": "2025-11-14T23:58:31.141874+05:30",
+  "findings_count": 8,
+  "results": {
+    "findings_count": 8,
+    "findings": [
+      {
+        "id": "NIKTO-3",
+        "severity": "MEDIUM",
+        "title": "The anti-clickjacking X-Frame-Options header is not present.",
+        "description": "The anti-clickjacking X-Frame-Options header is not present.",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [
+          "CVE-2009-0114",
+          "CVE-2009-0374",
+          "CVE-2010-2576"
+        ],
+        "osvdb_id": null,
+        "cvss_score": 6.8,
+        "remediation": "Add X-Frame-Options header: 'X-Frame-Options: DENY' or 'X-Frame-Options: SAMEORIGIN'",
+        "cve_details": [
+          {
+            "id": "CVE-2009-0374",
+            "cvss_score": 4.3,
+            "cvss_version": "2.0",
+            "description": "Google Chrome 1.0.154.43 allows remote attackers to trick a user into visiting an arbitrary URL via an onclick action that moves a crafted element to the current mouse position, related to a \"Clickjacking\" vulnerability.  NOTE: a third party disputes the relevance of this issue, stating that \"every sufficiently featured browser is and likely will remain susceptible to the behavior known as clickjacking,\" and adding that the exploit code \"is not a valid demonstration of the issue.",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0374"
+          },
+          {
+            "id": "CVE-2009-0114",
+            "cvss_score": 5.8,
+            "cvss_version": "2.0",
+            "description": "Unspecified vulnerability in the Settings Manager in Adobe Flash Player 9.x before 9.0.159.0 and 10.x before 10.0.22.87, and possibly other versions, allows remote attackers to trick a user into visiting an arbitrary URL via unknown vectors, related to \"a potential Clickjacking issue variant.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-0114"
+          },
+          {
+            "id": "CVE-2010-2576",
+            "cvss_score": 6.8,
+            "cvss_version": "2.0",
+            "description": "Opera before 10.61 does not properly suppress clicks on download dialogs that became visible after a recent tab change, which allows remote attackers to conduct clickjacking attacks, and consequently execute arbitrary code, via vectors involving (1) closing a tab or (2) hiding a tab, a related issue to CVE-2005-2407.",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-2576"
+          }
+        ],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-4",
+        "severity": "LOW",
+        "title": "Root page / redirects to: https://github.com/",
+        "description": "Root page / redirects to: https://github.com/",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-5",
+        "severity": "CRITICAL",
+        "title": "No CGI Directories found (use '-C all' to force check all possible dirs)",
+        "description": "No CGI Directories found (use '-C all' to force check all possible dirs)",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [
+          "CVE-2009-3023",
+          "CVE-2011-0655",
+          "CVE-2011-0976"
+        ],
+        "osvdb_id": null,
+        "cvss_score": 9.3,
+        "remediation": "Review CVE details and apply security patches or updates as recommended",
+        "cve_details": [
+          {
+            "id": "CVE-2009-3023",
+            "cvss_score": 9.0,
+            "cvss_version": "2.0",
+            "description": "Buffer overflow in the FTP Service in Microsoft Internet Information Services (IIS) 5.0 through 6.0 allows remote authenticated users to execute arbitrary code via a crafted NLST (NAME LIST) command that uses wildcards, leading to memory corruption, aka \"IIS FTP Service RCE and DoS Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3023"
+          },
+          {
+            "id": "CVE-2011-0976",
+            "cvss_score": 9.3,
+            "cvss_version": "2.0",
+            "description": "Microsoft PowerPoint 2002 SP3, 2003 SP3, and 2007 SP2; Office 2004 and 2008 for Mac; Open XML File Format Converter for Mac; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2; and PowerPoint Viewer 2007 SP2 do not properly handle Office Art containers that have invalid records, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a PowerPoint document with a container that triggers certain access to an uninitialized object, aka \"OfficeArt Atom RCE Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-0976"
+          },
+          {
+            "id": "CVE-2011-0655",
+            "cvss_score": 9.3,
+            "cvss_version": "2.0",
+            "description": "Microsoft PowerPoint 2007 SP2 and 2010; Office 2004, 2008, and 2011 for Mac; Open XML File Format Converter for Mac; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats SP2; PowerPoint Viewer; PowerPoint Viewer 2007 SP2; and PowerPoint Web App do not properly validate TimeColorBehaviorContainer Floating Point records in PowerPoint documents, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted document containing an invalid record, aka \"Floating Point Techno-color Time Bandit RCE Vulnerability.\"",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2011-0655"
+          }
+        ],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-6",
+        "severity": "LOW",
+        "title": "Uncommon header 'x-content-type-options' found, with contents: nosniff",
+        "description": "Uncommon header 'x-content-type-options' found, with contents: nosniff",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-7",
+        "severity": "LOW",
+        "title": "Uncommon header 'content-security-policy' found, with contents: default-src 'none'; style-src 'unsafe-inline'",
+        "description": "Uncommon header 'content-security-policy' found, with contents: default-src 'none'; style-src 'unsafe-inline'",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-8",
+        "severity": "MEDIUM",
+        "title": "Uncommon header 'x-frame-options' found, with contents: deny",
+        "description": "Uncommon header 'x-frame-options' found, with contents: deny",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": "Add X-Frame-Options header: 'X-Frame-Options: DENY' or 'X-Frame-Options: SAMEORIGIN'",
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-9",
+        "severity": "LOW",
+        "title": "Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload",
+        "description": "Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      },
+      {
+        "id": "NIKTO-10",
+        "severity": "HIGH",
+        "title": "Uncommon header 'x-xss-protection' found, with contents: 0",
+        "description": "Uncommon header 'x-xss-protection' found, with contents: 0",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [
+          "CVE-2002-1315",
+          "CVE-2002-1316",
+          "CVE-2003-0292"
+        ],
+        "osvdb_id": null,
+        "cvss_score": 6.8,
+        "remediation": "Implement Content Security Policy (CSP), input validation, and output encoding",
+        "cve_details": [
+          {
+            "id": "CVE-2002-1315",
+            "cvss_score": 6.8,
+            "cvss_version": "2.0",
+            "description": "Cross-site scripting (XSS) vulnerability in the Admin Server for iPlanet WebServer 4.x, up to SP11, allows remote attackers to execute web script or HTML as the iPlanet administrator by injecting the desired script into error logs, and possibly escalating privileges by using the XSS vulnerability in conjunction with another issue (CVE-2002-1316).",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1315"
+          },
+          {
+            "id": "CVE-2002-1316",
+            "cvss_score": 6.8,
+            "cvss_version": "2.0",
+            "description": "importInfo in the Admin Server for iPlanet WebServer 4.x, up to SP11, allows the web administrator to execute arbitrary commands via shell metacharacters in the dir parameter, and possibly allows remote attackers to exploit this vulnerability via a separate XSS issue (CVE-2002-1315).",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2002-1316"
+          },
+          {
+            "id": "CVE-2003-0292",
+            "cvss_score": 6.8,
+            "cvss_version": "2.0",
+            "description": "Cross-site scripting (XSS) vulnerability in Inktomi Traffic-Server 5.5.1 allows remote attackers to insert arbitrary web script or HTML into an error page that appears to come from the domain that the client is visiting, aka \"Man-in-the-Middle\" XSS.",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-0292"
+          }
+        ],
+        "scanner": "nikto"
+      }
+    ],
+    "scanner": "nikto",
+    "parsed_at": "2025-11-14T23:58:31.141806+05:30"
+  },
+  "risk_score": {
+    "score": 5.8,
+    "level": "MINIMAL",
+    "breakdown": {
+      "MEDIUM": {
+        "count": 2,
+        "score": 8
+      },
+      "LOW": {
+        "count": 4,
+        "score": 4
+      },
+      "CRITICAL": {
+        "count": 1,
+        "score": 10
+      },
+      "HIGH": {
+        "count": 1,
+        "score": 7
+      }
+    },
+    "total_findings": 8
+  },
+  "raw_output": "<?xml version=\"1.0\"?>\n<niktoscan>\n<scandata targetip=\"github.com\" targethostname=\"github.com\" targetport=\"80\" />\n<item id=\"1\">\n<description>Start Time:         2025-11-14 18:28:22 (GMT0)</description>\n<uri>/</uri>\n</item>\n<item id=\"2\">\n<description>Server: No banner retrieved</description>\n<uri>/</uri>\n</item>\n<item id=\"3\">\n<description>The anti-clickjacking X-Frame-Options header is not present.</description>\n<uri>/</uri>\n</item>\n<item id=\"4\">\n<description>Root page / redirects to: https://github.com/</description>\n<uri>/</uri>\n</item>\n<item id=\"5\">\n<description>No CGI Directories found (use &apos;-C all&apos; to force check all possible dirs)</description>\n<uri>/</uri>\n</item>\n<item id=\"6\">\n<description>Uncommon header &apos;x-content-type-options&apos; found, with contents: nosniff</description>\n<uri>/</uri>\n</item>\n<item id=\"7\">\n<description>Uncommon header &apos;content-security-policy&apos; found, with contents: default-src &apos;none&apos;; style-src &apos;unsafe-inline&apos;</description>\n<uri>/</uri>\n</item>\n<item id=\"8\">\n<description>Uncommon header &apos;x-frame-options&apos; found, with contents: deny</description>\n<uri>/</uri>\n</item>\n<item id=\"9\">\n<description>Uncommon header &apos;strict-transport-security&apos; found, with contents: max-age=31536000; includeSubDomains; preload</description>\n<uri>/</uri>\n</item>\n<item id=\"10\">\n<description>Uncommon header &apos;x-xss-protection&apos; found, with contents: 0</description>\n<uri>/</uri>\n</item>\n<item id=\"11\">\n<description>21 items checked: 0 error(s) and 6 item(s) reported on remote host</description>\n<uri>/</uri>\n</item>\n<item id=\"12\">\n<description>End Time:           2025-11-14 18:28:26 (GMT0) (4 seconds)</description>\n<uri>/</uri>\n</item>\n<item id=\"13\">\n<description>1 host(s) tested</description>\n<uri>/</uri>\n</item>\n</niktoscan>",
+  "logs": "- Nikto v2.1.5\n---------------------------------------------------------------------------\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apache_expect_xss\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Apache Expect XSS\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_multiple_index\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Multiple Index\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_paths\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Path Search\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_robots\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Robots\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_xml\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Report as XML\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_fileops\nV:Fri Nov 14 18:28:22 2025 - Loaded \"File Operations\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_clientaccesspolicy\nV:Fri Nov 14 18:28:22 2025 - Loaded \"clientaccesspolicy.xml\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_csv\nV:Fri Nov 14 18:28:22 2025 - Loaded \"CSV reports\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_msf\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Report data to Metasploit\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_html\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Report as HTML\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_outdated\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Outdated\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_subdomain\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Sub-domain forcer\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_cgi\nV:Fri Nov 14 18:28:22 2025 - Loaded \"CGI\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_dictionary_attack\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Dictionary attack\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_parked\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Parked Detection\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_auth\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Guess authentication\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_tests\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Nikto Tests\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_httpoptions\nV:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Options\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_msgs\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Server Messages\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apacheusers\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Apache Users\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_cookies\nV:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_favicon\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Favicon\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_headers\nV:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Headers\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_nbe\nV:Fri Nov 14 18:28:22 2025 - Loaded \"NBE reports\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_ssl\nV:Fri Nov 14 18:28:22 2025 - Loaded \"SSL and cert checks\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_embedded\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Embedded Detection\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_content_search\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Content Search\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_core\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_text\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Text reports\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_siebel\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Siebel Checks\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_put_del_test\nV:Fri Nov 14 18:28:22 2025 - Loaded \"Put/Delete test\" plugin.\nV:Fri Nov 14 18:28:22 2025 - Getting targets\nV:Fri Nov 14 18:28:22 2025 - Target:github.com port:80\nV:Fri Nov 14 18:28:22 2025 - Checking for HTTP on port github.com:80, using HEAD\nV:Fri Nov 14 18:28:22 2025 - 301 for HEAD:\t/\nV:Fri Nov 14 18:28:22 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)\nV:Fri Nov 14 18:28:22 2025 - Opening report for \"CSV reports\" plugin\nV:Fri Nov 14 18:28:22 2025 - 21 server checks loaded\nV:Fri Nov 14 18:28:22 2025 - Running start for \"Favicon\" plugin\nV:Fri Nov 14 18:28:22 2025 - Running start for \"HTTP Headers\" plugin\nV:Fri Nov 14 18:28:22 2025 - Running start for \"Embedded Detection\" plugin\nV:Fri Nov 14 18:28:22 2025 - Running start for \"Guess authentication\" plugin\nV:Fri Nov 14 18:28:22 2025 - Running start for \"Content Search\" plugin\nV:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/\n+ Target IP:          20.207.73.82\n+ Target Hostname:    github.com\n+ Target Port:        80\n+ Start Time:         2025-11-14 18:28:22 (GMT0)\n---------------------------------------------------------------------------\n+ Server: No banner retrieved\nV:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/\n+ The anti-clickjacking X-Frame-Options header is not present.\n+ Root page / redirects to: https://github.com/\nV:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60/\nV:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/Ovtjug60/\nV:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60.exe\nV:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/Ovtjug60.exe\nV:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60.php\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.php\nV:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.cgi\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.cgi\nV:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.cfm\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.cfm\nV:Fri Nov 14 18:28:23 2025 - Testing error for file: /.Ovtjug60\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/.Ovtjug60\nV:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.idc\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.idc\nV:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/index.php?\nV:Fri Nov 14 18:28:23 2025 - Running recon for \"CGI\" plugin\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi.cgi/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/webcgi/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-914/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-915/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/bin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/mpcgi/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-bin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/ows-bin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-sys/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-local/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/htbin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgibin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgis/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/scripts/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-win/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/fcgi-bin/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-exe/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-home/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-perl/\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/scgi-bin/\n+ No CGI Directories found (use '-C all' to force check all possible dirs)\nV:Fri Nov 14 18:28:23 2025 - Checking for CGI in: \nV:Fri Nov 14 18:28:23 2025 - Running recon for \"Path Search\" plugin\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:23 2025 - Running recon for \"Robots\" plugin\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/robots.txt\nV:Fri Nov 14 18:28:23 2025 - Running recon for \"clientaccesspolicy.xml\" plugin\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/clientaccesspolicy.xml\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/crossdomain.xml\nV:Fri Nov 14 18:28:23 2025 - Running scan for \"Apache Expect XSS\" plugin\nV:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:23 2025 - Running scan for \"Multiple Index\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.php\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.php3\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.html\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.htm\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.shtml\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.cfm\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.cgi\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.pl\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.asp\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.aspx\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.asp\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.aspx\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.htm\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.do\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.jhtml\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"Outdated\" plugin\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"Parked Detection\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"Apache Users\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/~root\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"Favicon\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/favicon.ico\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"HTTP Headers\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.asp\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/junk999.asp\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.aspx\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/junk988.aspx\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/login.asp\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/login.aspx\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/images\nV:Fri Nov 14 18:28:24 2025 - 400 for GET:\t.\n+ Uncommon header 'x-content-type-options' found, with contents: nosniff\n+ Uncommon header 'content-security-policy' found, with contents: default-src 'none'; style-src 'unsafe-inline'\n+ Uncommon header 'x-frame-options' found, with contents: deny\n+ Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload\n+ Uncommon header 'x-xss-protection' found, with contents: 0\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"SSL and cert checks\" plugin\nV:Fri Nov 14 18:28:24 2025 - Running scan for \"Embedded Detection\" plugin\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hmstat.htm\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/SoundBridgeStatus.html\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/eng/start/StatPtrGen.htm\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/cab/top.shtml\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/home.asp\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/\nV:Fri Nov 14 18:28:25 2025 - Running scan for \"Siebel Checks\" plugin\nV:Fri Nov 14 18:28:25 2025 No Siebel Application defined\nV:Fri Nov 14 18:28:25 2025 - Running scan for \"Put/Delete test\" plugin\nV:Fri Nov 14 18:28:25 2025 - 301 for PUT:\t/nikto-test-pjptL4WI.html\nV:Fri Nov 14 18:28:25 2025 - Running scan for \"HTTP Options\" plugin\nV:Fri Nov 14 18:28:25 2025 - 301 for OPTIONS:\t*\nV:Fri Nov 14 18:28:25 2025 - 301 for OPTIONS:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for DEBUG:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for PROPFIND:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for TRACE:\t/\nV:Fri Nov 14 18:28:25 2025 - 301 for TRACE:\t/\nV:Fri Nov 14 18:28:26 2025 - 301 for TRACK:\t/\nV:Fri Nov 14 18:28:26 2025 - 301 for TRACK:\t/\nV:Fri Nov 14 18:28:26 2025 - Running scan for \"Server Messages\" plugin\nV:Fri Nov 14 18:28:26 2025 - Running scan for \"Nikto Tests\" plugin\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfappman/index.cfm\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfdocs/examples/cvbeans/beaninfo.cfm\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfdocs/examples/parks/detail.cfm\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/kboard/\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/lists/admin/\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/splashAdmin.php\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/ssdefs/\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/sshome/\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/tiki/\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/tiki/tiki-install.php\nV:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/scripts/samples/details.idc\n+ 21 items checked: 0 error(s) and 6 item(s) reported on remote host\n+ End Time:           2025-11-14 18:28:26 (GMT0) (4 seconds)\n---------------------------------------------------------------------------\n+ 1 host(s) tested\nV:Fri Nov 14 18:28:26 2025 + 102 requests made in 4 seconds\n",
+  "log_events": [
+    {
+      "line_number": 1,
+      "timestamp": "2025-11-14T23:58:26.666141",
+      "message": "- Nikto v2.1.5",
+      "level": "INFO"
+    },
+    {
+      "line_number": 2,
+      "timestamp": "2025-11-14T23:58:26.666151",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 3,
+      "timestamp": "2025-11-14T23:58:26.666153",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apache_expect_xss",
+      "level": "INFO"
+    },
+    {
+      "line_number": 4,
+      "timestamp": "2025-11-14T23:58:26.666156",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Apache Expect XSS\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 5,
+      "timestamp": "2025-11-14T23:58:26.666160",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_multiple_index",
+      "level": "INFO"
+    },
+    {
+      "line_number": 6,
+      "timestamp": "2025-11-14T23:58:26.666162",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Multiple Index\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 7,
+      "timestamp": "2025-11-14T23:58:26.666164",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_paths",
+      "level": "INFO"
+    },
+    {
+      "line_number": 8,
+      "timestamp": "2025-11-14T23:58:26.666166",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Path Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 9,
+      "timestamp": "2025-11-14T23:58:26.666168",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_robots",
+      "level": "INFO"
+    },
+    {
+      "line_number": 10,
+      "timestamp": "2025-11-14T23:58:26.666170",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Robots\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 11,
+      "timestamp": "2025-11-14T23:58:26.666172",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 12,
+      "timestamp": "2025-11-14T23:58:26.666174",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Report as XML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 13,
+      "timestamp": "2025-11-14T23:58:26.666177",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_fileops",
+      "level": "INFO"
+    },
+    {
+      "line_number": 14,
+      "timestamp": "2025-11-14T23:58:26.666178",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"File Operations\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 15,
+      "timestamp": "2025-11-14T23:58:26.666180",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_clientaccesspolicy",
+      "level": "INFO"
+    },
+    {
+      "line_number": 16,
+      "timestamp": "2025-11-14T23:58:26.666182",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"clientaccesspolicy.xml\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 17,
+      "timestamp": "2025-11-14T23:58:26.666184",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_csv",
+      "level": "INFO"
+    },
+    {
+      "line_number": 18,
+      "timestamp": "2025-11-14T23:58:26.666186",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"CSV reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 19,
+      "timestamp": "2025-11-14T23:58:26.666189",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_msf",
+      "level": "INFO"
+    },
+    {
+      "line_number": 20,
+      "timestamp": "2025-11-14T23:58:26.666192",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Report data to Metasploit\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 21,
+      "timestamp": "2025-11-14T23:58:26.666195",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 22,
+      "timestamp": "2025-11-14T23:58:26.666198",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Report as HTML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 23,
+      "timestamp": "2025-11-14T23:58:26.666201",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_outdated",
+      "level": "INFO"
+    },
+    {
+      "line_number": 24,
+      "timestamp": "2025-11-14T23:58:26.666204",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Outdated\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 25,
+      "timestamp": "2025-11-14T23:58:26.666207",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_subdomain",
+      "level": "INFO"
+    },
+    {
+      "line_number": 26,
+      "timestamp": "2025-11-14T23:58:26.666210",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Sub-domain forcer\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 27,
+      "timestamp": "2025-11-14T23:58:26.666213",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 28,
+      "timestamp": "2025-11-14T23:58:26.666216",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"CGI\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 29,
+      "timestamp": "2025-11-14T23:58:26.666218",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_dictionary_attack",
+      "level": "INFO"
+    },
+    {
+      "line_number": 30,
+      "timestamp": "2025-11-14T23:58:26.666221",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Dictionary attack\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 31,
+      "timestamp": "2025-11-14T23:58:26.666224",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_parked",
+      "level": "INFO"
+    },
+    {
+      "line_number": 32,
+      "timestamp": "2025-11-14T23:58:26.666227",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Parked Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 33,
+      "timestamp": "2025-11-14T23:58:26.666262",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_auth",
+      "level": "INFO"
+    },
+    {
+      "line_number": 34,
+      "timestamp": "2025-11-14T23:58:26.666269",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Guess authentication\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 35,
+      "timestamp": "2025-11-14T23:58:26.666273",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_tests",
+      "level": "INFO"
+    },
+    {
+      "line_number": 36,
+      "timestamp": "2025-11-14T23:58:26.666276",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Nikto Tests\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 37,
+      "timestamp": "2025-11-14T23:58:26.666278",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_httpoptions",
+      "level": "INFO"
+    },
+    {
+      "line_number": 38,
+      "timestamp": "2025-11-14T23:58:26.666280",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Options\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 39,
+      "timestamp": "2025-11-14T23:58:26.666281",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_msgs",
+      "level": "INFO"
+    },
+    {
+      "line_number": 40,
+      "timestamp": "2025-11-14T23:58:26.666283",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Server Messages\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 41,
+      "timestamp": "2025-11-14T23:58:26.666285",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apacheusers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 42,
+      "timestamp": "2025-11-14T23:58:26.666287",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Apache Users\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 43,
+      "timestamp": "2025-11-14T23:58:26.666289",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_cookies",
+      "level": "INFO"
+    },
+    {
+      "line_number": 44,
+      "timestamp": "2025-11-14T23:58:26.666291",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 45,
+      "timestamp": "2025-11-14T23:58:26.666293",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_favicon",
+      "level": "INFO"
+    },
+    {
+      "line_number": 46,
+      "timestamp": "2025-11-14T23:58:26.666295",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Favicon\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 47,
+      "timestamp": "2025-11-14T23:58:26.666297",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_headers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 48,
+      "timestamp": "2025-11-14T23:58:26.666299",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"HTTP Headers\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 49,
+      "timestamp": "2025-11-14T23:58:26.666300",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_nbe",
+      "level": "INFO"
+    },
+    {
+      "line_number": 50,
+      "timestamp": "2025-11-14T23:58:26.666302",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"NBE reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 51,
+      "timestamp": "2025-11-14T23:58:26.666304",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_ssl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 52,
+      "timestamp": "2025-11-14T23:58:26.666306",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"SSL and cert checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 53,
+      "timestamp": "2025-11-14T23:58:26.666308",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_embedded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 54,
+      "timestamp": "2025-11-14T23:58:26.666310",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Embedded Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 55,
+      "timestamp": "2025-11-14T23:58:26.666312",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_content_search",
+      "level": "INFO"
+    },
+    {
+      "line_number": 56,
+      "timestamp": "2025-11-14T23:58:26.666314",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Content Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 57,
+      "timestamp": "2025-11-14T23:58:26.666316",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_core",
+      "level": "INFO"
+    },
+    {
+      "line_number": 58,
+      "timestamp": "2025-11-14T23:58:26.666318",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_text",
+      "level": "INFO"
+    },
+    {
+      "line_number": 59,
+      "timestamp": "2025-11-14T23:58:26.666324",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Text reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 60,
+      "timestamp": "2025-11-14T23:58:26.666327",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_siebel",
+      "level": "INFO"
+    },
+    {
+      "line_number": 61,
+      "timestamp": "2025-11-14T23:58:26.666328",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Siebel Checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 62,
+      "timestamp": "2025-11-14T23:58:26.666330",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_put_del_test",
+      "level": "INFO"
+    },
+    {
+      "line_number": 63,
+      "timestamp": "2025-11-14T23:58:26.666332",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Loaded \"Put/Delete test\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 64,
+      "timestamp": "2025-11-14T23:58:26.666334",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Getting targets",
+      "level": "INFO"
+    },
+    {
+      "line_number": 65,
+      "timestamp": "2025-11-14T23:58:26.666336",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Target:github.com port:80",
+      "level": "INFO"
+    },
+    {
+      "line_number": 66,
+      "timestamp": "2025-11-14T23:58:26.666338",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Checking for HTTP on port github.com:80, using HEAD",
+      "level": "INFO"
+    },
+    {
+      "line_number": 67,
+      "timestamp": "2025-11-14T23:58:26.666340",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 301 for HEAD:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 68,
+      "timestamp": "2025-11-14T23:58:26.666342",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)",
+      "level": "INFO"
+    },
+    {
+      "line_number": 69,
+      "timestamp": "2025-11-14T23:58:26.666344",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Opening report for \"CSV reports\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 70,
+      "timestamp": "2025-11-14T23:58:26.666346",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 21 server checks loaded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 71,
+      "timestamp": "2025-11-14T23:58:26.666348",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Running start for \"Favicon\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 72,
+      "timestamp": "2025-11-14T23:58:26.666350",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Running start for \"HTTP Headers\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 73,
+      "timestamp": "2025-11-14T23:58:26.666352",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Running start for \"Embedded Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 74,
+      "timestamp": "2025-11-14T23:58:26.666354",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Running start for \"Guess authentication\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 75,
+      "timestamp": "2025-11-14T23:58:26.666356",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Running start for \"Content Search\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 76,
+      "timestamp": "2025-11-14T23:58:26.666358",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 77,
+      "timestamp": "2025-11-14T23:58:26.666360",
+      "message": "+ Target IP:          20.207.73.82",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target IP:          20.207.73.82"
+    },
+    {
+      "line_number": 78,
+      "timestamp": "2025-11-14T23:58:26.666363",
+      "message": "+ Target Hostname:    github.com",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target Hostname:    github.com"
+    },
+    {
+      "line_number": 79,
+      "timestamp": "2025-11-14T23:58:26.666366",
+      "message": "+ Target Port:        80",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Target Port:        80"
+    },
+    {
+      "line_number": 80,
+      "timestamp": "2025-11-14T23:58:26.666368",
+      "message": "+ Start Time:         2025-11-14 18:28:22 (GMT0)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Start Time:         2025-11-14 18:28:22 (GMT0)"
+    },
+    {
+      "line_number": 81,
+      "timestamp": "2025-11-14T23:58:26.666369",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 82,
+      "timestamp": "2025-11-14T23:58:26.666372",
+      "message": "+ Server: No banner retrieved",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Server: No banner retrieved"
+    },
+    {
+      "line_number": 83,
+      "timestamp": "2025-11-14T23:58:26.666374",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 84,
+      "timestamp": "2025-11-14T23:58:26.666375",
+      "message": "+ The anti-clickjacking X-Frame-Options header is not present.",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "The anti-clickjacking X-Frame-Options header is not present."
+    },
+    {
+      "line_number": 85,
+      "timestamp": "2025-11-14T23:58:26.666377",
+      "message": "+ Root page / redirects to: https://github.com/",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Root page / redirects to: https://github.com/"
+    },
+    {
+      "line_number": 86,
+      "timestamp": "2025-11-14T23:58:26.666379",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60/",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 87,
+      "timestamp": "2025-11-14T23:58:26.666381",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/Ovtjug60/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 88,
+      "timestamp": "2025-11-14T23:58:26.666383",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60.exe",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 89,
+      "timestamp": "2025-11-14T23:58:26.666385",
+      "message": "V:Fri Nov 14 18:28:22 2025 - 301 for GET:\t/Ovtjug60.exe",
+      "level": "INFO"
+    },
+    {
+      "line_number": 90,
+      "timestamp": "2025-11-14T23:58:26.666387",
+      "message": "V:Fri Nov 14 18:28:22 2025 - Testing error for file: /Ovtjug60.php",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 91,
+      "timestamp": "2025-11-14T23:58:26.666388",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 92,
+      "timestamp": "2025-11-14T23:58:26.666390",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.cgi",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 93,
+      "timestamp": "2025-11-14T23:58:26.666392",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 94,
+      "timestamp": "2025-11-14T23:58:26.666394",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.cfm",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 95,
+      "timestamp": "2025-11-14T23:58:26.666396",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 96,
+      "timestamp": "2025-11-14T23:58:26.666397",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Testing error for file: /.Ovtjug60",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 97,
+      "timestamp": "2025-11-14T23:58:26.666399",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/.Ovtjug60",
+      "level": "INFO"
+    },
+    {
+      "line_number": 98,
+      "timestamp": "2025-11-14T23:58:26.666401",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60.idc",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 99,
+      "timestamp": "2025-11-14T23:58:26.666404",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60.idc",
+      "level": "INFO"
+    },
+    {
+      "line_number": 100,
+      "timestamp": "2025-11-14T23:58:26.666406",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Testing error for file: /Ovtjug60",
+      "level": "ERROR"
+    },
+    {
+      "line_number": 101,
+      "timestamp": "2025-11-14T23:58:26.666408",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/Ovtjug60",
+      "level": "INFO"
+    },
+    {
+      "line_number": 102,
+      "timestamp": "2025-11-14T23:58:26.666409",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/index.php?",
+      "level": "INFO"
+    },
+    {
+      "line_number": 103,
+      "timestamp": "2025-11-14T23:58:26.666411",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running recon for \"CGI\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 104,
+      "timestamp": "2025-11-14T23:58:26.666413",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi.cgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 105,
+      "timestamp": "2025-11-14T23:58:26.666414",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/webcgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 106,
+      "timestamp": "2025-11-14T23:58:26.666416",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-914/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 107,
+      "timestamp": "2025-11-14T23:58:26.666419",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-915/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 108,
+      "timestamp": "2025-11-14T23:58:26.666421",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 109,
+      "timestamp": "2025-11-14T23:58:26.666423",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 110,
+      "timestamp": "2025-11-14T23:58:26.666425",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/mpcgi/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 111,
+      "timestamp": "2025-11-14T23:58:26.666426",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 112,
+      "timestamp": "2025-11-14T23:58:26.666429",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/ows-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 113,
+      "timestamp": "2025-11-14T23:58:26.666431",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-sys/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 114,
+      "timestamp": "2025-11-14T23:58:26.666432",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-local/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 115,
+      "timestamp": "2025-11-14T23:58:26.666434",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/htbin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 116,
+      "timestamp": "2025-11-14T23:58:26.666435",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgibin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 117,
+      "timestamp": "2025-11-14T23:58:26.666437",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgis/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 118,
+      "timestamp": "2025-11-14T23:58:26.666439",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/scripts/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 119,
+      "timestamp": "2025-11-14T23:58:26.666440",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-win/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 120,
+      "timestamp": "2025-11-14T23:58:26.666442",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/fcgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 121,
+      "timestamp": "2025-11-14T23:58:26.666443",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-exe/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 122,
+      "timestamp": "2025-11-14T23:58:26.666445",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-home/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 123,
+      "timestamp": "2025-11-14T23:58:26.666447",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/cgi-perl/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 124,
+      "timestamp": "2025-11-14T23:58:26.666448",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/scgi-bin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 125,
+      "timestamp": "2025-11-14T23:58:26.666450",
+      "message": "+ No CGI Directories found (use '-C all' to force check all possible dirs)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "No CGI Directories found (use '-C all' to force check all possible dirs)"
+    },
+    {
+      "line_number": 126,
+      "timestamp": "2025-11-14T23:58:26.666452",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Checking for CGI in:",
+      "level": "INFO"
+    },
+    {
+      "line_number": 127,
+      "timestamp": "2025-11-14T23:58:26.666455",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running recon for \"Path Search\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 128,
+      "timestamp": "2025-11-14T23:58:26.666457",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 129,
+      "timestamp": "2025-11-14T23:58:26.666458",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running recon for \"Robots\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 130,
+      "timestamp": "2025-11-14T23:58:26.666460",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/robots.txt",
+      "level": "INFO"
+    },
+    {
+      "line_number": 131,
+      "timestamp": "2025-11-14T23:58:26.666462",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running recon for \"clientaccesspolicy.xml\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 132,
+      "timestamp": "2025-11-14T23:58:26.666466",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/clientaccesspolicy.xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 133,
+      "timestamp": "2025-11-14T23:58:26.666468",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/crossdomain.xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 134,
+      "timestamp": "2025-11-14T23:58:26.666470",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running scan for \"Apache Expect XSS\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 135,
+      "timestamp": "2025-11-14T23:58:26.666472",
+      "message": "V:Fri Nov 14 18:28:23 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 136,
+      "timestamp": "2025-11-14T23:58:26.666474",
+      "message": "V:Fri Nov 14 18:28:23 2025 - Running scan for \"Multiple Index\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 137,
+      "timestamp": "2025-11-14T23:58:26.666476",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 138,
+      "timestamp": "2025-11-14T23:58:26.666477",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.php3",
+      "level": "INFO"
+    },
+    {
+      "line_number": 139,
+      "timestamp": "2025-11-14T23:58:26.666479",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 140,
+      "timestamp": "2025-11-14T23:58:26.666480",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 141,
+      "timestamp": "2025-11-14T23:58:26.666482",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.shtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 142,
+      "timestamp": "2025-11-14T23:58:26.666484",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 143,
+      "timestamp": "2025-11-14T23:58:26.666485",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 144,
+      "timestamp": "2025-11-14T23:58:26.666487",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.pl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 145,
+      "timestamp": "2025-11-14T23:58:26.666488",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 146,
+      "timestamp": "2025-11-14T23:58:26.666490",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 147,
+      "timestamp": "2025-11-14T23:58:26.666491",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 148,
+      "timestamp": "2025-11-14T23:58:26.666493",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 149,
+      "timestamp": "2025-11-14T23:58:26.666495",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/default.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 150,
+      "timestamp": "2025-11-14T23:58:26.666497",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.do",
+      "level": "INFO"
+    },
+    {
+      "line_number": 151,
+      "timestamp": "2025-11-14T23:58:26.666498",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.jhtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 152,
+      "timestamp": "2025-11-14T23:58:26.666500",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"Outdated\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 153,
+      "timestamp": "2025-11-14T23:58:26.666502",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"Parked Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 154,
+      "timestamp": "2025-11-14T23:58:26.666504",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 155,
+      "timestamp": "2025-11-14T23:58:26.666505",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"Apache Users\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 156,
+      "timestamp": "2025-11-14T23:58:26.666507",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/~root",
+      "level": "INFO"
+    },
+    {
+      "line_number": 157,
+      "timestamp": "2025-11-14T23:58:26.666509",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"Favicon\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 158,
+      "timestamp": "2025-11-14T23:58:26.666512",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/favicon.ico",
+      "level": "INFO"
+    },
+    {
+      "line_number": 159,
+      "timestamp": "2025-11-14T23:58:26.666514",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 160,
+      "timestamp": "2025-11-14T23:58:26.666516",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"HTTP Headers\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 161,
+      "timestamp": "2025-11-14T23:58:26.666517",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 162,
+      "timestamp": "2025-11-14T23:58:26.666520",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/junk999.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 163,
+      "timestamp": "2025-11-14T23:58:26.666522",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/index.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 164,
+      "timestamp": "2025-11-14T23:58:26.666524",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/junk988.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 165,
+      "timestamp": "2025-11-14T23:58:26.666526",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/login.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 166,
+      "timestamp": "2025-11-14T23:58:26.666527",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/login.aspx",
+      "level": "INFO"
+    },
+    {
+      "line_number": 167,
+      "timestamp": "2025-11-14T23:58:26.666529",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 168,
+      "timestamp": "2025-11-14T23:58:26.666531",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/images",
+      "level": "INFO"
+    },
+    {
+      "line_number": 169,
+      "timestamp": "2025-11-14T23:58:26.666532",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 400 for GET:\t.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 170,
+      "timestamp": "2025-11-14T23:58:26.666534",
+      "message": "+ Uncommon header 'x-content-type-options' found, with contents: nosniff",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'x-content-type-options' found, with contents: nosniff"
+    },
+    {
+      "line_number": 171,
+      "timestamp": "2025-11-14T23:58:26.666536",
+      "message": "+ Uncommon header 'content-security-policy' found, with contents: default-src 'none'; style-src 'unsafe-inline'",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'content-security-policy' found, with contents: default-src 'none'; style-src 'unsafe-inline'"
+    },
+    {
+      "line_number": 172,
+      "timestamp": "2025-11-14T23:58:26.666539",
+      "message": "+ Uncommon header 'x-frame-options' found, with contents: deny",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'x-frame-options' found, with contents: deny"
+    },
+    {
+      "line_number": 173,
+      "timestamp": "2025-11-14T23:58:26.666541",
+      "message": "+ Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'strict-transport-security' found, with contents: max-age=31536000; includeSubDomains; preload"
+    },
+    {
+      "line_number": 174,
+      "timestamp": "2025-11-14T23:58:26.666543",
+      "message": "+ Uncommon header 'x-xss-protection' found, with contents: 0",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "Uncommon header 'x-xss-protection' found, with contents: 0"
+    },
+    {
+      "line_number": 175,
+      "timestamp": "2025-11-14T23:58:26.666545",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"SSL and cert checks\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 176,
+      "timestamp": "2025-11-14T23:58:26.666547",
+      "message": "V:Fri Nov 14 18:28:24 2025 - Running scan for \"Embedded Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 177,
+      "timestamp": "2025-11-14T23:58:26.666549",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 178,
+      "timestamp": "2025-11-14T23:58:26.666551",
+      "message": "V:Fri Nov 14 18:28:24 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 179,
+      "timestamp": "2025-11-14T23:58:26.666553",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 180,
+      "timestamp": "2025-11-14T23:58:26.666554",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 181,
+      "timestamp": "2025-11-14T23:58:26.666556",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 182,
+      "timestamp": "2025-11-14T23:58:26.666558",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 183,
+      "timestamp": "2025-11-14T23:58:26.666560",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 184,
+      "timestamp": "2025-11-14T23:58:26.666561",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hp/device/this.LCDispatcher",
+      "level": "INFO"
+    },
+    {
+      "line_number": 185,
+      "timestamp": "2025-11-14T23:58:26.666563",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/hmstat.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 186,
+      "timestamp": "2025-11-14T23:58:26.666565",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/SoundBridgeStatus.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 187,
+      "timestamp": "2025-11-14T23:58:26.666566",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/eng/start/StatPtrGen.htm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 188,
+      "timestamp": "2025-11-14T23:58:26.666568",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/cab/top.shtml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 189,
+      "timestamp": "2025-11-14T23:58:26.666570",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/home.asp",
+      "level": "INFO"
+    },
+    {
+      "line_number": 190,
+      "timestamp": "2025-11-14T23:58:26.666572",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 191,
+      "timestamp": "2025-11-14T23:58:26.666573",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 192,
+      "timestamp": "2025-11-14T23:58:26.666575",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 193,
+      "timestamp": "2025-11-14T23:58:26.666576",
+      "message": "V:Fri Nov 14 18:28:25 2025 - Running scan for \"Siebel Checks\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 194,
+      "timestamp": "2025-11-14T23:58:26.666578",
+      "message": "V:Fri Nov 14 18:28:25 2025 No Siebel Application defined",
+      "level": "INFO"
+    },
+    {
+      "line_number": 195,
+      "timestamp": "2025-11-14T23:58:26.666580",
+      "message": "V:Fri Nov 14 18:28:25 2025 - Running scan for \"Put/Delete test\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 196,
+      "timestamp": "2025-11-14T23:58:26.666582",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for PUT:\t/nikto-test-pjptL4WI.html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 197,
+      "timestamp": "2025-11-14T23:58:26.666586",
+      "message": "V:Fri Nov 14 18:28:25 2025 - Running scan for \"HTTP Options\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 198,
+      "timestamp": "2025-11-14T23:58:26.666588",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for OPTIONS:\t*",
+      "level": "INFO"
+    },
+    {
+      "line_number": 199,
+      "timestamp": "2025-11-14T23:58:26.666590",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for OPTIONS:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 200,
+      "timestamp": "2025-11-14T23:58:26.666591",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for DEBUG:\t/",
+      "level": "DEBUG"
+    },
+    {
+      "line_number": 201,
+      "timestamp": "2025-11-14T23:58:26.666593",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for PROPFIND:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 202,
+      "timestamp": "2025-11-14T23:58:26.666595",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for TRACE:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 203,
+      "timestamp": "2025-11-14T23:58:26.666597",
+      "message": "V:Fri Nov 14 18:28:25 2025 - 301 for TRACE:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 204,
+      "timestamp": "2025-11-14T23:58:26.666598",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for TRACK:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 205,
+      "timestamp": "2025-11-14T23:58:26.666600",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for TRACK:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 206,
+      "timestamp": "2025-11-14T23:58:26.666601",
+      "message": "V:Fri Nov 14 18:28:26 2025 - Running scan for \"Server Messages\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 207,
+      "timestamp": "2025-11-14T23:58:26.666603",
+      "message": "V:Fri Nov 14 18:28:26 2025 - Running scan for \"Nikto Tests\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 208,
+      "timestamp": "2025-11-14T23:58:26.666605",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfappman/index.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 209,
+      "timestamp": "2025-11-14T23:58:26.666607",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfdocs/examples/cvbeans/beaninfo.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 210,
+      "timestamp": "2025-11-14T23:58:26.666611",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/cfdocs/examples/parks/detail.cfm",
+      "level": "INFO"
+    },
+    {
+      "line_number": 211,
+      "timestamp": "2025-11-14T23:58:26.666613",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/kboard/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 212,
+      "timestamp": "2025-11-14T23:58:26.666615",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/lists/admin/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 213,
+      "timestamp": "2025-11-14T23:58:26.666617",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/splashAdmin.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 214,
+      "timestamp": "2025-11-14T23:58:26.666619",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/ssdefs/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 215,
+      "timestamp": "2025-11-14T23:58:26.666620",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/sshome/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 216,
+      "timestamp": "2025-11-14T23:58:26.666622",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/tiki/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 217,
+      "timestamp": "2025-11-14T23:58:26.666624",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/tiki/tiki-install.php",
+      "level": "INFO"
+    },
+    {
+      "line_number": 218,
+      "timestamp": "2025-11-14T23:58:26.666626",
+      "message": "V:Fri Nov 14 18:28:26 2025 - 301 for GET:\t/scripts/samples/details.idc",
+      "level": "INFO"
+    },
+    {
+      "line_number": 219,
+      "timestamp": "2025-11-14T23:58:26.666627",
+      "message": "+ 21 items checked: 0 error(s) and 6 item(s) reported on remote host",
+      "level": "ERROR",
+      "type": "finding",
+      "finding": "21 items checked: 0 error(s) and 6 item(s) reported on remote host"
+    },
+    {
+      "line_number": 220,
+      "timestamp": "2025-11-14T23:58:26.666629",
+      "message": "+ End Time:           2025-11-14 18:28:26 (GMT0) (4 seconds)",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "End Time:           2025-11-14 18:28:26 (GMT0) (4 seconds)"
+    },
+    {
+      "line_number": 221,
+      "timestamp": "2025-11-14T23:58:26.666631",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 222,
+      "timestamp": "2025-11-14T23:58:26.666633",
+      "message": "+ 1 host(s) tested",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "1 host(s) tested"
+    },
+    {
+      "line_number": 223,
+      "timestamp": "2025-11-14T23:58:26.666635",
+      "message": "V:Fri Nov 14 18:28:26 2025 + 102 requests made in 4 seconds",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "V:Fri Nov 14 18:28:26 2025 102 requests made in 4 seconds"
+    }
+  ]
+}

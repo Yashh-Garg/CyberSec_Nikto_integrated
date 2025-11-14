@@ -1,0 +1,1720 @@
+2025-11-14 15:29:21,218 - backend.main - INFO - Scan eb280623 queued for https://jimsrohini.org/:80
+2025-11-14 15:29:21,221 - backend.main - INFO - Starting scan eb280623 for https://jimsrohini.org/:80
+2025-11-14 15:29:21,230 - nikto_scanner - WARNING - Failed to connect with default Docker client: Error while fetching server API version: Not supported URL scheme http+docker
+2025-11-14 15:29:21,234 - backend.main - ERROR - Failed to initialize scanner: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+2025-11-14 15:29:21,235 - backend.main - ERROR - Scan eb280623 failed: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 32, in __init__
+    self.client = docker.from_env()
+                  ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 96, in from_env
+    return cls(
+           ^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 40, in __init__
+    self.client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 45, in __init__
+    self.client = docker.DockerClient(base_url='npipe:////./pipe/docker_engine')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 155, in __init__
+    raise DockerException(
+docker.errors.DockerException: The npipe:// protocol is only supported on Windows
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 71, in get_scanner
+    _scanner_instance = NiktoScanner()
+                        ^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 55, in __init__
+    raise Exception(
+Exception: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 132, in run_scan
+    scanner_instance = get_scanner()
+                       ^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 74, in get_scanner
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-14 15:37:37,719 - backend.main - INFO - Scan fc659427 queued for https://jimsrohini.org/:80
+2025-11-14 15:37:37,722 - backend.main - INFO - Starting scan fc659427 for https://jimsrohini.org/:80
+2025-11-14 15:37:37,732 - nikto_scanner - WARNING - Failed to connect with default Docker client: Error while fetching server API version: Not supported URL scheme http+docker
+2025-11-14 15:37:37,738 - backend.main - ERROR - Failed to initialize scanner: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+2025-11-14 15:37:37,739 - backend.main - ERROR - Scan fc659427 failed: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 32, in __init__
+    self.client = docker.from_env()
+                  ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 96, in from_env
+    return cls(
+           ^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 40, in __init__
+    self.client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 45, in __init__
+    self.client = docker.DockerClient(base_url='npipe:////./pipe/docker_engine')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 155, in __init__
+    raise DockerException(
+docker.errors.DockerException: The npipe:// protocol is only supported on Windows
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 71, in get_scanner
+    _scanner_instance = NiktoScanner()
+                        ^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 55, in __init__
+    raise Exception(
+Exception: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 132, in run_scan
+    scanner_instance = get_scanner()
+                       ^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 74, in get_scanner
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-14 15:38:12,759 - backend.main - INFO - Scan d5272d0a queued for https://jimsrohini.org/:80
+2025-11-14 15:38:12,763 - backend.main - INFO - Starting scan d5272d0a for https://jimsrohini.org/:80
+2025-11-14 15:38:12,764 - nikto_scanner - WARNING - Failed to connect with default Docker client: Error while fetching server API version: Not supported URL scheme http+docker
+2025-11-14 15:38:12,769 - backend.main - ERROR - Failed to initialize scanner: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+2025-11-14 15:38:12,769 - backend.main - ERROR - Scan d5272d0a failed: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 32, in __init__
+    self.client = docker.from_env()
+                  ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 96, in from_env
+    return cls(
+           ^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 40, in __init__
+    self.client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 45, in __init__
+    self.client = docker.DockerClient(base_url='npipe:////./pipe/docker_engine')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 155, in __init__
+    raise DockerException(
+docker.errors.DockerException: The npipe:// protocol is only supported on Windows
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 71, in get_scanner
+    _scanner_instance = NiktoScanner()
+                        ^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 55, in __init__
+    raise Exception(
+Exception: Cannot connect to Docker. Please ensure Docker is running. On Windows, you may need to enable 'Expose daemon on tcp://localhost:2375' in Docker Desktop settings, or use WSL2 backend.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 132, in run_scan
+    scanner_instance = get_scanner()
+                       ^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 74, in get_scanner
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-14 15:47:40,454 - backend.main - INFO - Scan 70b75f7f queued for https://jimsrohini.org/:80
+2025-11-14 15:47:40,457 - backend.main - INFO - Starting scan 70b75f7f for https://jimsrohini.org/:80
+2025-11-14 15:47:40,457 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 15:47:40,477 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 15:47:40,479 - backend.main - ERROR - Scan 70b75f7f failed: cannot access local variable 'time' where it is not associated with a value
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 133, in run_scan
+    scan_result = await loop.run_in_executor(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 135, in <lambda>
+    lambda: scanner_instance.scan(
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 121, in scan
+    scan_id = f"nikto_{int(time.time())}"
+                           ^^^^
+UnboundLocalError: cannot access local variable 'time' where it is not associated with a value
+2025-11-14 15:48:37,881 - backend.main - INFO - Scan bde892a6 queued for https://jimsrohini.org/:80
+2025-11-14 15:48:37,881 - backend.main - INFO - Starting scan bde892a6 for https://jimsrohini.org/:80
+2025-11-14 15:48:37,882 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 15:48:37,898 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 15:48:37,899 - backend.main - ERROR - Scan bde892a6 failed: cannot access local variable 'time' where it is not associated with a value
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 133, in run_scan
+    scan_result = await loop.run_in_executor(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 135, in <lambda>
+    lambda: scanner_instance.scan(
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 121, in scan
+    scan_id = f"nikto_{int(time.time())}"
+                           ^^^^
+UnboundLocalError: cannot access local variable 'time' where it is not associated with a value
+2025-11-14 15:49:09,942 - backend.main - INFO - Scan 8079c09c queued for https://jimsrohini.org/:80
+2025-11-14 15:49:09,942 - backend.main - INFO - Starting scan 8079c09c for https://jimsrohini.org/:80
+2025-11-14 15:49:09,943 - backend.main - ERROR - Scan 8079c09c failed: cannot access local variable 'time' where it is not associated with a value
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 133, in run_scan
+    scan_result = await loop.run_in_executor(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 135, in <lambda>
+    lambda: scanner_instance.scan(
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 121, in scan
+    scan_id = f"nikto_{int(time.time())}"
+                           ^^^^
+UnboundLocalError: cannot access local variable 'time' where it is not associated with a value
+2025-11-14 15:49:40,236 - backend.main - INFO - Scan 29dfad3c queued for https://jimsrohini.org/:80
+2025-11-14 15:49:40,237 - backend.main - INFO - Starting scan 29dfad3c for https://jimsrohini.org/:80
+2025-11-14 15:49:40,237 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 15:49:40,253 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 15:49:40,254 - nikto_scanner - INFO - Starting Nikto scan nikto_1763135380 for https://jimsrohini.org/:80
+2025-11-14 15:49:40,273 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-14 15:49:40,273 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 15:49:40,528 - nikto_scanner - INFO - Container e3f0aa0ca7ca3d6b0999417457a54dd769e2a84d0ddbf4705126f917de2267ef started for scan nikto_1763135380
+2025-11-14 15:51:02,013 - backend.main - INFO - Scan 70c084db queued for testphp.vulnweb.com:80
+2025-11-14 15:51:02,014 - backend.main - INFO - Starting scan 70c084db for testphp.vulnweb.com:80
+2025-11-14 15:51:02,014 - nikto_scanner - INFO - Starting Nikto scan nikto_1763135462 for testphp.vulnweb.com:80
+2025-11-14 15:51:02,043 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-14 15:51:02,043 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 15:51:02,323 - nikto_scanner - INFO - Container 530a43b870bf7d57031f48d2c849c9edddbff7c1cf87ac805f0c0ea240dc2281 started for scan nikto_1763135462
+2025-11-14 15:52:18,874 - backend.main - INFO - Scan 1d6aeb10 queued for testphp.vulnweb.com:80
+2025-11-14 15:52:18,874 - backend.main - INFO - Starting scan 1d6aeb10 for testphp.vulnweb.com:80
+2025-11-14 15:52:18,875 - nikto_scanner - INFO - Starting Nikto scan nikto_1763135538 for testphp.vulnweb.com:80
+2025-11-14 15:52:18,903 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-14 15:52:18,903 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 15:52:19,238 - nikto_scanner - INFO - Container a4ecb6774b7c54ee29f9bae9361e64b3fc7bd95b5a0ae1b706e3a9ba092563fc started for scan nikto_1763135538
+2025-11-14 21:27:42,134 - backend.main - INFO - Scan 2a61f091 queued for testphp.vulnweb.com:80
+2025-11-14 21:27:42,150 - backend.main - INFO - Starting scan 2a61f091 for testphp.vulnweb.com:80
+2025-11-14 21:27:42,158 - nikto_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-14 21:27:42,200 - nikto_scanner - WARNING - Failed to connect with primary method: Error while fetching server API version: Not supported URL scheme http+docker
+2025-11-14 21:27:42,204 - nikto_scanner - INFO - Trying Unix socket connection...
+2025-11-14 21:27:42,216 - nikto_scanner - WARNING - Unix socket failed: Error while fetching server API version: Not supported URL scheme http+docker
+2025-11-14 21:27:42,221 - backend.main - ERROR - Failed to initialize scanner: Cannot connect to Docker. Please ensure Docker is running.
+For Windows:
+1. Open Docker Desktop → Settings → General
+2. Enable 'Expose daemon on tcp://localhost:2375 without TLS'
+3. Restart Docker Desktop
+4. Use: docker-compose -f docker-compose.windows.yml up -d
+Or use WSL2 backend in Docker Desktop settings.
+2025-11-14 21:27:42,226 - backend.main - ERROR - Scan 2a61f091 failed: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 45, in __init__
+    self.client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 610, in send
+    conn = self.get_connection_with_tls_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 466, in get_connection_with_tls_context
+    conn = self.poolmanager.connection_from_host(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 319, in connection_from_host
+    return self.connection_from_context(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/poolmanager.py", line 341, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 214, in _retrieve_server_version
+    return self.version(api_version=False)["ApiVersion"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/daemon.py", line 181, in version
+    return self._result(self._get(url), json=True)
+                        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/utils/decorators.py", line 46, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 237, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 614, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/nikto_scanner.py", line 64, in __init__
+    self.client = docker.DockerClient(base_url='unix:///var/run/docker.sock')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/client.py", line 45, in __init__
+    self.api = APIClient(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 197, in __init__
+    self._version = self._retrieve_server_version()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/docker/api/client.py", line 221, in _retrieve_server_version
+    raise DockerException(
+docker.errors.DockerException: Error while fetching server API version: Not supported URL scheme http+docker
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 85, in get_scanner
+    _scanner_instance = NiktoScanner()
+                        ^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 98, in __init__
+    raise Exception(error_msg)
+Exception: Cannot connect to Docker. Please ensure Docker is running.
+For Windows:
+1. Open Docker Desktop → Settings → General
+2. Enable 'Expose daemon on tcp://localhost:2375 without TLS'
+3. Restart Docker Desktop
+4. Use: docker-compose -f docker-compose.windows.yml up -d
+Or use WSL2 backend in Docker Desktop settings.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 146, in run_scan
+    scanner_instance = get_scanner()
+                       ^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 88, in get_scanner
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-14 21:33:18,334 - backend.main - INFO - Scan 8374bd6f queued for testphp.vulnweb.com:80
+2025-11-14 21:33:18,336 - backend.main - INFO - Starting scan 8374bd6f for testphp.vulnweb.com:80
+2025-11-14 21:33:18,336 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 21:33:18,367 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 21:33:18,369 - nikto_scanner - INFO - Starting Nikto scan nikto_1763136198 for testphp.vulnweb.com:80
+2025-11-14 21:33:18,478 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-14 21:33:18,479 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 21:33:18,746 - nikto_scanner - INFO - Container 92685e957a57373297f0deca35116db5f4b4728ffb134fb096df121817a3e48d started for scan nikto_1763136198
+2025-11-14 21:49:32,328 - backend.main - INFO - Scan ae10de8a queued for testphp.vulnweb.com:80
+2025-11-14 21:49:32,329 - backend.main - INFO - Starting scan ae10de8a for testphp.vulnweb.com:80
+2025-11-14 21:49:32,330 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 21:49:32,348 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 21:49:32,349 - nikto_scanner - INFO - Starting Nikto scan nikto_1763137172 for testphp.vulnweb.com:80
+2025-11-14 21:49:32,368 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 21:49:32,368 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 21:49:32,573 - nikto_scanner - INFO - Container e3c54c86cde0880ea700ccbc0c4438804d411ce5e7b45d1e03212e8509c5669a started for scan nikto_1763137172
+2025-11-14 21:50:35,462 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 21:50:35,477 - nikto_scanner - INFO - Container logs length: 31309 chars
+2025-11-14 21:50:35,478 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:19:32 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:19:32 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:19:32 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:19:32 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:19:32 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:19:32 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:19:32 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 21:50:35,478 - nikto_scanner - INFO - Container logs (last 500 chars): :20:34 2025 - 404 for GET:	/db.php?q='&t='
+V:Fri Nov 14 16:20:34 2025 - 404 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 16:20:35 2025 - 200 for POST:	/search.php
+V:Fri Nov 14 16:20:35 2025 - 404 for POST:	/private.php
++ 59 items checked: 4 error(s) and 7 item(s) reported on remote host
++ End Time:           2025-11-14 16:20:35 (GMT0) (62 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:20:35 2025 + 210 requests made in 63 seconds
+
+2025-11-14 21:50:35,480 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 21:50:35,481 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:19:32 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:19:32 2025 - Loaded 
+2025-11-14 21:50:35,481 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 21:50:35,481 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31309
+2025-11-14 21:50:35,481 - nikto_scanner - INFO - Created XML from logs, length: 1638 chars
+2025-11-14 21:50:35,513 - backend.main - INFO - Scan ae10de8a completed with 11 findings
+2025-11-14 21:53:21,124 - backend.main - INFO - Scan 8756d698 queued for testphp.vulnweb.com:80
+2025-11-14 21:53:21,133 - backend.main - INFO - Starting scan 8756d698 for testphp.vulnweb.com:80
+2025-11-14 21:53:21,143 - nikto_scanner - INFO - Starting Nikto scan nikto_1763137401 for testphp.vulnweb.com:80
+2025-11-14 21:53:21,225 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning ca -Tuning ca
+2025-11-14 21:53:21,226 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 21:53:21,619 - nikto_scanner - INFO - Container 45331e2c862eaa62c98e2396714d0420fcd6f31703524d4f6949811366645df2 started for scan nikto_1763137401
+2025-11-14 21:53:51,024 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 21:53:51,039 - nikto_scanner - INFO - Container logs length: 11874 chars
+2025-11-14 21:53:51,039 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:23:21 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:23:21 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:23:21 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:23:21 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:23:21 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:23:21 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:23:21 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 21:53:51,040 - nikto_scanner - INFO - Container logs (last 500 chars):  14 16:23:49 2025 -  for TRACK:	/
+V:Fri Nov 14 16:23:50 2025 -  for TRACK:	/
+V:Fri Nov 14 16:23:50 2025 - Running scan for "Server Messages" plugin
+V:Fri Nov 14 16:23:50 2025 - Running scan for "Nikto Tests" plugin
++ 0 items checked: 4 error(s) and 7 item(s) reported on remote host
++ End Time:           2025-11-14 16:23:50 (GMT0) (28 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:23:50 2025 + 90 requests made in 29 seconds
+
+2025-11-14 21:53:51,043 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 21:53:51,043 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:23:21 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:23:21 2025 - Loaded 
+2025-11-14 21:53:51,044 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 21:53:51,044 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 11874
+2025-11-14 21:53:51,044 - nikto_scanner - INFO - Created XML from logs, length: 1637 chars
+2025-11-14 21:53:51,078 - backend.main - INFO - Scan 8756d698 completed with 11 findings
+2025-11-14 21:54:47,129 - backend.main - INFO - Scan 63fd24ec queued for https://jimsrohini.org/:80
+2025-11-14 21:54:47,130 - backend.main - INFO - Starting scan 63fd24ec for https://jimsrohini.org/:80
+2025-11-14 21:54:47,130 - nikto_scanner - INFO - Starting Nikto scan nikto_1763137487 for https://jimsrohini.org/:80
+2025-11-14 21:54:47,177 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning ca29 -Tuning ca29
+2025-11-14 21:54:47,177 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 21:54:47,484 - nikto_scanner - INFO - Container 1c99cbbfe63fa08679fac09435833590dddd01a8abf66dee4dd7c6c0542465a4 started for scan nikto_1763137487
+2025-11-14 21:55:11,749 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 21:55:11,763 - nikto_scanner - INFO - Container logs length: 12445 chars
+2025-11-14 21:55:11,764 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:24:47 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:24:47 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:24:47 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:24:47 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:24:47 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:24:47 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:24:47 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 21:55:11,764 - nikto_scanner - INFO - Container logs (last 500 chars): nd, with contents: SAMEORIGIN
+V:Fri Nov 14 16:25:11 2025 - 403 for TRACK:	/
+V:Fri Nov 14 16:25:11 2025 - Running scan for "Server Messages" plugin
+V:Fri Nov 14 16:25:11 2025 - Running scan for "Nikto Tests" plugin
++ 0 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 16:25:11 (GMT0) (23 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:25:11 2025 + 86 requests made in 24 seconds
+
+2025-11-14 21:55:11,771 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 21:55:11,771 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:24:47 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:24:47 2025 - Loaded 
+2025-11-14 21:55:11,771 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 21:55:11,772 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 12445
+2025-11-14 21:55:11,772 - nikto_scanner - INFO - Created XML from logs, length: 2925 chars
+2025-11-14 21:55:11,825 - backend.main - INFO - Scan 63fd24ec completed with 19 findings
+2025-11-14 22:11:11,957 - backend.main - INFO - Scan dbc915ad queued for testphp.vulnweb.com:80
+2025-11-14 22:11:11,958 - backend.main - INFO - Starting scan dbc915ad for testphp.vulnweb.com:80
+2025-11-14 22:11:11,961 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:11:11,982 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:11:11,983 - nikto_scanner - INFO - Starting Nikto scan nikto_1763138471 for testphp.vulnweb.com:80
+2025-11-14 22:11:12,003 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 219 -Tuning 219
+2025-11-14 22:11:12,003 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 22:11:12,251 - nikto_scanner - INFO - Container 759eb547d8362ac7112088236de4f47dbb81de52c1a5b24df58b329335befda2 started for scan nikto_1763138471
+2025-11-14 22:11:48,925 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:11:48,949 - nikto_scanner - INFO - Container logs length: 13783 chars
+2025-11-14 22:11:48,950 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:41:12 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:41:12 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:41:12 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:41:12 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:41:12 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:41:12 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:41:12 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:11:48,950 - nikto_scanner - INFO - Container logs (last 500 chars): 025 - 404 for GET:	/sshome/
+V:Fri Nov 14 16:41:48 2025 - 404 for GET:	/tiki/
+V:Fri Nov 14 16:41:48 2025 - 404 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 16:41:48 2025 - 404 for GET:	/scripts/samples/details.idc
++ 21 items checked: 4 error(s) and 7 item(s) reported on remote host
++ End Time:           2025-11-14 16:41:48 (GMT0) (35 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:41:48 2025 + 116 requests made in 36 seconds
+
+2025-11-14 22:11:48,954 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:11:48,955 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:41:12 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:41:12 2025 - Loaded 
+2025-11-14 22:11:48,956 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:11:48,956 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13783
+2025-11-14 22:11:48,957 - nikto_scanner - INFO - Created XML from logs, length: 1638 chars
+2025-11-14 22:11:48,987 - backend.main - INFO - Scan dbc915ad completed with 5 findings
+2025-11-14 22:16:59,647 - backend.main - INFO - Scan 0f35e7a9 queued for testphp.vulnweb.com:80
+2025-11-14 22:16:59,648 - backend.main - INFO - Starting scan 0f35e7a9 for testphp.vulnweb.com:80
+2025-11-14 22:16:59,649 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:16:59,669 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:16:59,670 - nikto_scanner - INFO - Starting Nikto scan nikto_1763138819 for testphp.vulnweb.com:80
+2025-11-14 22:16:59,689 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 294 -Tuning 294
+2025-11-14 22:16:59,690 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 22:16:59,928 - nikto_scanner - INFO - Container adc567db86256f60065555256a85c5b35a01a980580a40d5eed2235833c4c3a6 started for scan nikto_1763138819
+2025-11-14 22:17:38,643 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:17:38,729 - nikto_scanner - INFO - Container logs length: 13842 chars
+2025-11-14 22:17:38,733 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:47:00 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:47:00 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:47:00 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:47:00 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:47:00 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:47:00 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:47:00 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:17:38,733 - nikto_scanner - INFO - Container logs (last 500 chars): 025 - 404 for GET:	/sshome/
+V:Fri Nov 14 16:47:37 2025 - 404 for GET:	/tiki/
+V:Fri Nov 14 16:47:38 2025 - 404 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 16:47:38 2025 - 404 for GET:	/scripts/samples/details.idc
++ 21 items checked: 4 error(s) and 8 item(s) reported on remote host
++ End Time:           2025-11-14 16:47:38 (GMT0) (38 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:47:38 2025 + 116 requests made in 39 seconds
+
+2025-11-14 22:17:38,740 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:17:38,741 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:47:00 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:47:00 2025 - Loaded 
+2025-11-14 22:17:38,741 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:17:38,742 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13842
+2025-11-14 22:17:38,743 - nikto_scanner - INFO - Created XML from logs, length: 1758 chars
+2025-11-14 22:17:44,589 - backend.main - INFO - Scan 0f35e7a9 completed with 6 findings
+2025-11-14 22:22:33,978 - backend.main - INFO - Scan 4e94df6a queued for https://jimsrohini.org/:80
+2025-11-14 22:22:33,981 - backend.main - INFO - Starting scan 4e94df6a for https://jimsrohini.org/:80
+2025-11-14 22:22:33,983 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:22:34,009 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:22:34,011 - nikto_scanner - INFO - Starting Nikto scan nikto_1763139154 for https://jimsrohini.org/:80
+2025-11-14 22:22:34,031 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 219 -Tuning 219
+2025-11-14 22:22:34,032 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:22:34,338 - nikto_scanner - INFO - Container b5931f3c12e395ca33c20561d54fce5a28900f367a112216596a95595b364715 started for scan nikto_1763139154
+2025-11-14 22:23:03,503 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:23:03,521 - nikto_scanner - INFO - Container logs length: 13730 chars
+2025-11-14 22:23:03,521 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:52:34 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:52:34 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:52:34 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:52:34 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:52:34 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:52:34 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:52:34 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:23:03,522 - nikto_scanner - INFO - Container logs (last 500 chars): 25 - 301 for GET:	/sshome/
+V:Fri Nov 14 16:53:02 2025 - 301 for GET:	/tiki/
+V:Fri Nov 14 16:53:03 2025 - 301 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 16:53:03 2025 - 301 for GET:	/scripts/samples/details.idc
++ 21 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 16:53:03 (GMT0) (28 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:53:03 2025 + 102 requests made in 29 seconds
+
+2025-11-14 22:23:03,525 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:23:03,525 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:52:34 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:52:34 2025 - Loaded 
+2025-11-14 22:23:03,526 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:23:03,526 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13730
+2025-11-14 22:23:03,526 - nikto_scanner - INFO - Created XML from logs, length: 2922 chars
+2025-11-14 22:23:08,789 - backend.main - INFO - Scan 4e94df6a completed with 13 findings
+2025-11-14 22:25:00,593 - backend.main - INFO - Scan fde5caf1 queued for https://jimsrohini.org/:80
+2025-11-14 22:25:00,594 - backend.main - INFO - Starting scan fde5caf1 for https://jimsrohini.org/:80
+2025-11-14 22:25:00,594 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:25:00,610 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:25:00,611 - nikto_scanner - INFO - Starting Nikto scan nikto_1763139300 for https://jimsrohini.org/:80
+2025-11-14 22:25:00,630 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:25:00,630 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:25:00,871 - nikto_scanner - INFO - Container 917eae10249a401fc5e8cea1bde5942f18bcfe3416749bb79410ef20b98c6ff3 started for scan nikto_1763139300
+2025-11-14 22:26:58,047 - backend.main - INFO - Scan 7e37177c queued for https://jimsrohini.org/:80
+2025-11-14 22:26:58,050 - backend.main - INFO - Starting scan 7e37177c for https://jimsrohini.org/:80
+2025-11-14 22:26:58,054 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:26:58,150 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:26:58,156 - nikto_scanner - INFO - Starting Nikto scan nikto_1763139418 for https://jimsrohini.org/:80
+2025-11-14 22:26:58,272 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:26:58,275 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:26:59,706 - nikto_scanner - INFO - Container 107abeca05f2a0cf26f641c5f9424766a7ab121a56d80a422602fc22d3d4808d started for scan nikto_1763139418
+2025-11-14 22:27:54,115 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:27:54,132 - nikto_scanner - INFO - Container logs length: 31185 chars
+2025-11-14 22:27:54,133 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 16:57:00 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 16:57:00 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 16:57:00 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 16:57:00 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 16:57:00 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 16:57:00 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 16:57:00 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 16:57:00 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:27:54,133 - nikto_scanner - INFO - Container logs (last 500 chars): 57:53 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 16:57:53 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 16:57:53 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 16:57:54 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 16:57:54 (GMT0) (53 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 16:57:54 2025 + 195 requests made in 55 seconds
+
+2025-11-14 22:27:54,133 - nikto_scanner - ERROR - Unexpected error during scan: NiktoScanner._parse_log_events() missing 1 required positional argument: 'logs'
+2025-11-14 22:27:54,134 - backend.main - ERROR - Scan 7e37177c failed: NiktoScanner._parse_log_events() missing 1 required positional argument: 'logs'
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 169, in run_scan
+    scan_result = await loop.run_in_executor(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 171, in <lambda>
+    lambda: scanner_instance.scan(
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 235, in scan
+    log_events = NiktoScanner._parse_log_events(logs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NiktoScanner._parse_log_events() missing 1 required positional argument: 'logs'
+2025-11-14 22:31:32,976 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 22:34:41,253 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 22:35:56,935 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 22:36:55,523 - backend.main - INFO - Scan 11e84d6e queued for https://jimsrohini.org/:80
+2025-11-14 22:36:55,524 - backend.main - INFO - Starting scan 11e84d6e for https://jimsrohini.org/:80
+2025-11-14 22:36:55,524 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:36:55,548 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:36:55,549 - nikto_scanner - INFO - Starting Nikto scan nikto_1763140015 for https://jimsrohini.org/:80
+2025-11-14 22:36:55,568 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:36:55,569 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:36:55,845 - nikto_scanner - INFO - Container 30f987a138260c81d0000156329ff13ae7b0c0408b5bbd658fc274309e7cc9a7 started for scan nikto_1763140015
+2025-11-14 22:37:48,449 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:37:48,468 - nikto_scanner - INFO - Container logs length: 31188 chars
+2025-11-14 22:37:48,468 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:06:55 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:06:55 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:06:55 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:06:55 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:06:55 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:06:55 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:06:55 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:06:55 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:37:48,468 - nikto_scanner - INFO - Container logs (last 500 chars): 07:47 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:07:47 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:07:48 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:07:48 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:07:48 (GMT0) (52 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:07:48 2025 + 195 requests made in 53 seconds
+
+2025-11-14 22:37:48,469 - nikto_scanner - ERROR - Unexpected error during scan: name 'datetime' is not defined
+2025-11-14 22:37:48,469 - backend.main - ERROR - Scan 11e84d6e failed: name 'datetime' is not defined
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 177, in run_scan
+    scan_result = await loop.run_in_executor(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/main.py", line 179, in <lambda>
+    lambda: scanner_instance.scan(
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 235, in scan
+    log_events = self._parse_log_events(logs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/nikto_scanner.py", line 485, in _parse_log_events
+    "timestamp": datetime.now().isoformat(),
+                 ^^^^^^^^
+NameError: name 'datetime' is not defined
+2025-11-14 22:42:41,191 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 22:43:10,578 - backend.main - INFO - Scan c66809bf queued for https://jimsrohini.org/:80
+2025-11-14 22:43:10,579 - backend.main - INFO - Starting scan c66809bf for https://jimsrohini.org/:80
+2025-11-14 22:43:10,580 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 22:43:10,597 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 22:43:10,598 - nikto_scanner - INFO - Starting Nikto scan nikto_1763140390 for https://jimsrohini.org/:80
+2025-11-14 22:43:10,619 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:43:10,619 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:43:10,836 - nikto_scanner - INFO - Container 008b9bd7f7d95848a0203ac112ed65ef7618422905d433112573badba0de6024 started for scan nikto_1763140390
+2025-11-14 22:43:20,724 - backend.main - INFO - Scan fe2dd4e2 queued for https://jimsrohini.org/:80
+2025-11-14 22:43:20,725 - backend.main - INFO - Starting scan fe2dd4e2 for https://jimsrohini.org/:80
+2025-11-14 22:43:20,726 - nikto_scanner - INFO - Starting Nikto scan nikto_1763140400 for https://jimsrohini.org/:80
+2025-11-14 22:43:20,750 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:43:20,751 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:43:21,050 - nikto_scanner - INFO - Container 61a2b1eed2b5e884cac87a156a347c30a282867d403c0735d5e52199ac3cbfb1 started for scan nikto_1763140400
+2025-11-14 22:44:03,245 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:44:03,271 - nikto_scanner - INFO - Container logs length: 31188 chars
+2025-11-14 22:44:03,272 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:13:10 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:13:10 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:13:10 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:13:10 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:13:10 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:13:10 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:13:10 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:44:03,272 - nikto_scanner - INFO - Container logs (last 500 chars): 14:02 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:14:02 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:14:02 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:14:03 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:14:03 (GMT0) (52 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:14:03 2025 + 195 requests made in 53 seconds
+
+2025-11-14 22:44:03,275 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:44:03,276 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:13:10 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:13:10 2025 - Loaded 
+2025-11-14 22:44:03,276 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:44:03,276 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31188
+2025-11-14 22:44:03,277 - nikto_scanner - INFO - Created XML from logs, length: 2928 chars
+2025-11-14 22:44:05,740 - utils.file_manager - INFO - Scan results saved to scan_results/scan_c66809bf.json
+2025-11-14 22:44:05,740 - backend.main - INFO - Scan results persisted to file: scan_results/scan_c66809bf.json
+2025-11-14 22:44:05,740 - backend.main - INFO - Scan c66809bf completed with 13 findings
+2025-11-14 22:44:13,624 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:44:13,643 - nikto_scanner - INFO - Container logs length: 31184 chars
+2025-11-14 22:44:13,644 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:13:21 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:13:21 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:13:21 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:13:21 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:13:21 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:13:21 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:13:21 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:44:13,644 - nikto_scanner - INFO - Container logs (last 500 chars): 14:12 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:14:13 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:14:13 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:14:13 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:14:13 (GMT0) (52 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:14:13 2025 + 195 requests made in 52 seconds
+
+2025-11-14 22:44:13,649 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:44:13,649 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:13:21 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:13:21 2025 - Loaded 
+2025-11-14 22:44:13,650 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:44:13,650 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31184
+2025-11-14 22:44:13,650 - nikto_scanner - INFO - Created XML from logs, length: 2924 chars
+2025-11-14 22:44:16,281 - utils.file_manager - INFO - Scan results saved to scan_results/scan_fe2dd4e2.json
+2025-11-14 22:44:16,281 - backend.main - INFO - Scan results persisted to file: scan_results/scan_fe2dd4e2.json
+2025-11-14 22:44:16,281 - backend.main - INFO - Scan fe2dd4e2 completed with 13 findings
+2025-11-14 22:46:29,613 - backend.main - INFO - Scan a1eec00e queued for 192.168.137.1:80
+2025-11-14 22:46:29,617 - backend.main - INFO - Starting scan a1eec00e for 192.168.137.1:80
+2025-11-14 22:46:29,618 - nikto_scanner - INFO - Starting Nikto scan nikto_1763140589 for 192.168.137.1:80
+2025-11-14 22:46:29,648 - nikto_scanner - INFO - Running nikto.pl with args: -host 192.168.137.1 -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:46:29,648 - nikto_scanner - INFO - Clean target: 192.168.137.1, Port: 80
+2025-11-14 22:46:30,045 - nikto_scanner - INFO - Container 1fdcab93573bbc7cfbef8517e8b029f56b133814952996a4371369586a350d22 started for scan nikto_1763140589
+2025-11-14 22:46:47,130 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:46:47,143 - nikto_scanner - INFO - Container logs length: 5296 chars
+2025-11-14 22:46:47,144 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:16:30 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:16:30 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:16:30 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:16:30 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:16:30 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:16:30 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:16:30 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:46:47,144 - nikto_scanner - INFO - Container logs (last 500 chars): orts" plugin
+V:Fri Nov 14 17:16:47 2025 - 59 server checks loaded
+V:Fri Nov 14 17:16:47 2025 - Running start for "Favicon" plugin
+V:Fri Nov 14 17:16:47 2025 - Running start for "HTTP Headers" plugin
+V:Fri Nov 14 17:16:47 2025 - Running start for "Embedded Detection" plugin
+V:Fri Nov 14 17:16:47 2025 - Running start for "Guess authentication" plugin
+V:Fri Nov 14 17:16:47 2025 - Running start for "Content Search" plugin
++ 0 host(s) tested
+V:Fri Nov 14 17:16:47 2025 + 8 requests made in 17 seconds
+
+2025-11-14 22:46:47,148 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:46:47,148 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:16:30 2025 - Loaded 
+2025-11-14 22:46:47,148 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:46:47,149 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 5296
+2025-11-14 22:46:47,149 - nikto_scanner - INFO - Created XML from logs, length: 312 chars
+2025-11-14 22:46:47,186 - utils.file_manager - INFO - Scan results saved to scan_results/scan_a1eec00e.json
+2025-11-14 22:46:47,186 - backend.main - INFO - Scan results persisted to file: scan_results/scan_a1eec00e.json
+2025-11-14 22:46:47,186 - backend.main - INFO - Scan a1eec00e completed with 1 findings
+2025-11-14 22:47:59,675 - backend.main - INFO - Scan 3c510892 queued for 192.168.137.1:80
+2025-11-14 22:47:59,676 - backend.main - INFO - Starting scan 3c510892 for 192.168.137.1:80
+2025-11-14 22:47:59,678 - nikto_scanner - INFO - Starting Nikto scan nikto_1763140679 for 192.168.137.1:80
+2025-11-14 22:47:59,715 - nikto_scanner - INFO - Running nikto.pl with args: -host 192.168.137.1 -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9412c -Tuning 9412c
+2025-11-14 22:47:59,715 - nikto_scanner - INFO - Clean target: 192.168.137.1, Port: 80
+2025-11-14 22:48:00,062 - nikto_scanner - INFO - Container 7e8d8c137aef732bdc9d53602adb4611a43043488ded001392add7275a55678f started for scan nikto_1763140679
+2025-11-14 22:48:17,054 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:48:17,067 - nikto_scanner - INFO - Container logs length: 5295 chars
+2025-11-14 22:48:17,067 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:18:00 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:18:00 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:18:00 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:18:00 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:18:00 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:18:00 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:18:00 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:48:17,068 - nikto_scanner - INFO - Container logs (last 500 chars): ports" plugin
+V:Fri Nov 14 17:18:17 2025 - 0 server checks loaded
+V:Fri Nov 14 17:18:17 2025 - Running start for "Favicon" plugin
+V:Fri Nov 14 17:18:17 2025 - Running start for "HTTP Headers" plugin
+V:Fri Nov 14 17:18:17 2025 - Running start for "Embedded Detection" plugin
+V:Fri Nov 14 17:18:17 2025 - Running start for "Guess authentication" plugin
+V:Fri Nov 14 17:18:17 2025 - Running start for "Content Search" plugin
++ 0 host(s) tested
+V:Fri Nov 14 17:18:17 2025 + 8 requests made in 17 seconds
+
+2025-11-14 22:48:17,070 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:48:17,070 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:18:00 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:18:00 2025 - Loaded 
+2025-11-14 22:48:17,070 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:48:17,070 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 5295
+2025-11-14 22:48:17,071 - nikto_scanner - INFO - Created XML from logs, length: 312 chars
+2025-11-14 22:48:17,106 - utils.file_manager - INFO - Scan results saved to scan_results/scan_3c510892.json
+2025-11-14 22:48:17,106 - backend.main - INFO - Scan results persisted to file: scan_results/scan_3c510892.json
+2025-11-14 22:48:17,107 - backend.main - INFO - Scan 3c510892 completed with 1 findings
+2025-11-14 22:54:50,043 - backend.main - INFO - Scan 2341b3cc queued for https://jimsrohini.org/:80
+2025-11-14 22:54:50,057 - backend.main - INFO - Starting scan 2341b3cc for https://jimsrohini.org/:80
+2025-11-14 22:54:50,070 - nikto_scanner - INFO - Starting Nikto scan nikto_1763141090 for https://jimsrohini.org/:80
+2025-11-14 22:54:50,130 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:54:50,130 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:54:50,826 - nikto_scanner - INFO - Container 35a57a24949ee03e73ca12030967375955290b8d39aedd0cd455ff26ed619f0e started for scan nikto_1763141090
+2025-11-14 22:55:44,358 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 22:55:44,460 - nikto_scanner - INFO - Container logs length: 31189 chars
+2025-11-14 22:55:44,461 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:24:51 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:24:51 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:24:51 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:24:51 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:24:51 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:24:51 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:24:51 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 22:55:44,461 - nikto_scanner - INFO - Container logs (last 500 chars): 25:43 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:25:43 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:25:43 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:25:44 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:25:44 (GMT0) (53 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:25:44 2025 + 195 requests made in 54 seconds
+
+2025-11-14 22:55:44,485 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 22:55:44,489 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:24:51 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:24:51 2025 - Loaded 
+2025-11-14 22:55:44,490 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 22:55:44,491 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31189
+2025-11-14 22:55:44,492 - nikto_scanner - INFO - Created XML from logs, length: 2928 chars
+2025-11-14 22:55:47,411 - utils.file_manager - INFO - Scan results saved to scan_results/scan_2341b3cc.json
+2025-11-14 22:55:47,412 - backend.main - INFO - Scan results persisted to file: scan_results/scan_2341b3cc.json
+2025-11-14 22:55:47,412 - backend.main - INFO - Scan 2341b3cc completed with 13 findings
+2025-11-14 22:59:08,531 - backend.main - INFO - Scan 2cb70864 queued for https://jimsrohini.org/:80
+2025-11-14 22:59:08,532 - backend.main - INFO - Starting scan 2cb70864 for https://jimsrohini.org/:80
+2025-11-14 22:59:08,534 - nikto_scanner - INFO - Starting Nikto scan nikto_1763141348 for https://jimsrohini.org/:80
+2025-11-14 22:59:08,573 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 22:59:08,573 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 22:59:08,991 - nikto_scanner - INFO - Container 526eb50418fe27d110901234c0d019bc90a039456251918c6f87d8e07ec5cef9 started for scan nikto_1763141348
+2025-11-14 23:00:01,447 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:00:01,517 - nikto_scanner - INFO - Container logs length: 31187 chars
+2025-11-14 23:00:01,518 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:29:09 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:29:09 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:29:09 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:29:09 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:29:09 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:29:09 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:29:09 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:00:01,518 - nikto_scanner - INFO - Container logs (last 500 chars): 30:00 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:30:00 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:30:00 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:30:01 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:30:01 (GMT0) (51 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:30:01 2025 + 195 requests made in 52 seconds
+
+2025-11-14 23:00:01,528 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:00:01,529 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:29:09 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:29:09 2025 - Loaded 
+2025-11-14 23:00:01,529 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:00:01,529 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31187
+2025-11-14 23:00:01,531 - nikto_scanner - INFO - Created XML from logs, length: 2926 chars
+2025-11-14 23:00:03,845 - utils.file_manager - INFO - Scan results saved to scan_results/scan_2cb70864.json
+2025-11-14 23:00:03,846 - backend.main - INFO - Scan results persisted to file: scan_results/scan_2cb70864.json
+2025-11-14 23:00:03,847 - backend.main - INFO - Scan 2cb70864 completed with 13 findings
+2025-11-14 23:01:13,429 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 23:03:31,250 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 23:03:51,676 - backend.main - INFO - Scan b4037e38 queued for https://jimsrohini.org/:80
+2025-11-14 23:03:51,677 - backend.main - INFO - Starting scan b4037e38 for https://jimsrohini.org/:80
+2025-11-14 23:03:51,678 - nikto_scanner - INFO - Detected host environment, using default Docker client
+2025-11-14 23:03:51,707 - nikto_scanner - INFO - Successfully connected to Docker via default client
+2025-11-14 23:03:51,708 - nikto_scanner - INFO - Starting Nikto scan nikto_1763141631 for https://jimsrohini.org/:80
+2025-11-14 23:03:51,730 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-14 23:03:51,731 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-14 23:03:52,008 - nikto_scanner - INFO - Container b6f0e132765a02e69e6f3bdb033216a343ecfb3cd8c50373f9804c416c2226d8 started for scan nikto_1763141631
+2025-11-14 23:04:45,734 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:04:45,748 - nikto_scanner - INFO - Container logs length: 31189 chars
+2025-11-14 23:04:45,749 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:33:52 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 17:33:52 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 17:33:52 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 17:33:52 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 17:33:52 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 17:33:52 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 17:33:52 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:04:45,749 - nikto_scanner - INFO - Container logs (last 500 chars): 34:44 2025 - 301 for GET:	/db.php?q='&t='
+V:Fri Nov 14 17:34:45 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Fri Nov 14 17:34:45 2025 - 301 for POST:	/search.php
+V:Fri Nov 14 17:34:45 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-14 17:34:45 (GMT0) (53 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 17:34:45 2025 + 195 requests made in 53 seconds
+
+2025-11-14 23:04:45,752 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:04:45,753 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 17:33:52 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 17:33:52 2025 - Loaded 
+2025-11-14 23:04:45,753 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:04:45,754 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31189
+2025-11-14 23:04:45,754 - nikto_scanner - INFO - Created XML from logs, length: 2928 chars
+2025-11-14 23:04:48,190 - utils.file_manager - INFO - Scan results saved to scan_results/scan_b4037e38.json
+2025-11-14 23:04:48,190 - backend.main - INFO - Scan results persisted to file: scan_results/scan_b4037e38.json
+2025-11-14 23:04:48,190 - backend.main - INFO - Scan b4037e38 completed with 13 findings
+2025-11-14 23:51:28,512 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-14 23:53:00,926 - backend.main - INFO - Scan 0e5b1b9e queued for testphp.vulnweb.com:80
+2025-11-14 23:53:00,926 - backend.main - INFO - Starting scan 0e5b1b9e for testphp.vulnweb.com:80
+2025-11-14 23:53:00,927 - nikto_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-14 23:53:00,957 - nikto_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-14 23:53:00,959 - nikto_scanner - INFO - Starting Nikto scan nikto_1763144580 for testphp.vulnweb.com:80
+2025-11-14 23:53:00,983 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 479 -Tuning 479
+2025-11-14 23:53:00,983 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-14 23:53:01,298 - nikto_scanner - INFO - Container 7e25b0f68bcdb90abac5c6bc3c0d4f647b5c8217250c6137df93077c54f77f58 started for scan nikto_1763144580
+2025-11-14 23:53:39,268 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:53:39,291 - nikto_scanner - INFO - Container logs length: 13783 chars
+2025-11-14 23:53:39,292 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:23:01 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:23:01 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:23:01 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:23:01 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:23:01 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:23:01 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:23:01 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:53:39,292 - nikto_scanner - INFO - Container logs (last 500 chars): 025 - 404 for GET:	/sshome/
+V:Fri Nov 14 18:23:38 2025 - 404 for GET:	/tiki/
+V:Fri Nov 14 18:23:38 2025 - 404 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 18:23:39 2025 - 404 for GET:	/scripts/samples/details.idc
++ 21 items checked: 4 error(s) and 7 item(s) reported on remote host
++ End Time:           2025-11-14 18:23:39 (GMT0) (37 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 18:23:39 2025 + 116 requests made in 38 seconds
+
+2025-11-14 23:53:39,297 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:53:39,298 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:23:01 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:23:01 2025 - Loaded 
+2025-11-14 23:53:39,299 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:53:39,299 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13783
+2025-11-14 23:53:39,299 - nikto_scanner - INFO - Created XML from logs, length: 1638 chars
+2025-11-14 23:53:45,016 - utils.file_manager - INFO - Scan results saved to scan_results/scan_0e5b1b9e.json
+2025-11-14 23:53:45,017 - backend.main - INFO - Scan results persisted to file: scan_results/scan_0e5b1b9e.json
+2025-11-14 23:53:45,017 - backend.main - INFO - Scan 0e5b1b9e completed with 5 findings
+2025-11-14 23:57:18,627 - backend.main - INFO - Scan 5d56f0b2 queued for https://github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:18,628 - backend.main - INFO - Starting scan 5d56f0b2 for https://github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:18,629 - nikto_scanner - INFO - Starting Nikto scan nikto_1763144838 for https://github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:18,667 - nikto_scanner - INFO - Running nikto.pl with args: -host github.com/Yashh-Garg/Nikto-integrration -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 479 -Tuning 479
+2025-11-14 23:57:18,668 - nikto_scanner - INFO - Clean target: github.com/Yashh-Garg/Nikto-integrration, Port: 80
+2025-11-14 23:57:18,993 - nikto_scanner - INFO - Container 37dd1c733a2c2df75f38bd9af7ae6afc31d7ce7e82e5ef67f94c6288f7378f1e started for scan nikto_1763144838
+2025-11-14 23:57:20,997 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:57:21,008 - nikto_scanner - INFO - Container logs length: 4778 chars
+2025-11-14 23:57:21,008 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:27:19 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:27:19 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:27:19 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:27:19 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:27:19 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:27:19 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:27:19 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:57:21,009 - nikto_scanner - INFO - Container logs (last 500 chars): ports" plugin
+V:Fri Nov 14 18:27:19 2025 - 21 server checks loaded
+V:Fri Nov 14 18:27:19 2025 - Running start for "Favicon" plugin
+V:Fri Nov 14 18:27:19 2025 - Running start for "HTTP Headers" plugin
+V:Fri Nov 14 18:27:19 2025 - Running start for "Embedded Detection" plugin
+V:Fri Nov 14 18:27:19 2025 - Running start for "Guess authentication" plugin
+V:Fri Nov 14 18:27:19 2025 - Running start for "Content Search" plugin
++ 0 host(s) tested
+V:Fri Nov 14 18:27:19 2025 + 0 requests made in 0 seconds
+
+2025-11-14 23:57:21,012 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:57:21,012 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:27:19 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:27:19 2025 - Loaded 
+2025-11-14 23:57:21,012 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:57:21,012 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 4778
+2025-11-14 23:57:21,013 - nikto_scanner - INFO - Created XML from logs, length: 410 chars
+2025-11-14 23:57:21,051 - utils.file_manager - INFO - Scan results saved to scan_results/scan_5d56f0b2.json
+2025-11-14 23:57:21,052 - backend.main - INFO - Scan results persisted to file: scan_results/scan_5d56f0b2.json
+2025-11-14 23:57:21,052 - backend.main - INFO - Scan 5d56f0b2 completed with 1 findings
+2025-11-14 23:57:56,185 - backend.main - INFO - Scan c8aae450 queued for github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:56,186 - backend.main - INFO - Starting scan c8aae450 for github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:56,186 - nikto_scanner - INFO - Starting Nikto scan nikto_1763144876 for github.com/Yashh-Garg/Nikto-integrration:80
+2025-11-14 23:57:56,234 - nikto_scanner - INFO - Running nikto.pl with args: -host github.com/Yashh-Garg/Nikto-integrration -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 479 -Tuning 479
+2025-11-14 23:57:56,235 - nikto_scanner - INFO - Clean target: github.com/Yashh-Garg/Nikto-integrration, Port: 80
+2025-11-14 23:57:56,588 - nikto_scanner - INFO - Container 377492b633d083d3126bf7f6524b7ea3a76f00c327e1280f1bd61e1ead75fbca started for scan nikto_1763144876
+2025-11-14 23:57:58,594 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:57:58,603 - nikto_scanner - INFO - Container logs length: 4778 chars
+2025-11-14 23:57:58,604 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:27:56 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:27:56 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:27:56 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:27:56 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:27:56 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:27:56 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:27:56 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:57:58,604 - nikto_scanner - INFO - Container logs (last 500 chars): ports" plugin
+V:Fri Nov 14 18:27:56 2025 - 21 server checks loaded
+V:Fri Nov 14 18:27:56 2025 - Running start for "Favicon" plugin
+V:Fri Nov 14 18:27:56 2025 - Running start for "HTTP Headers" plugin
+V:Fri Nov 14 18:27:56 2025 - Running start for "Embedded Detection" plugin
+V:Fri Nov 14 18:27:56 2025 - Running start for "Guess authentication" plugin
+V:Fri Nov 14 18:27:56 2025 - Running start for "Content Search" plugin
++ 0 host(s) tested
+V:Fri Nov 14 18:27:56 2025 + 0 requests made in 0 seconds
+
+2025-11-14 23:57:58,606 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:57:58,607 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:27:56 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:27:56 2025 - Loaded 
+2025-11-14 23:57:58,607 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:57:58,607 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 4778
+2025-11-14 23:57:58,607 - nikto_scanner - INFO - Created XML from logs, length: 410 chars
+2025-11-14 23:57:58,642 - utils.file_manager - INFO - Scan results saved to scan_results/scan_c8aae450.json
+2025-11-14 23:57:58,642 - backend.main - INFO - Scan results persisted to file: scan_results/scan_c8aae450.json
+2025-11-14 23:57:58,643 - backend.main - INFO - Scan c8aae450 completed with 1 findings
+2025-11-14 23:58:22,215 - backend.main - INFO - Scan 6a9fae10 queued for github.com/:80
+2025-11-14 23:58:22,216 - backend.main - INFO - Starting scan 6a9fae10 for github.com/:80
+2025-11-14 23:58:22,216 - nikto_scanner - INFO - Starting Nikto scan nikto_1763144902 for github.com/:80
+2025-11-14 23:58:22,260 - nikto_scanner - INFO - Running nikto.pl with args: -host github.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 479 -Tuning 479
+2025-11-14 23:58:22,260 - nikto_scanner - INFO - Clean target: github.com, Port: 80
+2025-11-14 23:58:22,517 - nikto_scanner - INFO - Container d7512fd920d86513e349f8862e43c6d5d6d81cd2a888afa6a1c31dfdf02fad8e started for scan nikto_1763144902
+2025-11-14 23:58:26,650 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-14 23:58:26,665 - nikto_scanner - INFO - Container logs length: 13132 chars
+2025-11-14 23:58:26,665 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:28:22 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:28:22 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:28:22 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:28:22 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:28:22 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:28:22 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:28:22 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-14 23:58:26,665 - nikto_scanner - INFO - Container logs (last 500 chars):  2025 - 301 for GET:	/sshome/
+V:Fri Nov 14 18:28:26 2025 - 301 for GET:	/tiki/
+V:Fri Nov 14 18:28:26 2025 - 301 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 18:28:26 2025 - 301 for GET:	/scripts/samples/details.idc
++ 21 items checked: 0 error(s) and 6 item(s) reported on remote host
++ End Time:           2025-11-14 18:28:26 (GMT0) (4 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 18:28:26 2025 + 102 requests made in 4 seconds
+
+2025-11-14 23:58:26,669 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-14 23:58:26,669 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:28:22 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:28:22 2025 - Loaded 
+2025-11-14 23:58:26,669 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-14 23:58:26,669 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13132
+2025-11-14 23:58:26,670 - nikto_scanner - INFO - Created XML from logs, length: 1825 chars
+2025-11-14 23:58:31,152 - utils.file_manager - INFO - Scan results saved to scan_results/scan_6a9fae10.json
+2025-11-14 23:58:31,152 - backend.main - INFO - Scan results persisted to file: scan_results/scan_6a9fae10.json
+2025-11-14 23:58:31,153 - backend.main - INFO - Scan 6a9fae10 completed with 8 findings
+2025-11-14 23:59:09,184 - backend.main - INFO - Scan d6accf18 queued for 192.168.0.167:80
+2025-11-14 23:59:09,184 - backend.main - INFO - Starting scan d6accf18 for 192.168.0.167:80
+2025-11-14 23:59:09,185 - nikto_scanner - INFO - Starting Nikto scan nikto_1763144949 for 192.168.0.167:80
+2025-11-14 23:59:09,229 - nikto_scanner - INFO - Running nikto.pl with args: -host 192.168.0.167 -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 75 -Tuning 75
+2025-11-14 23:59:09,229 - nikto_scanner - INFO - Clean target: 192.168.0.167, Port: 80
+2025-11-14 23:59:09,516 - nikto_scanner - INFO - Container bdb3cd7e50e85a1c51cd15679894aa85580029bafac506311240658d2afd2523 started for scan nikto_1763144949
+2025-11-15 00:00:30,936 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-15 00:00:30,956 - nikto_scanner - INFO - Container logs length: 5296 chars
+2025-11-15 00:00:30,957 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:29:09 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:29:09 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:29:09 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:29:09 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:29:09 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:29:09 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:29:09 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-15 00:00:30,957 - nikto_scanner - INFO - Container logs (last 500 chars): orts" plugin
+V:Fri Nov 14 18:30:30 2025 - 22 server checks loaded
+V:Fri Nov 14 18:30:30 2025 - Running start for "Favicon" plugin
+V:Fri Nov 14 18:30:30 2025 - Running start for "HTTP Headers" plugin
+V:Fri Nov 14 18:30:30 2025 - Running start for "Embedded Detection" plugin
+V:Fri Nov 14 18:30:30 2025 - Running start for "Guess authentication" plugin
+V:Fri Nov 14 18:30:30 2025 - Running start for "Content Search" plugin
++ 0 host(s) tested
+V:Fri Nov 14 18:30:30 2025 + 8 requests made in 81 seconds
+
+2025-11-15 00:00:30,961 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-15 00:00:30,962 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:29:09 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:29:09 2025 - Loaded 
+2025-11-15 00:00:30,962 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-15 00:00:30,963 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 5296
+2025-11-15 00:00:30,963 - nikto_scanner - INFO - Created XML from logs, length: 312 chars
+2025-11-15 00:00:31,007 - utils.file_manager - INFO - Scan results saved to scan_results/scan_d6accf18.json
+2025-11-15 00:00:31,008 - backend.main - INFO - Scan results persisted to file: scan_results/scan_d6accf18.json
+2025-11-15 00:00:31,009 - backend.main - INFO - Scan d6accf18 completed with 1 findings
+2025-11-15 00:03:54,761 - backend.main - INFO - Scan 48cf5a8f queued for testphp.vulnweb.com:80
+2025-11-15 00:03:54,763 - backend.main - INFO - Starting scan 48cf5a8f for testphp.vulnweb.com:80
+2025-11-15 00:03:54,763 - nikto_scanner - INFO - Starting Nikto scan nikto_1763145234 for testphp.vulnweb.com:80
+2025-11-15 00:03:54,818 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 94 -Tuning 94
+2025-11-15 00:03:54,818 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-15 00:03:55,271 - nikto_scanner - INFO - Container 2742ea1878e9f5276d2c8a71e8160357038d7b7f00a3570628dbbb7ad8b7b314 started for scan nikto_1763145234
+2025-11-15 00:04:31,945 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-15 00:04:31,964 - nikto_scanner - INFO - Container logs length: 13783 chars
+2025-11-15 00:04:31,965 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:33:55 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:33:55 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:33:55 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:33:55 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:33:55 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:33:55 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:33:55 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-15 00:04:31,965 - nikto_scanner - INFO - Container logs (last 500 chars): 025 - 404 for GET:	/sshome/
+V:Fri Nov 14 18:34:31 2025 - 404 for GET:	/tiki/
+V:Fri Nov 14 18:34:31 2025 - 404 for GET:	/tiki/tiki-install.php
+V:Fri Nov 14 18:34:31 2025 - 404 for GET:	/scripts/samples/details.idc
++ 21 items checked: 4 error(s) and 7 item(s) reported on remote host
++ End Time:           2025-11-14 18:34:31 (GMT0) (35 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 18:34:31 2025 + 116 requests made in 36 seconds
+
+2025-11-15 00:04:31,970 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-15 00:04:31,970 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:33:55 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:33:55 2025 - Loaded 
+2025-11-15 00:04:31,971 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-15 00:04:31,971 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 13783
+2025-11-15 00:04:31,972 - nikto_scanner - INFO - Created XML from logs, length: 1638 chars
+2025-11-15 00:04:37,617 - utils.file_manager - INFO - Scan results saved to scan_results/scan_48cf5a8f.json
+2025-11-15 00:04:37,617 - backend.main - INFO - Scan results persisted to file: scan_results/scan_48cf5a8f.json
+2025-11-15 00:04:37,617 - backend.main - INFO - Scan 48cf5a8f completed with 5 findings
+2025-11-15 00:06:46,618 - backend.main - INFO - Scan 02f576a4 queued for testphp.vulnweb.com:80
+2025-11-15 00:06:46,619 - backend.main - INFO - Starting scan 02f576a4 for testphp.vulnweb.com:80
+2025-11-15 00:06:46,620 - nikto_scanner - INFO - Starting Nikto scan nikto_1763145406 for testphp.vulnweb.com:80
+2025-11-15 00:06:46,646 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-15 00:06:46,646 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
+2025-11-15 00:06:46,928 - nikto_scanner - INFO - Container 5f5b62156cf35710a4cbdb8ed6210ac950fc511dd1d5483836aadb5bb882c719 started for scan nikto_1763145406

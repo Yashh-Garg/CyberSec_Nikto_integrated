@@ -1,0 +1,562 @@
+{
+  "scan_id": "a1eec00e",
+  "target": "192.168.137.1",
+  "port": 80,
+  "ssl": false,
+  "created_at": "2025-11-14T22:46:29.613689+05:30",
+  "completed_at": "2025-11-14T22:46:47.178868+05:30",
+  "findings_count": 1,
+  "results": {
+    "findings_count": 1,
+    "findings": [
+      {
+        "id": "NIKTO-1",
+        "severity": "LOW",
+        "title": "No web server found on 192.168.137.1:80",
+        "description": "No web server found on 192.168.137.1:80",
+        "affected_component": "/",
+        "uri": "/",
+        "method": "GET",
+        "cve_ids": [],
+        "osvdb_id": null,
+        "cvss_score": null,
+        "remediation": null,
+        "cve_details": [],
+        "scanner": "nikto"
+      }
+    ],
+    "scanner": "nikto",
+    "parsed_at": "2025-11-14T22:46:47.178835+05:30"
+  },
+  "risk_score": {
+    "score": 0.2,
+    "level": "MINIMAL",
+    "breakdown": {
+      "LOW": {
+        "count": 1,
+        "score": 1
+      }
+    },
+    "total_findings": 1
+  },
+  "raw_output": "<?xml version=\"1.0\"?>\n<niktoscan>\n<scandata targetip=\"192.168.137.1\" targethostname=\"192.168.137.1\" targetport=\"80\" />\n<item id=\"1\">\n<description>No web server found on 192.168.137.1:80</description>\n<uri>/</uri>\n</item>\n<item id=\"2\">\n<description>0 host(s) tested</description>\n<uri>/</uri>\n</item>\n</niktoscan>",
+  "logs": "- Nikto v2.1.5\n---------------------------------------------------------------------------\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apache_expect_xss\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Apache Expect XSS\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_multiple_index\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Multiple Index\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_paths\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Path Search\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_robots\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Robots\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_xml\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Report as XML\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_fileops\nV:Fri Nov 14 17:16:30 2025 - Loaded \"File Operations\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_clientaccesspolicy\nV:Fri Nov 14 17:16:30 2025 - Loaded \"clientaccesspolicy.xml\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_csv\nV:Fri Nov 14 17:16:30 2025 - Loaded \"CSV reports\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_msf\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Report data to Metasploit\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_html\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Report as HTML\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_outdated\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Outdated\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_subdomain\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Sub-domain forcer\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_cgi\nV:Fri Nov 14 17:16:30 2025 - Loaded \"CGI\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_dictionary_attack\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Dictionary attack\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_parked\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Parked Detection\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_auth\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Guess authentication\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_tests\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Nikto Tests\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_httpoptions\nV:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Options\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_msgs\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Server Messages\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apacheusers\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Apache Users\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_cookies\nV:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_favicon\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Favicon\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_headers\nV:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Headers\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_nbe\nV:Fri Nov 14 17:16:30 2025 - Loaded \"NBE reports\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_ssl\nV:Fri Nov 14 17:16:30 2025 - Loaded \"SSL and cert checks\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_embedded\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Embedded Detection\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_content_search\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Content Search\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_core\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_text\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Text reports\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_siebel\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Siebel Checks\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_put_del_test\nV:Fri Nov 14 17:16:30 2025 - Loaded \"Put/Delete test\" plugin.\nV:Fri Nov 14 17:16:30 2025 - Getting targets\nV:Fri Nov 14 17:16:30 2025 - Target:192.168.137.1 port:80\nV:Fri Nov 14 17:16:30 2025 - Checking for HTTP on port 192.168.137.1:80, using HEAD\nV:Fri Nov 14 17:16:34 2025 -  for HEAD:\t/\nV:Fri Nov 14 17:16:34 2025 - Checking for HTTPS on port 192.168.137.1:80, using HEAD\nV:Fri Nov 14 17:16:38 2025 -  for HEAD:\t/\nV:Fri Nov 14 17:16:38 2025 - Checking for HTTP on port 192.168.137.1:80, using GET\nV:Fri Nov 14 17:16:42 2025 -  for GET:\t/\nV:Fri Nov 14 17:16:42 2025 - Checking for HTTPS on port 192.168.137.1:80, using GET\nV:Fri Nov 14 17:16:46 2025 -  for GET:\t/\n+ No web server found on 192.168.137.1:80\n---------------------------------------------------------------------------\nV:Fri Nov 14 17:16:46 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)\nV:Fri Nov 14 17:16:46 2025 - Opening report for \"CSV reports\" plugin\nV:Fri Nov 14 17:16:47 2025 - 59 server checks loaded\nV:Fri Nov 14 17:16:47 2025 - Running start for \"Favicon\" plugin\nV:Fri Nov 14 17:16:47 2025 - Running start for \"HTTP Headers\" plugin\nV:Fri Nov 14 17:16:47 2025 - Running start for \"Embedded Detection\" plugin\nV:Fri Nov 14 17:16:47 2025 - Running start for \"Guess authentication\" plugin\nV:Fri Nov 14 17:16:47 2025 - Running start for \"Content Search\" plugin\n+ 0 host(s) tested\nV:Fri Nov 14 17:16:47 2025 + 8 requests made in 17 seconds\n",
+  "log_events": [
+    {
+      "line_number": 1,
+      "timestamp": "2025-11-14T22:46:47.144855",
+      "message": "- Nikto v2.1.5",
+      "level": "INFO"
+    },
+    {
+      "line_number": 2,
+      "timestamp": "2025-11-14T22:46:47.144869",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 3,
+      "timestamp": "2025-11-14T22:46:47.144873",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apache_expect_xss",
+      "level": "INFO"
+    },
+    {
+      "line_number": 4,
+      "timestamp": "2025-11-14T22:46:47.144876",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Apache Expect XSS\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 5,
+      "timestamp": "2025-11-14T22:46:47.144879",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_multiple_index",
+      "level": "INFO"
+    },
+    {
+      "line_number": 6,
+      "timestamp": "2025-11-14T22:46:47.144882",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Multiple Index\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 7,
+      "timestamp": "2025-11-14T22:46:47.144886",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_paths",
+      "level": "INFO"
+    },
+    {
+      "line_number": 8,
+      "timestamp": "2025-11-14T22:46:47.144889",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Path Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 9,
+      "timestamp": "2025-11-14T22:46:47.144892",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_robots",
+      "level": "INFO"
+    },
+    {
+      "line_number": 10,
+      "timestamp": "2025-11-14T22:46:47.144894",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Robots\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 11,
+      "timestamp": "2025-11-14T22:46:47.144910",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_xml",
+      "level": "INFO"
+    },
+    {
+      "line_number": 12,
+      "timestamp": "2025-11-14T22:46:47.144914",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Report as XML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 13,
+      "timestamp": "2025-11-14T22:46:47.144917",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_fileops",
+      "level": "INFO"
+    },
+    {
+      "line_number": 14,
+      "timestamp": "2025-11-14T22:46:47.144920",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"File Operations\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 15,
+      "timestamp": "2025-11-14T22:46:47.144923",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_clientaccesspolicy",
+      "level": "INFO"
+    },
+    {
+      "line_number": 16,
+      "timestamp": "2025-11-14T22:46:47.144927",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"clientaccesspolicy.xml\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 17,
+      "timestamp": "2025-11-14T22:46:47.144930",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_csv",
+      "level": "INFO"
+    },
+    {
+      "line_number": 18,
+      "timestamp": "2025-11-14T22:46:47.144933",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"CSV reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 19,
+      "timestamp": "2025-11-14T22:46:47.144936",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_msf",
+      "level": "INFO"
+    },
+    {
+      "line_number": 20,
+      "timestamp": "2025-11-14T22:46:47.144938",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Report data to Metasploit\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 21,
+      "timestamp": "2025-11-14T22:46:47.144942",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_html",
+      "level": "INFO"
+    },
+    {
+      "line_number": 22,
+      "timestamp": "2025-11-14T22:46:47.144945",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Report as HTML\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 23,
+      "timestamp": "2025-11-14T22:46:47.144948",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_outdated",
+      "level": "INFO"
+    },
+    {
+      "line_number": 24,
+      "timestamp": "2025-11-14T22:46:47.144950",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Outdated\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 25,
+      "timestamp": "2025-11-14T22:46:47.144953",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_subdomain",
+      "level": "INFO"
+    },
+    {
+      "line_number": 26,
+      "timestamp": "2025-11-14T22:46:47.144957",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Sub-domain forcer\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 27,
+      "timestamp": "2025-11-14T22:46:47.144959",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_cgi",
+      "level": "INFO"
+    },
+    {
+      "line_number": 28,
+      "timestamp": "2025-11-14T22:46:47.144963",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"CGI\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 29,
+      "timestamp": "2025-11-14T22:46:47.144966",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_dictionary_attack",
+      "level": "INFO"
+    },
+    {
+      "line_number": 30,
+      "timestamp": "2025-11-14T22:46:47.144969",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Dictionary attack\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 31,
+      "timestamp": "2025-11-14T22:46:47.144973",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_parked",
+      "level": "INFO"
+    },
+    {
+      "line_number": 32,
+      "timestamp": "2025-11-14T22:46:47.144976",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Parked Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 33,
+      "timestamp": "2025-11-14T22:46:47.144979",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_auth",
+      "level": "INFO"
+    },
+    {
+      "line_number": 34,
+      "timestamp": "2025-11-14T22:46:47.144982",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Guess authentication\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 35,
+      "timestamp": "2025-11-14T22:46:47.144985",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_tests",
+      "level": "INFO"
+    },
+    {
+      "line_number": 36,
+      "timestamp": "2025-11-14T22:46:47.144988",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Nikto Tests\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 37,
+      "timestamp": "2025-11-14T22:46:47.144991",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_httpoptions",
+      "level": "INFO"
+    },
+    {
+      "line_number": 38,
+      "timestamp": "2025-11-14T22:46:47.144994",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Options\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 39,
+      "timestamp": "2025-11-14T22:46:47.144996",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_msgs",
+      "level": "INFO"
+    },
+    {
+      "line_number": 40,
+      "timestamp": "2025-11-14T22:46:47.144999",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Server Messages\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 41,
+      "timestamp": "2025-11-14T22:46:47.145002",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_apacheusers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 42,
+      "timestamp": "2025-11-14T22:46:47.145005",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Apache Users\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 43,
+      "timestamp": "2025-11-14T22:46:47.145008",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_cookies",
+      "level": "INFO"
+    },
+    {
+      "line_number": 44,
+      "timestamp": "2025-11-14T22:46:47.145011",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Cookie Internal IP\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 45,
+      "timestamp": "2025-11-14T22:46:47.145014",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_favicon",
+      "level": "INFO"
+    },
+    {
+      "line_number": 46,
+      "timestamp": "2025-11-14T22:46:47.145017",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Favicon\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 47,
+      "timestamp": "2025-11-14T22:46:47.145020",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_headers",
+      "level": "INFO"
+    },
+    {
+      "line_number": 48,
+      "timestamp": "2025-11-14T22:46:47.145023",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"HTTP Headers\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 49,
+      "timestamp": "2025-11-14T22:46:47.145026",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_nbe",
+      "level": "INFO"
+    },
+    {
+      "line_number": 50,
+      "timestamp": "2025-11-14T22:46:47.145029",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"NBE reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 51,
+      "timestamp": "2025-11-14T22:46:47.145031",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_ssl",
+      "level": "INFO"
+    },
+    {
+      "line_number": 52,
+      "timestamp": "2025-11-14T22:46:47.145034",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"SSL and cert checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 53,
+      "timestamp": "2025-11-14T22:46:47.145037",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_embedded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 54,
+      "timestamp": "2025-11-14T22:46:47.145041",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Embedded Detection\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 55,
+      "timestamp": "2025-11-14T22:46:47.145044",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_content_search",
+      "level": "INFO"
+    },
+    {
+      "line_number": 56,
+      "timestamp": "2025-11-14T22:46:47.145047",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Content Search\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 57,
+      "timestamp": "2025-11-14T22:46:47.145050",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_core",
+      "level": "INFO"
+    },
+    {
+      "line_number": 58,
+      "timestamp": "2025-11-14T22:46:47.145053",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_report_text",
+      "level": "INFO"
+    },
+    {
+      "line_number": 59,
+      "timestamp": "2025-11-14T22:46:47.145056",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Text reports\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 60,
+      "timestamp": "2025-11-14T22:46:47.145058",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_siebel",
+      "level": "INFO"
+    },
+    {
+      "line_number": 61,
+      "timestamp": "2025-11-14T22:46:47.145061",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Siebel Checks\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 62,
+      "timestamp": "2025-11-14T22:46:47.145064",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Initialising plugin nikto_put_del_test",
+      "level": "INFO"
+    },
+    {
+      "line_number": 63,
+      "timestamp": "2025-11-14T22:46:47.145067",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Loaded \"Put/Delete test\" plugin.",
+      "level": "INFO"
+    },
+    {
+      "line_number": 64,
+      "timestamp": "2025-11-14T22:46:47.145070",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Getting targets",
+      "level": "INFO"
+    },
+    {
+      "line_number": 65,
+      "timestamp": "2025-11-14T22:46:47.145073",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Target:192.168.137.1 port:80",
+      "level": "INFO"
+    },
+    {
+      "line_number": 66,
+      "timestamp": "2025-11-14T22:46:47.145077",
+      "message": "V:Fri Nov 14 17:16:30 2025 - Checking for HTTP on port 192.168.137.1:80, using HEAD",
+      "level": "INFO"
+    },
+    {
+      "line_number": 67,
+      "timestamp": "2025-11-14T22:46:47.145080",
+      "message": "V:Fri Nov 14 17:16:34 2025 -  for HEAD:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 68,
+      "timestamp": "2025-11-14T22:46:47.145084",
+      "message": "V:Fri Nov 14 17:16:34 2025 - Checking for HTTPS on port 192.168.137.1:80, using HEAD",
+      "level": "INFO"
+    },
+    {
+      "line_number": 69,
+      "timestamp": "2025-11-14T22:46:47.145087",
+      "message": "V:Fri Nov 14 17:16:38 2025 -  for HEAD:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 70,
+      "timestamp": "2025-11-14T22:46:47.145090",
+      "message": "V:Fri Nov 14 17:16:38 2025 - Checking for HTTP on port 192.168.137.1:80, using GET",
+      "level": "INFO"
+    },
+    {
+      "line_number": 71,
+      "timestamp": "2025-11-14T22:46:47.145093",
+      "message": "V:Fri Nov 14 17:16:42 2025 -  for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 72,
+      "timestamp": "2025-11-14T22:46:47.145096",
+      "message": "V:Fri Nov 14 17:16:42 2025 - Checking for HTTPS on port 192.168.137.1:80, using GET",
+      "level": "INFO"
+    },
+    {
+      "line_number": 73,
+      "timestamp": "2025-11-14T22:46:47.145100",
+      "message": "V:Fri Nov 14 17:16:46 2025 -  for GET:\t/",
+      "level": "INFO"
+    },
+    {
+      "line_number": 74,
+      "timestamp": "2025-11-14T22:46:47.145102",
+      "message": "+ No web server found on 192.168.137.1:80",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "No web server found on 192.168.137.1:80"
+    },
+    {
+      "line_number": 75,
+      "timestamp": "2025-11-14T22:46:47.145108",
+      "message": "---------------------------------------------------------------------------",
+      "level": "INFO"
+    },
+    {
+      "line_number": 76,
+      "timestamp": "2025-11-14T22:46:47.145111",
+      "message": "V:Fri Nov 14 17:16:46 2025 - Opening reports (csv, /tmp/results/nikto_output.csv)",
+      "level": "INFO"
+    },
+    {
+      "line_number": 77,
+      "timestamp": "2025-11-14T22:46:47.145114",
+      "message": "V:Fri Nov 14 17:16:46 2025 - Opening report for \"CSV reports\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 78,
+      "timestamp": "2025-11-14T22:46:47.145118",
+      "message": "V:Fri Nov 14 17:16:47 2025 - 59 server checks loaded",
+      "level": "INFO"
+    },
+    {
+      "line_number": 79,
+      "timestamp": "2025-11-14T22:46:47.145121",
+      "message": "V:Fri Nov 14 17:16:47 2025 - Running start for \"Favicon\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 80,
+      "timestamp": "2025-11-14T22:46:47.145124",
+      "message": "V:Fri Nov 14 17:16:47 2025 - Running start for \"HTTP Headers\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 81,
+      "timestamp": "2025-11-14T22:46:47.145127",
+      "message": "V:Fri Nov 14 17:16:47 2025 - Running start for \"Embedded Detection\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 82,
+      "timestamp": "2025-11-14T22:46:47.145131",
+      "message": "V:Fri Nov 14 17:16:47 2025 - Running start for \"Guess authentication\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 83,
+      "timestamp": "2025-11-14T22:46:47.145135",
+      "message": "V:Fri Nov 14 17:16:47 2025 - Running start for \"Content Search\" plugin",
+      "level": "INFO"
+    },
+    {
+      "line_number": 84,
+      "timestamp": "2025-11-14T22:46:47.145138",
+      "message": "+ 0 host(s) tested",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "0 host(s) tested"
+    },
+    {
+      "line_number": 85,
+      "timestamp": "2025-11-14T22:46:47.145141",
+      "message": "V:Fri Nov 14 17:16:47 2025 + 8 requests made in 17 seconds",
+      "level": "INFO",
+      "type": "finding",
+      "finding": "V:Fri Nov 14 17:16:47 2025 8 requests made in 17 seconds"
+    }
+  ]
+}

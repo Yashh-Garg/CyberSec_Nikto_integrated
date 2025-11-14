@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: .
+    container_name: cybersec-ai-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./scan_results:/app/scan_results
+      - ./logs:/app/logs
+      # Docker socket - works on Linux/Mac/WSL2
+      # On Windows with WSL2 backend, this works
+      # On Windows without WSL2, use TCP endpoint (see environment below)
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # For Windows: Use TCP if Docker Desktop TCP endpoint is enabled
+      # For Linux/Mac/WSL2: Use unix socket (default)
+      # Uncomment the line below if you're on Windows and socket mount doesn't work:
+      # - DOCKER_HOST=tcp://host.docker.internal:2375
+      # Note: Don't set DOCKER_HOST to unix:// as it causes issues with docker-py
+      # The code will detect the socket and use it directly
+      - LOG_LEVEL=info
+      - SCAN_TIMEOUT=3600
+      - MAX_CONCURRENT_SCANS=5
+    restart: unless-stopped
+    networks:
+      - cybersec-network
+
+networks:
+  cybersec-network:
+    driver: bridge
