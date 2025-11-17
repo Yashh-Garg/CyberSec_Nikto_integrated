@@ -4,6 +4,7 @@ import { initiateScan, getScanStatus } from '../services/api'
 
 function ScanForm({ onScanComplete }) {
   const [formData, setFormData] = useState({
+    scanner: 'nikto', // 'nikto' or 'zap'
     target: '',
     port: 80,
     ssl: false,
@@ -44,22 +45,25 @@ function ScanForm({ onScanComplete }) {
     setStatus({ type: 'pending', message: 'Initiating scan...' })
 
     try {
-      // Build options based on scan mode
+      // Build options based on scan mode (only for Nikto)
       const options = []
-      if (formData.scanMode === 'selective' && formData.selectedScans.length > 0) {
-        // Use selected scan types
-        const tuningOptions = formData.selectedScans.join('')
-        options.push('-Tuning', tuningOptions)
-      } else {
-        // Default: all tests
-        options.push('-Tuning', 'x')
+      if (formData.scanner === 'nikto') {
+        if (formData.scanMode === 'selective' && formData.selectedScans.length > 0) {
+          // Use selected scan types
+          const tuningOptions = formData.selectedScans.join('')
+          options.push('-Tuning', tuningOptions)
+        } else {
+          // Default: all tests
+          options.push('-Tuning', 'x')
+        }
       }
+      // ZAP doesn't need tuning options, it uses scan type (baseline/quick/full)
 
       const response = await initiateScan({
         target: formData.target,
         port: formData.port,
         ssl: formData.ssl,
-        scan_type: 'nikto',
+        scan_type: formData.scanner,
         options: options,
         scan_mode: formData.scanMode,
         selected_scans: formData.scanMode === 'selective' ? formData.selectedScans : null,
@@ -128,6 +132,27 @@ function ScanForm({ onScanComplete }) {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">
+            Scanner
+          </label>
+          <select
+            className="input"
+            value={formData.scanner}
+            onChange={(e) => setFormData({ ...formData, scanner: e.target.value, scanMode: 'all', selectedScans: [] })}
+            disabled={loading}
+            required
+          >
+            <option value="nikto">Nikto</option>
+            <option value="zap">OWASP ZAP</option>
+          </select>
+          <p className="text-xs text-gray-500 mt-1">
+            {formData.scanner === 'nikto' 
+              ? 'Nikto - Fast web server scanner focused on known vulnerabilities'
+              : 'OWASP ZAP - Comprehensive web application security scanner with active and passive scanning'}
+          </p>
+        </div>
+
+        <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-2">
             Target (Hostname or IP)
           </label>
           <input
@@ -169,46 +194,47 @@ function ScanForm({ onScanComplete }) {
           </label>
         </div>
 
-        {/* Scan Mode Selection */}
-        <div className="border-t pt-4 mt-4">
-          <label className="text-sm font-semibold text-gray-700 mb-3 block">Scan Mode</label>
+        {/* Scan Mode Selection - Only show for Nikto */}
+        {formData.scanner === 'nikto' && (
+          <div className="border-t pt-4 mt-4">
+            <label className="text-sm font-semibold text-gray-700 mb-3 block">Scan Mode</label>
 
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <input
-                type="radio"
-                id="scan-all"
-                name="scanMode"
-                value="all"
-                checked={formData.scanMode === 'all'}
-                onChange={(e) => setFormData({ ...formData, scanMode: 'all', selectedScans: [] })}
-                disabled={loading}
-                className="w-4 h-4"
-              />
-              <label htmlFor="scan-all" className="text-sm text-gray-700">
-                <strong>Comprehensive Scan</strong> - All vulnerability tests (slower, thorough)
-              </label>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="scan-all"
+                  name="scanMode"
+                  value="all"
+                  checked={formData.scanMode === 'all'}
+                  onChange={(e) => setFormData({ ...formData, scanMode: 'all', selectedScans: [] })}
+                  disabled={loading}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="scan-all" className="text-sm text-gray-700">
+                  <strong>Comprehensive Scan</strong> - All vulnerability tests (slower, thorough)
+                </label>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="scan-selective"
+                  name="scanMode"
+                  value="selective"
+                  checked={formData.scanMode === 'selective'}
+                  onChange={(e) => setFormData({ ...formData, scanMode: 'selective' })}
+                  disabled={loading}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="scan-selective" className="text-sm text-gray-700">
+                  <strong>Selective Scan</strong> - Choose specific vulnerability types (faster, targeted)
+                </label>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <input
-                type="radio"
-                id="scan-selective"
-                name="scanMode"
-                value="selective"
-                checked={formData.scanMode === 'selective'}
-                onChange={(e) => setFormData({ ...formData, scanMode: 'selective' })}
-                disabled={loading}
-                className="w-4 h-4"
-              />
-              <label htmlFor="scan-selective" className="text-sm text-gray-700">
-                <strong>Selective Scan</strong> - Choose specific vulnerability types (faster, targeted)
-              </label>
-            </div>
-          </div>
-
-          {/* Selective Scan Options */}
-          {formData.scanMode === 'selective' && (
+            {/* Selective Scan Options */}
+            {formData.scanMode === 'selective' && (
             <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 max-h-64 overflow-y-auto">
               <p className="text-xs text-gray-600 mb-3">
                 Select one or more vulnerability types to scan for:
@@ -252,13 +278,14 @@ function ScanForm({ onScanComplete }) {
                 </p>
               )}
             </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
 
         <button
           type="submit"
           className="btn btn-primary flex items-center gap-2 w-full"
-          disabled={loading || isSubmitting || (formData.scanMode === 'selective' && formData.selectedScans.length === 0)}
+          disabled={loading || isSubmitting || (formData.scanner === 'nikto' && formData.scanMode === 'selective' && formData.selectedScans.length === 0)}
         >
           <Play className="w-5 h-5" />
           {loading && status?.type === 'pending' ? 'Starting...' : 

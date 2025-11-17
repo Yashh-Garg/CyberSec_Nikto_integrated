@@ -17,6 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, validator
 
 from nikto_scanner import NiktoScanner
+from zap_scanner import ZapScanner
 from utils.parser import normalize_results
 from utils.analytics import ScanAnalytics
 from utils.file_manager import FileManager
@@ -83,17 +84,28 @@ scan_jobs: Dict[str, Dict] = {}
 # File manager for persisting scan results
 file_manager = FileManager()
 
-# Initialize scanner lazily (only when needed)
-_scanner_instance: Optional[NiktoScanner] = None
+# Initialize scanners lazily (only when needed)
+_scanner_instances: Dict[str, any] = {}
 
-def get_scanner() -> NiktoScanner:
-    """Get or create scanner instance."""
-    global _scanner_instance
-    if _scanner_instance is None:
+def get_scanner(scan_type: str = "nikto"):
+    """Get or create scanner instance based on scan type.
+    
+    Args:
+        scan_type: Type of scanner ('nikto' or 'zap')
+        
+    Returns:
+        Scanner instance (NiktoScanner or ZapScanner)
+    """
+    global _scanner_instances
+    
+    if scan_type not in _scanner_instances:
         try:
-            _scanner_instance = NiktoScanner()
+            if scan_type == "zap":
+                _scanner_instances[scan_type] = ZapScanner()
+            else:  # Default to nikto
+                _scanner_instances[scan_type] = NiktoScanner()
         except Exception as e:
-            logger.error(f"Failed to initialize scanner: {e}", exc_info=True)
+            logger.error(f"Failed to initialize {scan_type} scanner: {e}", exc_info=True)
             error_detail = str(e)
             # Provide helpful Windows-specific instructions
             if "Cannot connect to Docker" in error_detail or "Docker connection failed" in error_detail:
@@ -107,7 +119,7 @@ def get_scanner() -> NiktoScanner:
                 status_code=503,
                 detail=error_detail
             )
-    return _scanner_instance
+    return _scanner_instances[scan_type]
 
 
 # Pydantic models
@@ -164,8 +176,8 @@ async def run_scan(scan_id: str, request: ScanRequest):
         # Build options from request
         scan_options = request.options or []
         
-        # If selective mode with selected scans, build tuning options
-        if request.scan_mode == 'selective' and request.selected_scans:
+        # If selective mode with selected scans, build tuning options (only for Nikto)
+        if request.scan_type == 'nikto' and request.scan_mode == 'selective' and request.selected_scans:
             # Combine selected scan types into tuning string
             tuning_string = ''.join(request.selected_scans)
             if tuning_string:
@@ -173,7 +185,7 @@ async def run_scan(scan_id: str, request: ScanRequest):
         
         # Run scan (blocking operation in thread pool)
         loop = asyncio.get_event_loop()
-        scanner_instance = get_scanner()
+        scanner_instance = get_scanner(request.scan_type)
         scan_result = await loop.run_in_executor(
             None,
             lambda: scanner_instance.scan(
@@ -185,6 +197,7 @@ async def run_scan(scan_id: str, request: ScanRequest):
         )
         
         # Parse results
+        logger.info(f"Parsing results for scanner type: '{request.scan_type}'")
         normalized_results = normalize_results(
             raw_output=scan_result["raw_output"],
             output_format=scan_result.get("output_format", "xml"),

@@ -1718,3 +1718,419 @@ V:Fri Nov 14 18:33:55 2025 - Loaded
 2025-11-15 00:06:46,646 - nikto_scanner - INFO - Running nikto.pl with args: -host testphp.vulnweb.com -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
 2025-11-15 00:06:46,646 - nikto_scanner - INFO - Clean target: testphp.vulnweb.com, Port: 80
 2025-11-15 00:06:46,928 - nikto_scanner - INFO - Container 5f5b62156cf35710a4cbdb8ed6210ac950fc511dd1d5483836aadb5bb882c719 started for scan nikto_1763145406
+2025-11-15 00:40:47,295 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-15 00:40:48,345 - nikto_scanner - INFO - Container logs length: 648981 chars
+2025-11-15 00:40:48,346 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:36:47 2025 - Loaded "Apache Expect XSS" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_multiple_index
+V:Fri Nov 14 18:36:47 2025 - Loaded "Multiple Index" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_paths
+V:Fri Nov 14 18:36:47 2025 - Loaded "Path Search" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_robots
+V:Fri Nov 14 18:36:47 2025 - Loaded "Robots" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_report_xml
+V:Fri Nov 14 18:36:47 2025 - Loaded "Report as XML" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_fileops
+V:Fri Nov 14 18:36:47 2025 - Loaded "File Operations" plugin.
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Fri Nov 14 18:36:47 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Fri Nov 14 
+2025-11-15 00:40:48,346 - nikto_scanner - INFO - Container logs (last 500 chars): T:	/mobileadmin/web/
+V:Fri Nov 14 19:10:45 2025 - 404 for GET:	/mobileadmin/logs/
+V:Fri Nov 14 19:10:46 2025 - 404 for GET:	/mobileadmin/bin/
+V:Fri Nov 14 19:10:46 2025 - 404 for GET:	/mobileadmin/home.cs
++ 6544 items checked: 4 error(s) and 13 item(s) reported on remote host
++ End Time:           2025-11-14 19:10:46 (GMT0) (2039 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Fri Nov 14 19:10:46 2025 + 7050 requests made in 2040 seconds
+
+2025-11-15 00:40:48,407 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-15 00:40:48,409 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Fri Nov 14 18:36:47 2025 - Initialising plugin nikto_apache_expect_xss
+V:Fri Nov 14 18:36:47 2025 - Loaded 
+2025-11-15 00:40:48,410 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-15 00:40:48,411 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 648981
+2025-11-15 00:40:48,413 - nikto_scanner - INFO - Created XML from logs, length: 2361 chars
+2025-11-15 00:40:53,827 - utils.file_manager - INFO - Scan results saved to scan_results/scan_02f576a4.json
+2025-11-15 00:40:53,827 - backend.main - INFO - Scan results persisted to file: scan_results/scan_02f576a4.json
+2025-11-15 00:40:53,827 - backend.main - INFO - Scan 02f576a4 completed with 11 findings
+2025-11-15 20:36:48,762 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-15 20:37:39,677 - backend.main - INFO - Scan dde8bb8c queued for https://jimsrohini.org/:80
+2025-11-15 20:37:39,685 - backend.main - INFO - Starting scan dde8bb8c for https://jimsrohini.org/:80
+2025-11-15 20:37:39,686 - nikto_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-15 20:37:39,732 - nikto_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-15 20:37:39,735 - nikto_scanner - INFO - Starting Nikto scan nikto_1763219259 for https://jimsrohini.org/:80
+2025-11-15 20:37:39,796 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-15 20:37:39,796 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-15 20:37:40,294 - nikto_scanner - INFO - Container 7988b6c1d46e0f36c06ce4c416011c534299ed9ff1b22fc0d37c27e87bee4d70 started for scan nikto_1763219259
+2025-11-15 20:38:33,450 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-15 20:38:33,475 - nikto_scanner - INFO - Container logs length: 31184 chars
+2025-11-15 20:38:33,476 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sat Nov 15 15:07:40 2025 - Loaded "Apache Expect XSS" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_multiple_index
+V:Sat Nov 15 15:07:40 2025 - Loaded "Multiple Index" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_paths
+V:Sat Nov 15 15:07:40 2025 - Loaded "Path Search" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_robots
+V:Sat Nov 15 15:07:40 2025 - Loaded "Robots" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_report_xml
+V:Sat Nov 15 15:07:40 2025 - Loaded "Report as XML" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_fileops
+V:Sat Nov 15 15:07:40 2025 - Loaded "File Operations" plugin.
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Sat Nov 15 15:07:40 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Sat Nov 15 
+2025-11-15 20:38:33,476 - nikto_scanner - INFO - Container logs (last 500 chars): 08:32 2025 - 301 for GET:	/db.php?q='&t='
+V:Sat Nov 15 15:08:32 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Sat Nov 15 15:08:33 2025 - 301 for POST:	/search.php
+V:Sat Nov 15 15:08:33 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-15 15:08:33 (GMT0) (52 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Sat Nov 15 15:08:33 2025 + 195 requests made in 53 seconds
+
+2025-11-15 20:38:33,480 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-15 20:38:33,481 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sat Nov 15 15:07:40 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sat Nov 15 15:07:40 2025 - Loaded 
+2025-11-15 20:38:33,481 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-15 20:38:33,481 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31184
+2025-11-15 20:38:33,482 - nikto_scanner - INFO - Created XML from logs, length: 2924 chars
+2025-11-15 20:38:35,574 - utils.file_manager - INFO - Scan results saved to scan_results/scan_dde8bb8c.json
+2025-11-15 20:38:35,575 - backend.main - INFO - Scan results persisted to file: scan_results/scan_dde8bb8c.json
+2025-11-15 20:38:35,575 - backend.main - INFO - Scan dde8bb8c completed with 13 findings
+2025-11-16 01:26:19,826 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 01:30:06,905 - backend.main - INFO - Scan d70ac482 queued for https://jimsrohini.org/:80
+2025-11-16 01:30:06,907 - backend.main - INFO - Starting scan d70ac482 for https://jimsrohini.org/:80
+2025-11-16 01:30:06,907 - nikto_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 01:30:07,081 - nikto_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 01:30:07,083 - nikto_scanner - INFO - Starting Nikto scan nikto_1763236807 for https://jimsrohini.org/:80
+2025-11-16 01:30:07,112 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-16 01:30:07,112 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-16 01:30:07,467 - nikto_scanner - INFO - Container 31af0859a1dcb9dfbf8a7c706f0d0221b58052c48be83c556642849111c6484d started for scan nikto_1763236807
+2025-11-16 01:59:17,509 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-16 01:59:17,667 - nikto_scanner - INFO - Container logs length: 591399 chars
+2025-11-16 01:59:17,668 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sat Nov 15 20:00:07 2025 - Loaded "Apache Expect XSS" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_multiple_index
+V:Sat Nov 15 20:00:07 2025 - Loaded "Multiple Index" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_paths
+V:Sat Nov 15 20:00:07 2025 - Loaded "Path Search" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_robots
+V:Sat Nov 15 20:00:07 2025 - Loaded "Robots" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_report_xml
+V:Sat Nov 15 20:00:07 2025 - Loaded "Report as XML" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_fileops
+V:Sat Nov 15 20:00:07 2025 - Loaded "File Operations" plugin.
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Sat Nov 15 20:00:07 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Sat Nov 15 
+2025-11-16 01:59:17,669 - nikto_scanner - INFO - Container logs (last 500 chars): T:	/mobileadmin/web/
+V:Sat Nov 15 20:29:16 2025 - 301 for GET:	/mobileadmin/logs/
+V:Sat Nov 15 20:29:16 2025 - 404 for GET:	/mobileadmin/bin/
+V:Sat Nov 15 20:29:17 2025 - 404 for GET:	/mobileadmin/home.cs
++ 6544 items checked: 0 error(s) and 20 item(s) reported on remote host
++ End Time:           2025-11-15 20:29:17 (GMT0) (1749 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Sat Nov 15 20:29:17 2025 + 6298 requests made in 1750 seconds
+
+2025-11-16 01:59:17,709 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-16 01:59:17,711 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sat Nov 15 20:00:07 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sat Nov 15 20:00:07 2025 - Loaded 
+2025-11-16 01:59:17,711 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-16 01:59:17,712 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 591399
+2025-11-16 01:59:17,715 - nikto_scanner - INFO - Created XML from logs, length: 5008 chars
+2025-11-16 01:59:17,796 - backend.main - ERROR - Scan d70ac482 failed: Unsupported scanner: zap
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 188, in run_scan
+    normalized_results = normalize_results(
+                         ^^^^^^^^^^^^^^^^^^
+  File "/app/backend/utils/parser.py", line 405, in normalize_results
+    raise ValueError(f"Unsupported scanner: {scanner}")
+ValueError: Unsupported scanner: zap
+2025-11-16 02:52:38,357 - backend.main - INFO - Scan 00a9f074 queued for https://jimsrohini.org/:80
+2025-11-16 02:52:38,365 - backend.main - INFO - Starting scan 00a9f074 for https://jimsrohini.org/:80
+2025-11-16 02:52:38,375 - nikto_scanner - INFO - Starting Nikto scan nikto_1763241758 for https://jimsrohini.org/:80
+2025-11-16 02:52:38,437 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning x
+2025-11-16 02:52:38,439 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-16 02:52:39,103 - nikto_scanner - INFO - Container 9920631eaa2abef233572b5bc4bf1e18c18310915f358b9f73f2301b687475c2 started for scan nikto_1763241758
+2025-11-16 02:53:29,199 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 02:53:39,449 - backend.main - INFO - Scan 79a9bc97 queued for https://jimsrohini.org/:80
+2025-11-16 02:53:39,450 - backend.main - INFO - Starting scan 79a9bc97 for https://jimsrohini.org/:80
+2025-11-16 02:53:39,451 - zap_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 02:53:39,479 - zap_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 02:53:39,481 - zap_scanner - INFO - Starting ZAP scan zap_1763241819 for https://jimsrohini.org/:80
+2025-11-16 02:53:39,489 - zap_scanner - INFO - Pulling image ghcr.io/zaproxy/zaproxy:stable
+2025-11-16 02:56:25,110 - zap_scanner - INFO - Running ZAP with command: zap-baseline.py -t http://https://jimsrohini.org/:80 -J /tmp/results/zap_report.json -x /tmp/results/zap_report.xml
+2025-11-16 02:56:25,126 - zap_scanner - INFO - Target URL: http://https://jimsrohini.org/:80
+2025-11-16 02:56:26,182 - zap_scanner - INFO - Container 21e45d769494e4180fdb7f2892e44c7dd489aa330c3f34f77cfe3b25a4891279 started for scan zap_1763241819
+2025-11-16 02:56:28,195 - zap_scanner - INFO - Container exited with code: 3
+2025-11-16 02:56:28,227 - zap_scanner - INFO - Container logs length: 2279 chars
+2025-11-16 02:56:28,227 - zap_scanner - INFO - Container logs (first 1000 chars): 2025-11-15 21:26:26,919 A file based option has been specified but the directory '/zap/wrk' is not mounted 
+Usage: zap-baseline.py -t <target> [options]
+    -t target         target URL including the protocol, e.g. https://www.example.com
+Options:
+    -h                print this help message
+    -c config_file    config file to use to INFO, IGNORE or FAIL warnings
+    -u config_url     URL of config file to use to INFO, IGNORE or FAIL warnings
+    -g gen_file       generate default config file (all rules set to WARN)
+    -m mins           the number of minutes to spider for (default 1)
+    -r report_html    file to write the full ZAP HTML report
+    -w report_md      file to write the full ZAP Wiki (Markdown) report
+    -x report_xml     file to write the full ZAP XML report
+    -J report_json    file to write the full ZAP JSON document
+    -a                include the alpha passive scan rules as well
+    -d                show debug messages
+    -P                specify listen port
+2025-11-16 02:56:28,228 - zap_scanner - INFO - Container logs (last 500 chars): scans - must be defined in the given context file
+    -z zap_options    ZAP command line options e.g. -z "-config aaa=bbb -config ccc=ddd"
+    --hook            path to python file that define your custom hooks
+    --auto            use the automation framework if supported for the given parameters (this is now the default)
+    --autooff         do not use the automation framework even if supported for the given parameters
+
+For more details see https://www.zaproxy.org/docs/docker/baseline-scan/
+
+2025-11-16 02:56:28,235 - zap_scanner - WARNING - No XML file found, trying to extract from logs
+2025-11-16 02:56:28,247 - zap_scanner - WARNING - No XML found in logs. Logs contain: 2025-11-15 21:26:26,919 A file based option has been specified but the directory '/zap/wrk' is not mounted 
+Usage: zap-baseline.py -t <target> [options]
+    -t target         target URL including the 
+2025-11-16 02:56:28,248 - zap_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-16 02:56:28,250 - zap_scanner - INFO - Created XML from logs, length: 144 chars
+2025-11-16 02:56:28,303 - backend.main - INFO - Parsing results for scanner type: 'zap'
+2025-11-16 02:56:28,305 - utils.parser - INFO - Normalizing results for scanner: zap (normalized: zap)
+2025-11-16 02:56:28,335 - utils.file_manager - INFO - Scan results saved to scan_results/scan_79a9bc97.json
+2025-11-16 02:56:28,335 - backend.main - INFO - Scan results persisted to file: scan_results/scan_79a9bc97.json
+2025-11-16 02:56:28,336 - backend.main - INFO - Scan 79a9bc97 completed with 0 findings
+2025-11-16 03:05:39,564 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 03:06:41,195 - backend.main - INFO - Scan 246f8851 queued for https://jimsrohini.org/:80
+2025-11-16 03:06:41,196 - backend.main - INFO - Starting scan 246f8851 for https://jimsrohini.org/:80
+2025-11-16 03:06:41,197 - zap_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 03:06:41,241 - zap_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 03:06:41,248 - zap_scanner - INFO - Starting ZAP scan zap_1763242601 for https://jimsrohini.org/:80
+2025-11-16 03:06:41,405 - zap_scanner - INFO - Running ZAP with command: zap-baseline.py -t https://jimsrohini.org:80 -J /zap/wrk/zap_report.json -x /zap/wrk/zap_report.xml -r /zap/wrk/zap_report.html
+2025-11-16 03:06:41,405 - zap_scanner - INFO - Target URL: https://jimsrohini.org:80
+2025-11-16 03:06:41,848 - zap_scanner - INFO - Container 73332dcc6e9486caf8ade7f33dc0fa4cc90b075cdeeda9ff88c8dec222a987b3 started for scan zap_1763242601
+2025-11-16 03:07:29,648 - zap_scanner - INFO - Container exited with code: 3
+2025-11-16 03:07:29,744 - zap_scanner - INFO - Container logs length: 355 chars
+2025-11-16 03:07:29,745 - zap_scanner - INFO - Container logs (first 1000 chars): 2025-11-15 21:36:42,446 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+2025-11-15 21:37:29,449 Failed to access summary file /home/zap/zap_out.json
+Using the Automation Framework
+Automation plan failures:
+	Job spider failed to access URL https://jimsrohini.org:80 : Unsupported or unrecognized SSL message
+
+2025-11-16 03:07:29,745 - zap_scanner - INFO - Container logs (last 500 chars): 2025-11-15 21:36:42,446 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+2025-11-15 21:37:29,449 Failed to access summary file /home/zap/zap_out.json
+Using the Automation Framework
+Automation plan failures:
+	Job spider failed to access URL https://jimsrohini.org:80 : Unsupported or unrecognized SSL message
+
+2025-11-16 03:07:29,757 - zap_scanner - INFO - Files in results directory: ['.gitkeep', 'Latest_comprehensive.json', 'scan_0e5b1b9e.json', 'scan_2341b3cc.json', 'scan_2cb70864.json', 'scan_3c510892.json', 'scan_48cf5a8f.json', 'scan_5d56f0b2.json', 'scan_6a9fae10.json', 'scan_79a9bc97.json', 'scan_a1eec00e.json', 'scan_b4037e38.json', 'scan_c66809bf.json', 'scan_c8aae450.json', 'scan_d6accf18.json', 'scan_dde8bb8c.json', 'scan_fe2dd4e2.json']
+2025-11-16 03:07:29,846 - zap_scanner - INFO - Found JSON file Latest_comprehensive.json, size: 2303797 chars
+2025-11-16 03:07:29,846 - zap_scanner - INFO - Converting JSON to XML format
+2025-11-16 03:07:29,864 - zap_scanner - INFO - Successfully extracted XML, length: 56
+2025-11-16 03:07:29,969 - backend.main - INFO - Parsing results for scanner type: 'zap'
+2025-11-16 03:07:29,970 - utils.parser - INFO - Normalizing results for scanner: zap (normalized: zap)
+2025-11-16 03:07:29,972 - utils.parser - INFO - ZAP XML root tag: OWASPZAPReport
+2025-11-16 03:07:29,972 - utils.parser - INFO - Found 0 site(s) in ZAP XML
+2025-11-16 03:07:29,973 - utils.parser - INFO - ZAP parser found 0 total vulnerabilities
+2025-11-16 03:07:29,978 - utils.file_manager - INFO - Scan results saved to scan_results/scan_246f8851.json
+2025-11-16 03:07:29,978 - backend.main - INFO - Scan results persisted to file: scan_results/scan_246f8851.json
+2025-11-16 03:07:29,979 - backend.main - INFO - Scan 246f8851 completed with 0 findings
+2025-11-16 03:12:47,121 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 03:12:57,625 - backend.main - INFO - Scan c19842fa queued for https://jimsrohini.org/:80
+2025-11-16 03:12:57,627 - backend.main - INFO - Starting scan c19842fa for https://jimsrohini.org/:80
+2025-11-16 03:12:57,627 - zap_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 03:12:57,664 - zap_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 03:12:57,666 - zap_scanner - INFO - Starting ZAP scan zap_1763242977 for https://jimsrohini.org/:80
+2025-11-16 03:12:57,743 - zap_scanner - INFO - Running ZAP with command: zap-baseline.py -t https://jimsrohini.org -J /zap/wrk/zap_report.json -x /zap/wrk/zap_report.xml -r /zap/wrk/zap_report.html
+2025-11-16 03:12:57,743 - zap_scanner - INFO - Target URL: https://jimsrohini.org
+2025-11-16 03:12:58,042 - zap_scanner - INFO - Container 108eb426860c0b9cae688a612d58c306f00d2ece2a684d8ff41372dd46bc8802 started for scan zap_1763242977
+2025-11-16 03:14:52,617 - zap_scanner - INFO - Container exited with code: 2
+2025-11-16 03:14:52,680 - zap_scanner - INFO - Container logs length: 10364 chars
+2025-11-16 03:14:52,680 - zap_scanner - INFO - Container logs (first 1000 chars): 2025-11-15 21:42:58,413 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+Using the Automation Framework
+Total of 1032 URLs
+PASS: In Page Banner Information Leak [10009]
+PASS: Cookie No HttpOnly Flag [10010]
+PASS: Content-Type Header Missing [10019]
+PASS: Information Disclosure - Sensitive Information in URL [10024]
+PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+PASS: HTTP Parameter Override [10026]
+PASS: Off-site Redirect [10028]
+PASS: Cookie Poisoning [10029]
+PASS: User Controllable Charset [10030]
+PASS: Viewstate [10032]
+PASS: Directory Browsing [10033]
+PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+PASS: HTTP Server Response Header [10036]
+PASS: X-Backend-Server Header Information Leak [10039]
+PASS: Secure Pages Include Mixed Content [10040]
+PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+PASS: User Controllable J
+2025-11-16 03:14:52,682 - zap_scanner - INFO - Container logs (last 500 chars): MS_Latest_Events.aspx/contact-us.aspx (500 Internal Server Error)
+	https://jimsrohini.org/JIMS_Latest_Events.aspx/jims-top-mba-colleges.aspx (500 Internal Server Error)
+	https://jimsrohini.org/JIMS_Latest_Events.aspx/JIMS_Latest_Events.aspx/placementprofile2015-2017.aspx (500 Internal Server Error)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 26	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 41
+Automation plan failures:
+	Job report failed to generate report: NoSuchFileException /zap/wrk/zap/wrk/zap_report.html
+
+2025-11-16 03:14:52,693 - zap_scanner - INFO - Files in results directory: ['.gitkeep', 'Latest_comprehensive.json', 'scan_0e5b1b9e.json', 'scan_2341b3cc.json', 'scan_246f8851.json', 'scan_2cb70864.json', 'scan_3c510892.json', 'scan_48cf5a8f.json', 'scan_5d56f0b2.json', 'scan_6a9fae10.json', 'scan_79a9bc97.json', 'scan_a1eec00e.json', 'scan_b4037e38.json', 'scan_c66809bf.json', 'scan_c8aae450.json', 'scan_d6accf18.json', 'scan_dde8bb8c.json', 'scan_fe2dd4e2.json']
+2025-11-16 03:14:52,702 - zap_scanner - WARNING - No XML file found, trying to extract from logs
+2025-11-16 03:14:52,703 - zap_scanner - WARNING - No XML found in logs. Logs contain: 2025-11-15 21:42:58,413 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+Using the Automation Framework
+Total of 1032 URLs
+PASS: In Page Banner Informati
+2025-11-16 03:14:52,703 - zap_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-16 03:14:52,706 - zap_scanner - INFO - Created XML from logs, length: 134 chars
+2025-11-16 03:14:53,263 - backend.main - INFO - Parsing results for scanner type: 'zap'
+2025-11-16 03:14:53,266 - utils.parser - INFO - Normalizing results for scanner: zap (normalized: zap)
+2025-11-16 03:14:53,274 - utils.parser - INFO - ZAP XML root tag: OWASPZAPReport
+2025-11-16 03:14:53,276 - utils.parser - INFO - Found 1 site(s) in ZAP XML
+2025-11-16 03:14:53,277 - utils.parser - INFO - Processing site: https://jimsrohini.org
+2025-11-16 03:14:53,277 - utils.parser - INFO - Found 0 alertitem(s) in site https://jimsrohini.org
+2025-11-16 03:14:53,279 - utils.parser - INFO - ZAP parser found 0 total vulnerabilities
+2025-11-16 03:14:53,297 - utils.file_manager - INFO - Scan results saved to scan_results/scan_c19842fa.json
+2025-11-16 03:14:53,297 - backend.main - INFO - Scan results persisted to file: scan_results/scan_c19842fa.json
+2025-11-16 03:14:53,298 - backend.main - INFO - Scan c19842fa completed with 0 findings
+2025-11-16 03:19:48,776 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 03:19:57,086 - backend.main - INFO - Scan 68e4774b queued for https://jimsrohini.org/:80
+2025-11-16 03:19:57,086 - backend.main - INFO - Starting scan 68e4774b for https://jimsrohini.org/:80
+2025-11-16 03:19:57,087 - zap_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 03:19:57,116 - zap_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 03:19:57,119 - zap_scanner - INFO - Starting ZAP scan zap_1763243397 for https://jimsrohini.org/:80
+2025-11-16 03:19:57,191 - zap_scanner - INFO - Running ZAP with command: zap-baseline.py -t https://jimsrohini.org -J /zap/wrk/zap_report.json -x /zap/wrk/zap_report.xml -r /zap/wrk/zap_report.html
+2025-11-16 03:19:57,191 - zap_scanner - INFO - Target URL: https://jimsrohini.org
+2025-11-16 03:19:57,538 - zap_scanner - INFO - Container 7f3031b3366a4981060645d8148ec336f26bc6e2685eb2e7e3acf0d3c7f0e263 started for scan zap_1763243397
+2025-11-16 03:21:47,619 - zap_scanner - INFO - Container exited with code: 2
+2025-11-16 03:21:47,721 - zap_scanner - INFO - Container logs length: 10747 chars
+2025-11-16 03:21:47,722 - zap_scanner - INFO - Container logs (first 1000 chars): 2025-11-15 21:49:57,977 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+Using the Automation Framework
+Total of 1267 URLs
+PASS: In Page Banner Information Leak [10009]
+PASS: Cookie No HttpOnly Flag [10010]
+PASS: Content-Type Header Missing [10019]
+PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+PASS: HTTP Parameter Override [10026]
+PASS: Off-site Redirect [10028]
+PASS: Cookie Poisoning [10029]
+PASS: User Controllable Charset [10030]
+PASS: Viewstate [10032]
+PASS: Directory Browsing [10033]
+PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+PASS: HTTP Server Response Header [10036]
+PASS: X-Backend-Server Header Information Leak [10039]
+PASS: Secure Pages Include Mixed Content [10040]
+PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+PASS: User Controllable JavaScript Event (XSS) [10043]
+PASS: X-ChromeLogger-Data (XCOLD) Head
+2025-11-16 03:21:47,722 - zap_scanner - INFO - Container logs (last 500 chars): t-us.aspx (500 Internal Server Error)
+	https://jimsrohini.org/JIMS_Latest_Events.aspx/JIMS_Latest_Events.aspx/placementprofile2015-2017.aspx (500 Internal Server Error)
+	https://jimsrohini.org/JIMS_Latest_Events.aspx/JIMS_Latest_Events.aspx/placementprofile2018-2020.aspx (500 Internal Server Error)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 27	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 40
+Automation plan failures:
+	Job report failed to generate report: NoSuchFileException /zap/wrk/zap/wrk/zap_report.html
+
+2025-11-16 03:21:47,722 - zap_scanner - INFO - Container logs (middle 500 chars): //jimsrohini.org (200 OK)
+	https://jimsrohini.org/AdmissionHome.aspx (200 OK)
+	https://jimsrohini.org/Alumni_UserLogin.aspx (302 Found)
+	https://jimsrohini.org/jims_admin_login.aspx (200 OK)
+	https://jimsrohini.org/PLACEMENTLatestCampus.aspx (302 Found)
+WARN-NEW: Content Security Policy (CSP) Header Not Set [10038] x 10 
+	https://jimsrohini.org (200 OK)
+	https://jimsrohini.org/AdmissionHome.aspx (200 OK)
+	https://jimsrohini.org/Alumni_Edit_Search.aspx (500 Internal Server Error)
+	https://jimsroh
+2025-11-16 03:21:47,745 - zap_scanner - INFO - Files in results directory: ['.gitkeep', 'Latest_comprehensive.json', 'scan_0e5b1b9e.json', 'scan_2341b3cc.json', 'scan_246f8851.json', 'scan_2cb70864.json', 'scan_3c510892.json', 'scan_48cf5a8f.json', 'scan_5d56f0b2.json', 'scan_6a9fae10.json', 'scan_79a9bc97.json', 'scan_a1eec00e.json', 'scan_b4037e38.json', 'scan_c19842fa.json', 'scan_c66809bf.json', 'scan_c8aae450.json', 'scan_d6accf18.json', 'scan_dde8bb8c.json', 'scan_fe2dd4e2.json']
+2025-11-16 03:21:47,754 - zap_scanner - WARNING - No XML file found, trying to extract from logs
+2025-11-16 03:21:47,755 - zap_scanner - WARNING - No XML found in logs. Logs contain: 2025-11-15 21:49:57,977 Unable to copy yaml file to /zap/wrk/zap.yaml [Errno 13] Permission denied: '/zap/wrk/zap.yaml'
+Using the Automation Framework
+Total of 1267 URLs
+PASS: In Page Banner Informati
+2025-11-16 03:21:47,756 - zap_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-16 03:21:47,758 - zap_scanner - INFO - Parsed ZAP summary: 27 warnings, 0 failures
+2025-11-16 03:21:47,758 - zap_scanner - INFO - Found 30 lines containing WARN/FAIL keywords
+2025-11-16 03:21:47,759 - zap_scanner - INFO - WARN/FAIL line: WARN-NEW: Vulnerable JS Library [10003] x 1 
+2025-11-16 03:21:47,759 - zap_scanner - INFO - WARN/FAIL line: WARN-NEW: Cookie Without Secure Flag [10011] x 1 
+2025-11-16 03:21:47,759 - zap_scanner - INFO - WARN/FAIL line: WARN-NEW: Re-examine Cache-control Directives [10015] x 10 
+2025-11-16 03:21:47,760 - zap_scanner - INFO - WARN/FAIL line: WARN-NEW: Cross-Domain JavaScript Source File Inclusion [10017] x 17 
+2025-11-16 03:21:47,760 - zap_scanner - INFO - WARN/FAIL line: WARN-NEW: Missing Anti-clickjacking Header [10020] x 11 
+2025-11-16 03:21:47,763 - zap_scanner - INFO - Extracted 27 findings from ZAP logs
+2025-11-16 03:21:47,764 - zap_scanner - INFO - Created XML from logs, length: 9045 chars
+2025-11-16 03:21:47,915 - backend.main - INFO - Parsing results for scanner type: 'zap'
+2025-11-16 03:21:47,917 - utils.parser - INFO - Normalizing results for scanner: zap (normalized: zap)
+2025-11-16 03:21:47,929 - utils.parser - INFO - ZAP XML root tag: OWASPZAPReport
+2025-11-16 03:21:47,933 - utils.parser - INFO - Found 1 site(s) in ZAP XML
+2025-11-16 03:21:47,933 - utils.parser - INFO - Processing site: https://jimsrohini.org
+2025-11-16 03:21:47,934 - utils.parser - INFO - Found 27 alertitem(s) in site https://jimsrohini.org
+2025-11-16 03:21:56,801 - utils.parser - INFO - ZAP parser found 27 total vulnerabilities
+2025-11-16 03:21:56,821 - utils.file_manager - INFO - Scan results saved to scan_results/scan_68e4774b.json
+2025-11-16 03:21:56,822 - backend.main - INFO - Scan results persisted to file: scan_results/scan_68e4774b.json
+2025-11-16 03:21:56,822 - backend.main - INFO - Scan 68e4774b completed with 27 findings
+2025-11-16 22:39:02,971 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 22:39:15,264 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-16 22:39:54,846 - backend.main - INFO - Scan b719587a queued for https://jimsrohini.org/:80
+2025-11-16 22:39:54,850 - backend.main - INFO - Starting scan b719587a for https://jimsrohini.org/:80
+2025-11-16 22:39:54,852 - nikto_scanner - INFO - Detected Docker container environment, using Unix socket
+2025-11-16 22:39:54,944 - nikto_scanner - INFO - Successfully connected to Docker via Unix socket
+2025-11-16 22:39:54,949 - nikto_scanner - INFO - Starting Nikto scan nikto_1763312994 for https://jimsrohini.org/:80
+2025-11-16 22:39:54,990 - nikto_scanner - INFO - Running nikto.pl with args: -host jimsrohini.org -port 80 -Format csv -output /tmp/results/nikto_output.csv -Display V -Tuning 9 -Tuning 9
+2025-11-16 22:39:54,991 - nikto_scanner - INFO - Clean target: jimsrohini.org, Port: 80
+2025-11-16 22:39:55,270 - nikto_scanner - INFO - Container f1922aa0126512467069611d4831a0c5c0f5a8f2c7400adca7398723193aa9e7 started for scan nikto_1763312994
+2025-11-16 22:40:49,968 - nikto_scanner - INFO - Container exited with code: 0
+2025-11-16 22:40:50,007 - nikto_scanner - INFO - Container logs length: 31186 chars
+2025-11-16 22:40:50,008 - nikto_scanner - INFO - Container logs (first 1000 chars): - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sun Nov 16 17:09:55 2025 - Loaded "Apache Expect XSS" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_multiple_index
+V:Sun Nov 16 17:09:55 2025 - Loaded "Multiple Index" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_paths
+V:Sun Nov 16 17:09:55 2025 - Loaded "Path Search" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_robots
+V:Sun Nov 16 17:09:55 2025 - Loaded "Robots" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_report_xml
+V:Sun Nov 16 17:09:55 2025 - Loaded "Report as XML" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_fileops
+V:Sun Nov 16 17:09:55 2025 - Loaded "File Operations" plugin.
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_clientaccesspolicy
+V:Sun Nov 16 17:09:55 2025 - Loaded "clientaccesspolicy.xml" plugin.
+V:Sun Nov 16 
+2025-11-16 22:40:50,008 - nikto_scanner - INFO - Container logs (last 500 chars): 10:49 2025 - 301 for GET:	/db.php?q='&t='
+V:Sun Nov 16 17:10:49 2025 - 301 for GET:	/rpc.php?q='&t='
+V:Sun Nov 16 17:10:49 2025 - 301 for POST:	/search.php
+V:Sun Nov 16 17:10:49 2025 - 301 for POST:	/private.php
++ 59 items checked: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2025-11-16 17:10:49 (GMT0) (53 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+V:Sun Nov 16 17:10:49 2025 + 195 requests made in 54 seconds
+
+2025-11-16 22:40:50,013 - nikto_scanner - WARNING - No XML file found in volume, trying to extract from logs
+2025-11-16 22:40:50,014 - nikto_scanner - WARNING - No XML found in logs. Logs contain: - Nikto v2.1.5
+---------------------------------------------------------------------------
+V:Sun Nov 16 17:09:55 2025 - Initialising plugin nikto_apache_expect_xss
+V:Sun Nov 16 17:09:55 2025 - Loaded 
+2025-11-16 22:40:50,014 - nikto_scanner - WARNING - XML output empty but scan appears to have run. Creating XML from logs.
+2025-11-16 22:40:50,014 - nikto_scanner - INFO - Logs contain scan indicators. Full logs length: 31186
+2025-11-16 22:40:50,015 - nikto_scanner - INFO - Created XML from logs, length: 2926 chars
+2025-11-16 22:40:50,055 - backend.main - INFO - Parsing results for scanner type: 'nikto'
+2025-11-16 22:40:50,056 - utils.parser - INFO - Normalizing results for scanner: nikto (normalized: nikto)
+2025-11-16 22:40:52,493 - utils.file_manager - INFO - Scan results saved to scan_results/scan_b719587a.json
+2025-11-16 22:40:52,494 - backend.main - INFO - Scan results persisted to file: scan_results/scan_b719587a.json
+2025-11-16 22:40:52,494 - backend.main - INFO - Scan b719587a completed with 13 findings
+2025-11-17 12:26:44,258 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log

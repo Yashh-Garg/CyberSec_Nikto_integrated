@@ -386,6 +386,249 @@ class NiktoParser:
         return [cve.upper() for cve in cves]
 
 
+class ZapParser:
+    """Parser for OWASP ZAP XML/JSON output."""
+    
+    @staticmethod
+    def parse_xml(xml_content: str) -> List[Vulnerability]:
+        """Parse ZAP XML output into normalized vulnerabilities."""
+        vulnerabilities = []
+        
+        if not xml_content or not xml_content.strip():
+            logger.warning("Empty XML content provided")
+            return vulnerabilities
+        
+        try:
+            root = ET.fromstring(xml_content)
+            logger.info(f"ZAP XML root tag: {root.tag}")
+            
+            # ZAP XML structure: <OWASPZAPReport><site><alertitem>...</alertitem></site></OWASPZAPReport>
+            sites = root.findall('.//site')
+            logger.info(f"Found {len(sites)} site(s) in ZAP XML")
+            
+            for site in sites:
+                site_name = site.get('name', '')
+                logger.info(f"Processing site: {site_name}")
+                
+                alertitems = site.findall('.//alertitem')
+                logger.info(f"Found {len(alertitems)} alertitem(s) in site {site_name}")
+                
+                for alertitem in alertitems:
+                    pluginid = alertitem.find('pluginid')
+                    pluginid_text = pluginid.text if pluginid is not None else ''
+                    
+                    alert_elem = alertitem.find('alert')
+                    alert_text = alert_elem.text if alert_elem is not None else ''
+                    
+                    name_elem = alertitem.find('name')
+                    name_text = name_elem.text if name_elem is not None else alert_text
+                    
+                    desc_elem = alertitem.find('description')
+                    description = desc_elem.text if desc_elem is not None else alert_text
+                    
+                    uri_elem = alertitem.find('uri')
+                    uri = uri_elem.text if uri_elem is not None else site_name
+                    
+                    riskcode_elem = alertitem.find('riskcode')
+                    riskcode = riskcode_elem.text if riskcode_elem is not None else '2'
+                    
+                    confidence_elem = alertitem.find('confidence')
+                    confidence = confidence_elem.text if confidence_elem is not None else '2'
+                    
+                    # Map risk code to severity
+                    severity = ZapParser._map_riskcode_to_severity(riskcode)
+                    
+                    # Extract CVE IDs from description
+                    cve_ids = ZapParser._extract_cves(description)
+                    cve_details = []
+                    cvss_score = None
+                    remediation = None
+                    
+                    # Enrich with CVE lookup if available
+                    if CVE_LOOKUP_AVAILABLE:
+                        try:
+                            enriched_data = CVELookup.enrich_with_cves(description, None, uri)
+                            cve_ids.extend(enriched_data.get("cve_ids", []))
+                            cve_ids = list(set(cve_ids))
+                            cve_details = enriched_data.get("cve_details", [])
+                            enriched_cvss = enriched_data.get("cvss_score")
+                            if enriched_cvss:
+                                cvss_score = enriched_cvss
+                            remediation = enriched_data.get("remediation")
+                        except Exception as e:
+                            logger.debug(f"Failed to enrich CVEs: {e}")
+                    
+                    # Create title
+                    title = name_text if name_text else ZapParser._create_title(description, uri)
+                    
+                    vuln = Vulnerability(
+                        id=f"ZAP-{pluginid_text}",
+                        severity=severity,
+                        title=title,
+                        description=description,
+                        affected_component=uri or site_name,
+                        uri=uri,
+                        method="GET",  # ZAP doesn't always specify method
+                        cve_ids=cve_ids,
+                        osvdb_id=None,
+                        cvss_score=cvss_score,
+                        remediation=remediation,
+                        cve_details=cve_details,
+                        scanner="zap"
+                    )
+                    vulnerabilities.append(vuln)
+            
+            logger.info(f"ZAP parser found {len(vulnerabilities)} total vulnerabilities")
+                    
+        except ET.ParseError as e:
+            logger.error(f"Failed to parse ZAP XML: {e}")
+            raise ValueError(f"Failed to parse XML: {e}")
+        
+        return vulnerabilities
+    
+    @staticmethod
+    def parse_json(json_content: str) -> List[Vulnerability]:
+        """Parse ZAP JSON output into normalized vulnerabilities."""
+        vulnerabilities = []
+        
+        try:
+            data = json.loads(json_content)
+            logger.info(f"ZAP JSON top-level keys: {list(data.keys()) if isinstance(data, dict) else 'list'}")
+            
+            # ZAP JSON structure: {"@version": "...", "site": [...]}
+            sites = []
+            if isinstance(data, dict):
+                if 'site' in data:
+                    sites = data['site'] if isinstance(data['site'], list) else [data['site']]
+                elif 'sites' in data:
+                    sites = data['sites'] if isinstance(data['sites'], list) else [data['sites']]
+            elif isinstance(data, list):
+                sites = data
+            
+            logger.info(f"Found {len(sites)} site(s) in ZAP JSON")
+            
+            for site in sites:
+                site_name = site.get('@name', '')
+                logger.info(f"Processing site: {site_name}")
+                alerts = site.get('alerts', [])
+                if not isinstance(alerts, list):
+                    alerts = [alerts] if alerts else []
+                logger.info(f"Found {len(alerts)} alert(s) in site {site_name}")
+                
+                for alert in alerts:
+                    pluginid = str(alert.get('pluginid', ''))
+                    name = alert.get('name', alert.get('alert', ''))
+                    description = alert.get('description', alert.get('alert', ''))
+                    uri = alert.get('uri', site_name)
+                    risk = alert.get('risk', 'Medium')
+                    confidence = alert.get('confidence', 'Medium')
+                    
+                    # Map risk to severity
+                    severity = ZapParser._map_risk_to_severity(risk)
+                    
+                    # Extract CVE IDs
+                    cve_ids = ZapParser._extract_cves(description)
+                    cve_details = []
+                    cvss_score = None
+                    remediation = None
+                    
+                    # Enrich with CVE lookup if available
+                    if CVE_LOOKUP_AVAILABLE:
+                        try:
+                            enriched_data = CVELookup.enrich_with_cves(description, None, uri)
+                            cve_ids.extend(enriched_data.get("cve_ids", []))
+                            cve_ids = list(set(cve_ids))
+                            cve_details = enriched_data.get("cve_details", [])
+                            enriched_cvss = enriched_data.get("cvss_score")
+                            if enriched_cvss:
+                                cvss_score = enriched_cvss
+                            remediation = enriched_data.get("remediation")
+                        except Exception as e:
+                            logger.debug(f"Failed to enrich CVEs: {e}")
+                    
+                    vuln = Vulnerability(
+                        id=f"ZAP-{pluginid}",
+                        severity=severity,
+                        title=name,
+                        description=description,
+                        affected_component=uri or site_name,
+                        uri=uri,
+                        method="GET",
+                        cve_ids=cve_ids,
+                        osvdb_id=None,
+                        cvss_score=cvss_score,
+                        remediation=remediation,
+                        cve_details=cve_details,
+                        scanner="zap"
+                    )
+                    vulnerabilities.append(vuln)
+            
+            logger.info(f"ZAP parser found {len(vulnerabilities)} total vulnerabilities from JSON")
+                    
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse ZAP JSON: {e}")
+            raise ValueError(f"Failed to parse JSON: {e}")
+        
+        return vulnerabilities
+    
+    @staticmethod
+    def _map_riskcode_to_severity(riskcode: str) -> str:
+        """Map ZAP risk code to severity."""
+        risk_map = {
+            "0": "LOW",      # Informational
+            "1": "LOW",      # Low
+            "2": "MEDIUM",   # Medium
+            "3": "HIGH",     # High
+            "4": "CRITICAL"  # Critical
+        }
+        return risk_map.get(str(riskcode), "MEDIUM")
+    
+    @staticmethod
+    def _map_risk_to_severity(risk: str) -> str:
+        """Map ZAP risk level string to severity."""
+        risk_map = {
+            "Informational": "LOW",
+            "Low": "LOW",
+            "Medium": "MEDIUM",
+            "High": "HIGH",
+            "Critical": "CRITICAL"
+        }
+        return risk_map.get(risk, "MEDIUM")
+    
+    @staticmethod
+    def _extract_cves(description: str) -> List[str]:
+        """Extract CVE IDs from description."""
+        import re
+        cve_pattern = r'CVE-\d{4}-\d{4,7}'
+        cves = re.findall(cve_pattern, description, re.IGNORECASE)
+        return [cve.upper() for cve in cves]
+    
+    @staticmethod
+    def _create_title(description: str, uri: str) -> str:
+        """Create a concise title from description."""
+        if not description:
+            return "ZAP Finding"
+        
+        title = description.strip()
+        
+        # Extract first sentence or meaningful part
+        for separator in ['. ', '\n', ' See ', ' See http']:
+            if separator in title:
+                title = title.split(separator)[0].strip()
+                break
+        
+        # Truncate if too long
+        if len(title) > 120:
+            truncated = title[:117]
+            last_space = truncated.rfind(' ')
+            if last_space > 80:
+                title = truncated[:last_space] + '...'
+            else:
+                title = truncated + '...'
+        
+        return title if title else "ZAP Finding"
+
+
 def normalize_results(
     raw_output: str,
     output_format: str = "xml",
@@ -393,7 +636,12 @@ def normalize_results(
 ) -> Dict[str, Any]:
     """Normalize scanner results into standard format."""
     
-    if scanner == "nikto":
+    # Normalize scanner name to lowercase for case-insensitive matching
+    scanner_lower = scanner.lower().strip() if scanner else "nikto"
+    
+    logger.info(f"Normalizing results for scanner: {scanner} (normalized: {scanner_lower})")
+    
+    if scanner_lower == "nikto":
         parser = NiktoParser()
         if output_format.lower() == "xml":
             vulnerabilities = parser.parse_xml(raw_output)
@@ -401,7 +649,16 @@ def normalize_results(
             vulnerabilities = parser.parse_json(raw_output)
         else:
             raise ValueError(f"Unsupported format: {output_format}")
+    elif scanner_lower == "zap":
+        parser = ZapParser()
+        if output_format.lower() == "xml":
+            vulnerabilities = parser.parse_xml(raw_output)
+        elif output_format.lower() == "json":
+            vulnerabilities = parser.parse_json(raw_output)
+        else:
+            raise ValueError(f"Unsupported format: {output_format}")
     else:
+        logger.error(f"Unsupported scanner received: '{scanner}' (normalized: '{scanner_lower}')")
         raise ValueError(f"Unsupported scanner: {scanner}")
     
     return {

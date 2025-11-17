@@ -25,6 +25,15 @@ scanners:
       - "c": "Remote Source Inclusion"
       - "x": "All Tests"
 
+  zap:
+    image: "ghcr.io/zaproxy/zaproxy:stable"
+    timeout: 3600
+    default_options: []
+    scan_types:
+      - "baseline": "Quick baseline scan (faster, basic checks)"
+      - "quick": "Quick scan (faster, limited checks)"
+      - "full": "Full scan (slower, comprehensive checks)"
+
   # Future scanners
   # nmap:
   #   image: "securecodebox/nmap:latest"

@@ -49,7 +49,7 @@ function App() {
             <Shield className="w-8 h-8 text-primary-600" />
             <div>
               <h1 className="text-3xl font-bold text-gray-800">CyberSec AI Assistant</h1>
-              <p className="text-gray-600">Vulnerability Scanning Platform - Phase 1: Nikto Integration</p>
+              <p className="text-gray-600">Vulnerability Scanning Platform - Nikto & OWASP ZAP Integration</p>
             </div>
           </div>
         </div>
