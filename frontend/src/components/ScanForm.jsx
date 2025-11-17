@@ -244,13 +244,19 @@ function ScanForm({ onScanComplete }) {
             <option value="zap">
               OWASP ZAP - Application Security Scanner
             </option>
+            <option value="nuclei">Nuclei - Template-based CVE Scanner</option>
+            <option value="wapiti">Wapiti - Lightweight Web Scanner</option>
           </select>
           <div className="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-lg flex items-start gap-2">
             <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
             <p className="text-xs text-blue-800">
               {formData.scanner === "nikto"
                 ? "Nikto: Fast web server scanner focused on known vulnerabilities, misconfigurations, and security issues. Best for quick server assessments."
-                : "OWASP ZAP: Comprehensive web application security scanner with both passive and active testing. Ideal for finding application-level vulnerabilities like XSS, SQLi, and authentication issues."}
+                : formData.scanner === "zap"
+                ? "OWASP ZAP: Comprehensive web application security scanner with both passive and active testing. Ideal for finding application-level vulnerabilities like XSS, SQLi, and authentication issues."
+                : formData.scanner === "nuclei"
+                ? "Nuclei: High-speed, template-based scanner focused on CVEs and known vulnerabilities using community-maintained YAML templates."
+                : "Wapiti: Lightweight black-box web scanner that injects payloads to find issues like SQL injection, XSS, and file disclosure."}
             </p>
           </div>
         </div>

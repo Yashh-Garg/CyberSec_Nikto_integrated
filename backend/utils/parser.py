@@ -629,6 +629,200 @@ class ZapParser:
         return title if title else "ZAP Finding"
 
 
+class NucleiParser:
+    """Parser for Nuclei JSON (newline-delimited) output."""
+
+    @staticmethod
+    def parse_json(json_content: str) -> List[Vulnerability]:
+        """Parse Nuclei JSON/NDJSON into normalized vulnerabilities."""
+        vulnerabilities: List[Vulnerability] = []
+
+        if not json_content or not json_content.strip():
+            logger.warning("Empty Nuclei JSON content provided")
+            return vulnerabilities
+
+        lines = [line for line in json_content.splitlines() if line.strip()]
+        for line in lines:
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                # Some builds may emit a single JSON array; try once
+                try:
+                    data = json.loads(json_content)
+                    if isinstance(data, list):
+                        for item in data:
+                            NucleiParser._parse_record(item, vulnerabilities)
+                        return vulnerabilities
+                except json.JSONDecodeError:
+                    logger.debug("Skipping non-JSON line in Nuclei output")
+                    continue
+            else:
+                NucleiParser._parse_record(record, vulnerabilities)
+
+        return vulnerabilities
+
+    @staticmethod
+    def _parse_record(record: Dict[str, Any], out: List[Vulnerability]) -> None:
+        """Parse a single Nuclei result record into a Vulnerability."""
+        if not isinstance(record, dict):
+            return
+
+        host = record.get("host") or record.get("ip") or ""
+        url = record.get("url") or record.get("matched-at") or host
+        template_id = record.get("template-id", "")
+
+        info = record.get("info", {}) or {}
+        name = info.get("name", template_id or "Nuclei Finding")
+        description = info.get("description", "") or record.get("description", "")
+        severity_raw = (info.get("severity") or "medium").upper()
+
+        severity_map = {
+            "INFO": "LOW",
+            "INFORMATIONAL": "LOW",
+            "LOW": "LOW",
+            "MEDIUM": "MEDIUM",
+            "HIGH": "HIGH",
+            "CRITICAL": "CRITICAL",
+        }
+        severity = severity_map.get(severity_raw, "MEDIUM")
+
+        classification = info.get("classification", {}) or {}
+        cve_ids: List[str] = []
+        cve_field = classification.get("cve-id") or classification.get("cve-ids")
+        if isinstance(cve_field, str):
+            cve_ids = [cve_field]
+        elif isinstance(cve_field, list):
+            cve_ids = [str(cve) for cve in cve_field]
+
+        if not cve_ids:
+            # Try to extract CVEs from description
+            cve_ids = NiktoParser._extract_cves(description)
+
+        cvss_score = None
+        try:
+            cvss_score_val = classification.get("cvss-score")
+            if cvss_score_val is not None:
+                cvss_score = float(cvss_score_val)
+        except (TypeError, ValueError):
+            cvss_score = None
+
+        remediation = info.get("remediation") or info.get("reference")
+
+        # Map into the simplified schema fields the user highlighted
+        vuln = Vulnerability(
+            id=f"NUCLEI-{template_id or host}",
+            severity=severity,
+            title=name,
+            description=description or name,
+            affected_component=url or host,
+            uri=url,
+            method=None,
+            cve_ids=cve_ids,
+            osvdb_id=None,
+            cvss_score=cvss_score,
+            remediation=remediation,
+            cve_details=[],
+            scanner="nuclei",
+        )
+        out.append(vuln)
+
+
+class WapitiParser:
+    """Parser for Wapiti JSON output."""
+
+    @staticmethod
+    def parse_json(json_content: str) -> List[Vulnerability]:
+        """Parse Wapiti JSON report into normalized vulnerabilities."""
+        vulnerabilities: List[Vulnerability] = []
+
+        if not json_content or not json_content.strip():
+            logger.warning("Empty Wapiti JSON content provided")
+            return vulnerabilities
+
+        try:
+            data = json.loads(json_content)
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse Wapiti JSON: {e}")
+            return vulnerabilities
+
+        # Wapiti 3 uses "vulnerabilities" with modules; structure may vary slightly
+        vulns = data.get("vulnerabilities") or data.get("vulns") or {}
+        if isinstance(vulns, dict):
+            # {module: [{...}, {...}], ...}
+            for module_name, findings in vulns.items():
+                if isinstance(findings, list):
+                    for finding in findings:
+                        WapitiParser._parse_finding(finding, module_name, vulnerabilities)
+        elif isinstance(vulns, list):
+            for finding in vulns:
+                WapitiParser._parse_finding(finding, None, vulnerabilities)
+
+        return vulnerabilities
+
+    @staticmethod
+    def _parse_finding(
+        finding: Dict[str, Any],
+        module_name: Optional[str],
+        out: List[Vulnerability],
+    ) -> None:
+        if not isinstance(finding, dict):
+            return
+
+        url = finding.get("url") or finding.get("path") or "/"
+        method = finding.get("method") or "GET"
+        vuln_type = finding.get("vulnerability") or finding.get("type") or module_name or "Wapiti Finding"
+        description = finding.get("info") or finding.get("description") or vuln_type
+
+        severity_raw = (finding.get("severity") or finding.get("level") or "medium").upper()
+        severity_map = {
+            "INFO": "LOW",
+            "INFORMATIONAL": "LOW",
+            "LOW": "LOW",
+            "MEDIUM": "MEDIUM",
+            "HIGH": "HIGH",
+            "CRITICAL": "CRITICAL",
+        }
+        severity = severity_map.get(severity_raw, "MEDIUM")
+
+        cve_ids: List[str] = []
+        cve_field = finding.get("cve") or finding.get("cve_id") or finding.get("cve_ids")
+        if isinstance(cve_field, str):
+            cve_ids = [cve_field]
+        elif isinstance(cve_field, list):
+            cve_ids = [str(cve) for cve in cve_field]
+
+        if not cve_ids:
+            cve_ids = NiktoParser._extract_cves(description)
+
+        cvss_score = None
+        try:
+            cvss_val = finding.get("cvss") or finding.get("cvss_score")
+            if cvss_val is not None:
+                cvss_score = float(cvss_val)
+        except (TypeError, ValueError):
+            cvss_score = None
+
+        remediation = finding.get("solution") or finding.get("remediation")
+
+        title = vuln_type
+        vuln = Vulnerability(
+            id=f"WAPITI-{finding.get('id', url)}",
+            severity=severity,
+            title=title,
+            description=description,
+            affected_component=url,
+            uri=url,
+            method=method,
+            cve_ids=cve_ids,
+            osvdb_id=None,
+            cvss_score=cvss_score,
+            remediation=remediation,
+            cve_details=[],
+            scanner="wapiti",
+        )
+        out.append(vuln)
+
+
 def normalize_results(
     raw_output: str,
     output_format: str = "xml",
@@ -657,6 +851,16 @@ def normalize_results(
             vulnerabilities = parser.parse_json(raw_output)
         else:
             raise ValueError(f"Unsupported format: {output_format}")
+    elif scanner_lower == "nuclei":
+        parser = NucleiParser()
+        if output_format.lower() != "json":
+            raise ValueError("Nuclei parser currently supports only JSON output")
+        vulnerabilities = parser.parse_json(raw_output)
+    elif scanner_lower == "wapiti":
+        parser = WapitiParser()
+        if output_format.lower() != "json":
+            raise ValueError("Wapiti parser currently supports only JSON output")
+        vulnerabilities = parser.parse_json(raw_output)
     else:
         logger.error(f"Unsupported scanner received: '{scanner}' (normalized: '{scanner_lower}')")
         raise ValueError(f"Unsupported scanner: {scanner}")

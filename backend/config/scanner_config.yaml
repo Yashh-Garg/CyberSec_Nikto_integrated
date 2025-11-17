@@ -34,14 +34,22 @@ scanners:
       - "quick": "Quick scan (faster, limited checks)"
       - "full": "Full scan (slower, comprehensive checks)"
 
-  # Future scanners
-  # nmap:
-  #   image: "securecodebox/nmap:latest"
-  #   timeout: 1800
-  #
-  # nuclei:
-  #   image: "projectdiscovery/nuclei:latest"
-  #   timeout: 3600
+  nuclei:
+    image: "projectdiscovery/nuclei:latest"
+    timeout: 3600
+    default_options:
+      - "-t"
+      - "cves/"
+      - "-json"
+    notes: "Uses CVE templates by default. Override with custom -t path if needed."
+
+  wapiti:
+    image: "vulmon/wapiti:latest"
+    timeout: 3600
+    default_options:
+      - "-f"
+      - "json"
+    notes: "Lightweight black-box scanner. JSON output only; HTML can be produced separately if required."
 
 severity_mapping:
   critical:

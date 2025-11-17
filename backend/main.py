@@ -18,6 +18,8 @@ from pydantic import BaseModel, Field, validator
 
 from nikto_scanner import NiktoScanner
 from zap_scanner import ZapScanner
+from nuclei_scanner import NucleiScanner
+from wapiti_scanner import WapitiScanner
 from utils.parser import normalize_results
 from utils.analytics import ScanAnalytics
 from utils.file_manager import FileManager
@@ -100,8 +102,13 @@ def get_scanner(scan_type: str = "nikto"):
     
     if scan_type not in _scanner_instances:
         try:
-            if scan_type == "zap":
+            scan_type_lower = scan_type.lower()
+            if scan_type_lower == "zap":
                 _scanner_instances[scan_type] = ZapScanner()
+            elif scan_type_lower == "nuclei":
+                _scanner_instances[scan_type] = NucleiScanner()
+            elif scan_type_lower == "wapiti":
+                _scanner_instances[scan_type] = WapitiScanner()
             else:  # Default to nikto
                 _scanner_instances[scan_type] = NiktoScanner()
         except Exception as e:
