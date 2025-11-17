@@ -2134,3 +2134,4 @@ V:Sun Nov 16 17:09:55 2025 - Loaded
 2025-11-16 22:40:52,494 - backend.main - INFO - Scan results persisted to file: scan_results/scan_b719587a.json
 2025-11-16 22:40:52,494 - backend.main - INFO - Scan b719587a completed with 13 findings
 2025-11-17 12:26:44,258 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
+2025-11-17 13:47:19,261 - backend.main - INFO - Logging initialized. Log file: /app/logs/app.log
