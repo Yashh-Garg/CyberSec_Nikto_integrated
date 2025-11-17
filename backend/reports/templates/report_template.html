@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Security Scan Report - {{ scan_id }}</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        margin: 2rem;
+        color: #111827;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #111827;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      th,
+      td {
+        border: 1px solid #e5e7eb;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+      }
+      th {
+        background-color: #f9fafb;
+        text-align: left;
+      }
+      .severity-High {
+        background-color: #fee2e2;
+      }
+      .severity-Medium {
+        background-color: #fef3c7;
+      }
+      .severity-Low {
+        background-color: #ecfdf3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Security Scan Report</h1>
+    <p><strong>Scan ID:</strong> {{ scan_id }}</p>
+    <p><strong>Target:</strong> {{ target }}</p>
+    <p><strong>Generated at:</strong> {{ generated_at }}</p>
+
+    <h2>Summary</h2>
+    <p>Total Findings: {{ findings|length }}</p>
+
+    <h2>Findings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Vulnerability</th>
+          <th>Severity</th>
+          <th>Type</th>
+          <th>Tool</th>
+          <th>CVSS</th>
+          <th>Description</th>
+          <th>Remediation</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in findings %}
+        <tr class="severity-{{ item.severity }}">
+          <td>{{ item.vulnerability }}</td>
+          <td>{{ item.severity }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.tool }}</td>
+          <td>{{ item.cvss_score or '-' }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.remediation }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+  </html>
+
+
